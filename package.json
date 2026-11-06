@@ -1,0 +1,26 @@
+{
+  "name": "@tasteee/scaled",
+  "version": "0.1.0",
+  "description": "Typed chord, voicing, and continuous MIDI performance tools",
+  "type": "module",
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/types.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
