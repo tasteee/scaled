@@ -89,7 +89,7 @@ const checkOverrides = async (model, renderer, source, library) => {
       assert.equal(note.durationBeats, 6, label)
     }
     const secondChord = renderer.getVoicedChord(secondEntry, session)
-    const performance = source.adaptPerformanceTemplate({ template, midiNotes: secondChord.midiNotes, key: session.key, scale: session.scale, octave: session.octave - 1 })
+    const performance = source.adaptPerformanceTemplate({ template, midiNotes: secondChord.midiNotes, chordRootPitch: secondChord.rootPitch, key: session.key, scale: session.scale, octave: session.octave - 1 })
     const progression = session.progression.map((entry) => {
       const chord = renderer.getVoicedChord(entry, session)
       return { id: entry.id, chord, durationBeats: entry.durationBeats }

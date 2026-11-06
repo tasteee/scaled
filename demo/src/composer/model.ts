@@ -24,7 +24,10 @@ export const sourceVoicingOptions = scaled.voicingPresets.map((preset): OptionT 
 export const allVoicingOptions = voicingOptions.concat(sourceVoicingOptions)
 export const performanceOptions: OptionT[] = [{ value: 'standard', label: 'Standard · sustained chords' }]
 export const sourcePerformanceOptions = scaled.performanceSummaries.map((template): OptionT => {
-  const label = `${template.category} / ${template.subcategory} / ${template.name}`
+  const subcategory = template.subcategory.trim()
+  const hasSubcategory = subcategory.length > 0
+  const categoryLabel = hasSubcategory ? `${template.category} / ${subcategory}` : template.category
+  const label = `${categoryLabel} / ${template.name}`
   return { value: template.id, label }
 })
 export const allPerformanceOptions = performanceOptions.concat(sourcePerformanceOptions)

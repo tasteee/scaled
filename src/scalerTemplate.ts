@@ -13,6 +13,7 @@ export type AdaptPerformanceTemplateInputT = {
   readonly key: string
   readonly scale: string
   readonly octave: number
+  readonly chordRootPitch?: number
 }
 
 type ResolvedEventT = {
@@ -96,7 +97,7 @@ const buildResolvedPattern = (input: AdaptPerformanceTemplateInputT): ResolvedPa
     const events = resolveIndexedEvents(input.template, midiNotes)
     return { durationBeats: input.template.durationBeats, events }
   }
-  const scalePerformance = scalePerformances.getScalePerformance({ template: input.template, midiNotes: input.midiNotes, key: input.key, scale: input.scale, octave: input.octave })
+  const scalePerformance = scalePerformances.getScalePerformance(input)
   const events = resolveIndexedEvents(scalePerformance.template, scalePerformance.midiNotes)
   return { durationBeats: scalePerformance.template.durationBeats, events }
 }
@@ -126,7 +127,7 @@ const normalizeEvents = (events: readonly ResolvedEventT[]): readonly ResolvedEv
   return normalizedEvents
 }
 
-// Factory playback uses explicit global scale context,
+// Factory playback follows chord harmony and scale context,
 // normal speed, and native reference velocity 0.7.
 // Strums retain their captured native default settings.
 export const adaptPerformanceTemplate = (input: AdaptPerformanceTemplateInputT): types.PerformancePatternT => {

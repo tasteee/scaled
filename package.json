@@ -33,6 +33,8 @@
     "demo:build": "npm run build --workspace @tasteee/scaled-demo",
     "demo:typecheck": "npm run typecheck --workspace @tasteee/scaled-demo",
     "check:demo-performances": "node scripts/checkDemoPerformances.mjs",
+    "check:chord-following": "npm run build && node scripts/checkChordFollowing.mjs",
+    "check:playback": "node scripts/checkPlayback.mjs",
     "check:passages": "npm run build && node scripts/checkPassageAdaptation.mjs"
   },
   "devDependencies": {

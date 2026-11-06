@@ -182,10 +182,19 @@ catalogs and demo selectors. Bass, Grooves, Melody, Phrases, Rhythms,
 Passages, Sequences, and Strummed Sequences remain available.
 
 Rhythms, Grooves, Passages, and Strummed Sequences adapt to the supplied
-chord's notes. Bass, Melody, Phrases, and Sequences currently map notes to
-the global key and scale; changing chords can leave their pitches unchanged.
-They can render over a progression, but do not guarantee chord-following
-melodies or bass lines. Audition them with the intended progression.
+chord's notes. Bass, Melody, Phrases, and Sequences follow its root and
+quality while retaining scale passing tones. Scale degrees rotate to the
+chord root, and chord tones replace the nearest degrees, preferring exact
+scale matches. Suspended chords replace the third. Chromatic roots use
+the global scale's interval structure transposed to that root.
+
+Pass `chordRootPitch: chord.rootPitch` to `adaptPerformanceTemplate` or
+`getScalePerformance`, especially for inversions, rootless voicings, and
+ambiguous pitch sets such as C6/Am7. Without it, the adapter matches the
+supplied pitch classes against catalog chord definitions in catalog order,
+then falls back to the lowest note. Minor variants follow chord quality.
+This harmonic adaptation is Scaled behavior, not a promise of exact Scaler
+runtime output.
 
 The shared adapter resolves MIDI pitches for one voiced chord. For a
 progression, adapt each chord, render against the complete timeline, and
@@ -309,12 +318,12 @@ explicit inputs; they do not inherit engine defaults.
 | Function | Input | Result and behavior |
 | --- | --- | --- |
 | `scaled.canAdaptPerformanceTemplate(template)` | `{ category: string }` | `boolean`: checks whether the category is Rhythms, Grooves, Bass, Melody, Passages, Phrases, Sequences, or StrummedSequences. Checks category support, not full template validity. |
-| `scaled.adaptPerformanceTemplate(input: ScaledT.AdaptPerformanceTemplateInputT)` | `template`, nonempty `midiNotes`, `key`, `scale`, `octave` | `ScaledT.PerformancePatternT`: shared adapter for all eight categories. Resolves notes for one voiced chord into fixed `midi` selectors, applies category-specific register/velocity behavior, removes duplicate same-pitch onsets, and clips same-pitch overlaps. |
+| `scaled.adaptPerformanceTemplate(input: ScaledT.AdaptPerformanceTemplateInputT)` | `template`, nonempty `midiNotes`, `key`, `scale`, `octave`, optional `chordRootPitch` | `ScaledT.PerformancePatternT`: shared adapter for all eight categories. Resolves notes for one voiced chord into fixed `midi` selectors, applies category-specific register/velocity behavior, removes duplicate same-pitch onsets, and clips same-pitch overlaps. |
 | `scaled.canAdaptRhythmTemplate(template: ScaledT.PerformanceTemplateT)` | A full factory template | `boolean`: checks category `Rhythms` and the supported register `octaveDifference === -1`. Other structural validation occurs during adaptation. |
 | `scaled.adaptRhythmTemplate(input: ScaledT.AdaptRhythmTemplateInputT)` | `template`, `targetNoteCount` | `ScaledT.PerformancePatternT`: expands a supported rhythm into chord-tone selectors, cycling source voice patterns to cover 1–128 target voices. Preserves source event velocities. |
 | `scaled.adaptStrummedTemplate(input: ScaledT.AdaptStrummedTemplateInputT)` | `template`, `targetNoteCount` | `ScaledT.PerformancePatternT`: uses the template ID to select a built-in strum for 1–12 voices. Returns chord-tone selectors with timing and velocities matching Scaler's default strum settings. Throws for an unknown strummed sequence. |
 | `scaled.getGrooveMidiNotes(input: ScaledT.GetGrooveMidiNotesInputT)` | Grooves `template`, nonempty `midiNotes` | `readonly number[]`: builds the source-index pitch vector from unique target pitch classes and source octave repetitions, including the template register shift. This is a pitch vector, not a playable pattern. |
-| `scaled.getScalePerformance(input: ScaledT.GetScalePerformanceInputT)` | `template`, `midiNotes`, `key`, `scale`, `octave` | `ScaledT.ScalePerformanceT`: supports Bass, Melody, Phrases, and Sequences. Selects applicable minor variants, maps source scale pitches, applies register and pitch-count rules, and returns the selected template with its source-index pitch vector. Entries may be `undefined` and must be skipped. |
+| `scaled.getScalePerformance(input: ScaledT.GetScalePerformanceInputT)` | `template`, nonempty `midiNotes`, `key`, `scale`, `octave`, optional `chordRootPitch` | `ScaledT.ScalePerformanceT`: supports Bass, Melody, Phrases, and Sequences. Selects chord-quality variants, maps pitches to chord harmony with scale passing tones, and applies register and pitch-count rules. The returned vector preserves source indices, including duplicate pitches and `undefined` entries for unmapped notes. |
 | `scaled.mapScaleNotes(input: ScaledT.MapScaleNotesInputT)` | `midiNotes`, `sourceKey`, `sourceScale`, `targetKey`, `targetScale`, optional `shouldPreserveNearestRegister = false` | `readonly number[]`: maps notes between scales, drops unmapped notes, sorts, and deduplicates exact MIDI notes. The optional flag shifts the mapped register by an octave when tonic distance exceeds six semitones. Throws if a mapped note leaves MIDI range. |
 
 Use the shared adapter for normal factory playback. The category-specific
@@ -337,6 +346,7 @@ const chord = scaled.getChordWithVoicing({ chord: 'Cmaj7', voicing: 'closed' })
 const performance = scaled.adaptPerformanceTemplate({
   template,
   midiNotes: chord.midiNotes,
+  chordRootPitch: chord.rootPitch,
   key: 'C',
   scale: 'major',
   octave: 4
@@ -405,11 +415,11 @@ factory renders.
 
 | Type | Fields |
 | --- | --- |
-| `ScaledT.AdaptPerformanceTemplateInputT` | `template: ScaledT.PerformanceTemplateT`, `midiNotes: readonly number[]`, `key: string`, `scale: string`, `octave: number`. |
+| `ScaledT.AdaptPerformanceTemplateInputT` | `template: ScaledT.PerformanceTemplateT`, `midiNotes: readonly number[]`, `key: string`, `scale: string`, `octave: number`, `chordRootPitch?: number` (integer 0–11). |
 | `ScaledT.AdaptRhythmTemplateInputT` | `template: ScaledT.PerformanceTemplateT`, `targetNoteCount: number`. |
 | `ScaledT.AdaptStrummedTemplateInputT` | `template: ScaledT.PerformanceTemplateT`, `targetNoteCount: number`. |
 | `ScaledT.GetGrooveMidiNotesInputT` | `template: ScaledT.PerformanceTemplateT`, `midiNotes: readonly number[]`. |
-| `ScaledT.GetScalePerformanceInputT` | `template: ScaledT.PerformanceTemplateT`, `midiNotes: readonly number[]`, `key: string`, `scale: string`, `octave: number`. |
+| `ScaledT.GetScalePerformanceInputT` | `template: ScaledT.PerformanceTemplateT`, `midiNotes: readonly number[]`, `key: string`, `scale: string`, `octave: number`, `chordRootPitch?: number` (integer 0–11). |
 | `ScaledT.ScalePerformanceT` | `template: ScaledT.PerformanceTemplateT`, `midiNotes: readonly (number \| undefined)[]`. |
 | `ScaledT.MapScaleNotesInputT` | `midiNotes: readonly number[]`, `sourceKey: string`, `sourceScale: string`, `targetKey: string`, `targetScale: string`, `shouldPreserveNearestRegister?: boolean`. |
 | `ScaledT.GetScaleVoicingChordsInputT` | `presetId: string`, `key: string`, `scale: string`, `octave?: number`. |
@@ -492,3 +502,7 @@ demo renderer across three progression scenarios, including MIDI export
 and per-category chord overrides.
 `npm run check:passages` checks all seven Passages against Scaler reference
 performances for four common chord voicings.
+`npm run check:chord-following` checks chord roots, quality, inversions,
+passing tones, source indices, and all 770 scale-based factory templates.
+`npm run check:playback` checks that the first bass pattern plays a four-bar
+progression and its highlight wraps only after all sixteen beats.

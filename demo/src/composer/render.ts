@@ -75,7 +75,7 @@ const getPerformedNotes = async (entry: model.EntryT, chord: ScaledT.ChordT, pro
   const template = templates.find((candidate) => { return candidate.id === identifier })
   if (!template) throw new Error('Unknown performance template')
   const octave = session.octave + entry.octaveOffset
-  const performance = scaled.adaptPerformanceTemplate({ template, midiNotes: chord.midiNotes, key: session.key, scale: session.scale, octave })
+  const performance = scaled.adaptPerformanceTemplate({ template, midiNotes: chord.midiNotes, chordRootPitch: chord.rootPitch, key: session.key, scale: session.scale, octave })
   const clip = scaled.applyPerformance({ progression, performance, key: session.key, scale: session.scale, octave })
   const notes = clip.notes.filter((note) => { return note.chordId === entry.id })
   return notes
