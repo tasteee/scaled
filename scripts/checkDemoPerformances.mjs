@@ -73,8 +73,9 @@ const checkOverrides = async (model, renderer, source, library) => {
     if (hasCheckedCategory) continue
     categories.add(template.category)
     const session = buildSession(model, scenarios[0], 'standard')
+    session.speedMultiplier = 0.5
     const originalSecondEntry = session.progression[1]
-    const secondEntry = { ...originalSecondEntry, performance: template.id, voicing: 'open', inversion: 1, octaveOffset: -1 }
+    const secondEntry = { ...originalSecondEntry, performance: template.id, speedMultiplier: 2, voicing: 'open', inversion: 1, octaveOffset: -1 }
     session.progression[1] = secondEntry
     const clip = await renderer.renderProgression(session)
     const label = `${template.category}: per-chord overrides`
@@ -94,7 +95,7 @@ const checkOverrides = async (model, renderer, source, library) => {
       const chord = renderer.getVoicedChord(entry, session)
       return { id: entry.id, chord, durationBeats: entry.durationBeats }
     })
-    const expectedClip = library.scaled.applyPerformance({ progression, performance, key: session.key, scale: session.scale })
+    const expectedClip = library.scaled.applyPerformance({ progression, performance, speedMultiplier: 2, key: session.key, scale: session.scale })
     const expectedNotes = expectedClip.notes.filter((note) => {
       return note.chordId === secondEntry.id
     })
@@ -107,6 +108,22 @@ const checkOverrides = async (model, renderer, source, library) => {
     checkedCount += 1
   }
   return checkedCount
+}
+
+const checkScenarioSpeeds = async (model, renderer, library, option, scenario) => {
+  for (const speedOption of model.speedOptions) {
+    const session = buildSession(model, scenario, option.value)
+    session.speedMultiplier = Number(speedOption.value)
+    const label = `${option.label} / ${scenario.key} ${scenario.scale} / ${speedOption.label}`
+    try {
+      const clip = await renderer.renderProgression(session)
+      checkClip(clip, session, label)
+      checkMidi(library, clip, session.tempo, label)
+    } catch (error) {
+      throw new Error(`Demo performance failed: ${label}`, { cause: error })
+    }
+  }
+  return model.speedOptions.length
 }
 
 try {
@@ -124,16 +141,8 @@ try {
   let checkedCount = 0
   for (const option of model.allPerformanceOptions) {
     for (const scenario of scenarios) {
-      const session = buildSession(model, scenario, option.value)
-      const label = `${option.label} / ${scenario.key} ${scenario.scale}`
-      try {
-        const clip = await renderer.renderProgression(session)
-        checkClip(clip, session, label)
-        checkMidi(library, clip, session.tempo, label)
-      } catch (error) {
-        throw new Error(`Demo performance failed: ${label}`, { cause: error })
-      }
-      checkedCount += 1
+      const scenarioCount = await checkScenarioSpeeds(model, renderer, library, option, scenario)
+      checkedCount += scenarioCount
     }
   }
   const overrideCount = await checkOverrides(model, renderer, source, library)

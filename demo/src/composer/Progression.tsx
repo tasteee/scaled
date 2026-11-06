@@ -38,6 +38,12 @@ const EntryControls = (props: { entry: model.EntryT; position: number; count: nu
   const handleDuration = (durationBars: number): void => { const durationBeats = durationBars * 4; updateEntry({ durationBeats }); return undefined }
   const handleVoicing = (voicing: string): void => { updateEntry({ voicing }); return undefined }
   const handlePerformance = (performance: string): void => { updateEntry({ performance }); return undefined }
+  const handleSpeed = (value: string): void => {
+    const shouldInherit = value === 'inherit'
+    const speedMultiplier = shouldInherit ? null : Number(value)
+    updateEntry({ speedMultiplier })
+    return undefined
+  }
   const handleInversion = (inversion: number): void => { updateEntry({ inversion }); return undefined }
   const handleOctaveOffset = (octaveOffset: number): void => { updateEntry({ octaveOffset }); return undefined }
   const handleMoveLeft = (): void => { store.moveEntry(props.entry.id, -1); return undefined }
@@ -46,6 +52,8 @@ const EntryControls = (props: { entry: model.EntryT; position: number; count: nu
   const isFirst = props.position === 0
   const isLast = props.position === props.count - 1
   const durationBars = props.entry.durationBeats / 4
+  const shouldInheritSpeed = props.entry.speedMultiplier === null
+  const speedValue = shouldInheritSpeed ? 'inherit' : String(props.entry.speedMultiplier)
   return (
     <div className="entryControls" aria-label="Selected chord settings">
       <div className="entryNumber"><fields.NumberField label="Duration · bars" value={durationBars} min={0.00390625} max={32} step={0.25} onChange={handleDuration} /></div>
@@ -53,6 +61,7 @@ const EntryControls = (props: { entry: model.EntryT; position: number; count: nu
       <div className="entryNumber"><fields.NumberField label="Inversion" value={props.entry.inversion} min={-4} max={7} step={1} onChange={handleInversion} /></div>
       <div className="entryNumber"><fields.NumberField label="Octave offset" value={props.entry.octaveOffset} min={-2} max={2} step={1} onChange={handleOctaveOffset} /></div>
       <div className="entryPerformance"><fields.Choice label="Performance" value={props.entry.performance} options={model.inheritedPerformanceOptions} onChange={handlePerformance} isSearchable /></div>
+      <div className="entryChoice"><fields.Choice label="Pattern speed" value={speedValue} options={model.inheritedSpeedOptions} onChange={handleSpeed} /></div>
       <div className="entryActions"><z-button kind="ghost" size="sm" onClick={handleMoveLeft} isDisabled={isFirst} aria-label="Move chord left">←</z-button><z-button kind="ghost" size="sm" onClick={handleMoveRight} isDisabled={isLast} aria-label="Move chord right">→</z-button><z-button kind="ghost" size="sm" tone="danger" onClick={handleRemove} aria-label="Remove chord">×</z-button></div>
     </div>
   )

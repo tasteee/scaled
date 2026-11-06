@@ -171,6 +171,7 @@ export type ProgressionChordT = {
 export type ApplyPerformanceInputT = {
   readonly progression: readonly ProgressionChordT[]
   readonly performance: PerformancePatternT
+  readonly speedMultiplier?: number
   readonly key?: string
   readonly scale?: string
   readonly octave?: number

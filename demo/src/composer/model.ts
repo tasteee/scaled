@@ -2,9 +2,9 @@ import { scaled } from '@tasteee/scaled'
 import type { ScaledT } from '@tasteee/scaled/types'
 
 export type OptionT = { value: string; label: string; disabled?: boolean }
-export type EntryT = { id: string; symbol: string; durationBeats: number; voicing: string; performance: string; inversion: number; octaveOffset: number; sourceSlot: number | null }
+export type EntryT = { id: string; symbol: string; durationBeats: number; voicing: string; performance: string; speedMultiplier: number | null; inversion: number; octaveOffset: number; sourceSlot: number | null }
 export type GridChordT = ScaledT.ChordT & { sourceSlot: number | null }
-export type SessionT = { key: string; scale: string; octave: number; voicing: string; performance: string; tempo: number; shouldPreviewPerformance: boolean; family: string; search: string; selectedId: string; progression: EntryT[]; error: string }
+export type SessionT = { key: string; scale: string; octave: number; voicing: string; performance: string; speedMultiplier: number; tempo: number; shouldPreviewPerformance: boolean; family: string; search: string; selectedId: string; progression: EntryT[]; error: string }
 
 export const keyOptions = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'].map((key): OptionT => {
   return { value: key, label: key }
@@ -33,6 +33,13 @@ export const sourcePerformanceOptions = scaled.performanceSummaries.map((templat
 export const allPerformanceOptions = performanceOptions.concat(sourcePerformanceOptions)
 export const inheritedVoicingOptions = [{ value: 'inherit', label: 'Use global voicing' }].concat(allVoicingOptions)
 export const inheritedPerformanceOptions = [{ value: 'inherit', label: 'Use global performance' }].concat(allPerformanceOptions)
+export const speedOptions: OptionT[] = [
+  { value: '0.25', label: '0.25×' },
+  { value: '0.5', label: '0.5×' },
+  { value: '1', label: '1×' },
+  { value: '2', label: '2×' }
+]
+export const inheritedSpeedOptions = [{ value: 'inherit', label: 'Use global speed' }].concat(speedOptions)
 export const familyOptions: OptionT[] = [
   { value: 'all', label: 'All variations' },
   { value: 'triad', label: 'Triads' },
@@ -45,11 +52,11 @@ export const familyOptions: OptionT[] = [
 ]
 
 export const getInitialSession = (): SessionT => {
-  return { key: 'C', scale: 'Major scale', octave: 4, voicing: 'rootPosition', performance: 'standard', tempo: 110, shouldPreviewPerformance: false, family: 'triad', search: '', selectedId: '', progression: [], error: '' }
+  return { key: 'C', scale: 'Major scale', octave: 4, voicing: 'rootPosition', performance: 'standard', speedMultiplier: 1, tempo: 110, shouldPreviewPerformance: false, family: 'triad', search: '', selectedId: '', progression: [], error: '' }
 }
 
 export const createEntry = (symbol: string, sourceSlot: number | null = null): EntryT => {
-  return { id: crypto.randomUUID(), symbol, durationBeats: 4, voicing: 'inherit', performance: 'inherit', inversion: 0, octaveOffset: 0, sourceSlot }
+  return { id: crypto.randomUUID(), symbol, durationBeats: 4, voicing: 'inherit', performance: 'inherit', speedMultiplier: null, inversion: 0, octaveOffset: 0, sourceSlot }
 }
 
 export const getFamilyFilter = (family: string): readonly ScaledT.ChordFamilyT[] | undefined => {

@@ -111,6 +111,21 @@ uses the same renderer for any positive duration.
 - The result is a `ScaledT.MidiClipT` with absolute MIDI notes. Inputs are not mutated.
 - One render may schedule at most 1,000,000 pattern events.
 
+Pass `speedMultiplier` to `applyPerformance` to play a pattern at a different
+speed. It defaults to `1`; `0.25` plays at quarter speed, `0.5` at half speed,
+and `2` at double speed. Event starts, durations, and loop length are divided
+by the multiplier. Chord durations, tempo, pitches, and velocities stay the
+same. Pattern phase remains continuous through chord changes, and notes
+still clip at chord boundaries. The source pattern is not mutated.
+
+```ts
+const fasterClip = scaled.applyPerformance({
+  progression,
+  performance: pattern,
+  speedMultiplier: 2
+})
+```
+
 ## MIDI files
 
 ```ts
@@ -250,7 +265,7 @@ They are not separate named exports from the root package.
 | `scaled.beatsToTicks(beats: number, ticksPerBeat: number)` | `number` | Multiplies beats by resolution without rounding. |
 | `scaled.barsToBeats(bars: number, timeSignature: ScaledT.TimeSignatureT)` | `number` | Computes `bars × numerator × 4 / denominator`; one bar of 6/8 is three quarter-note beats. |
 | `scaled.createPatternFromTicks(input: ScaledT.TickPatternT)` | `ScaledT.PerformancePatternT` | Converts loop and event timing from ticks to beats, preserving selectors, IDs, and velocities. |
-| `scaled.applyPerformance(input: ScaledT.ApplyPerformanceInputT)` | `ScaledT.MidiClipT` | Loops a pattern continuously over a progression. Defaults: `key = 'C'`, `scale = 'major'`, engine octave and velocity. An empty progression returns an empty, zero-duration clip. |
+| `scaled.applyPerformance(input: ScaledT.ApplyPerformanceInputT)` | `ScaledT.MidiClipT` | Loops a pattern continuously over a progression. Defaults: `speedMultiplier = 1`, `key = 'C'`, `scale = 'major'`, engine octave and velocity. An empty progression returns an empty, zero-duration clip. |
 | `scaled.getProgressionWithVoicing(inputs: ScaledT.GetChordWithVoicingInputT[])` | `readonly ScaledT.VoicedChordT[]` | Voices chords in order so `dynamic`/`dynamicBass` follow the previous chord. |
 | `scaled.exportMidi(input: ScaledT.ExportMidiInputT)` | `ScaledT.MidiFileT` | Encodes a format-0 MIDI file. Optional `fileName`. Defaults: `tempo = 120`, `ticksPerBeat = 480`, `channel = 0`, and 4/4. |
 
@@ -397,7 +412,7 @@ intervals are semitone offsets. Formula strings use degrees such as `1`,
 | `ScaledT.TickPatternEventT` | `id?: string`, `startTick: number`, `durationTicks: number`, `velocity?: number`, `pitch: ScaledT.PatternPitchSelectorT`. |
 | `ScaledT.TickPatternT` | `id: string`, `name: string`, `ticksPerBeat: number`, `durationTicks: number`, `events: readonly ScaledT.TickPatternEventT[]`. |
 | `ScaledT.ProgressionChordT` | `id?: string`, `chord: string \| ScaledT.ChordT`, `startBeat?: number`, `durationBeats: number`. Omitted starts follow the previous chord's end, beginning at beat 0. |
-| `ScaledT.ApplyPerformanceInputT` | `progression: readonly ScaledT.ProgressionChordT[]`, `performance: ScaledT.PerformancePatternT`, `key?: string`, `scale?: string`, `octave?: number`. |
+| `ScaledT.ApplyPerformanceInputT` | `progression: readonly ScaledT.ProgressionChordT[]`, `performance: ScaledT.PerformancePatternT`, `speedMultiplier?: number`, `key?: string`, `scale?: string`, `octave?: number`. |
 | `ScaledT.PerformanceNoteT` | `id: string`, `midiNote: number`, `startBeat: number`, `durationBeats: number`, `velocity: number`, `chordId: string`, `eventId: string`. |
 | `ScaledT.MidiClipT` | `durationBeats: number`, `notes: readonly ScaledT.PerformanceNoteT[]`, sorted by onset when rendered by the engine. |
 | `ScaledT.TimeSignatureT` | `numerator: number`, `denominator: number`. |
@@ -456,6 +471,8 @@ Numeric range and integer checks generally produce `RangeError` instances.
 - Pattern and chord durations must be finite and positive. Starts must be
   finite and nonnegative. Each event must start before the loop ends;
   its duration may extend beyond that loop and is clipped at chord/clip ends.
+- `speedMultiplier` must be finite and positive. Scaled pattern timing must
+  remain finite and representable. The scheduling limit applies after scaling.
 - Timing conversion resolution must be a positive safe integer. Standalone
   conversions accept finite fractional or negative positions without rounding.
   `barsToBeats` requires positive integer signature components.
@@ -494,12 +511,17 @@ compatible chords, and performance patterns with MIDI export. Change a
 selection, click the result to hear it, and copy the matching TypeScript
 example. Controls, cards, alerts and code blocks use actual Zest elements.
 Soundfont piano samples load on the first click and require a network
-connection. Playback and MIDI export use 120 BPM.
+connection. Playback and MIDI export share the chosen BPM and pattern speed.
+The composer offers 0.25×, 0.5×, 1×, and 2× speeds globally and per chord;
+per-chord speed defaults to the global setting. Sustained chords retain their
+full duration at every pattern speed.
 
 `npm run demo:typecheck` checks the app. `npm run demo:build` builds it.
 `npm run check:demo-performances` checks every dropdown choice through the
 demo renderer across three progression scenarios, including MIDI export
 and per-category chord overrides.
+It exercises all four pattern speeds. `npm run check:performance-speed`
+checks scaled timing, phase, chord clipping, dynamics, and invalid multipliers.
 `npm run check:passages` checks all seven Passages against Scaler reference
 performances for four common chord voicings.
 `npm run check:chord-following` checks chord roots, quality, inversions,

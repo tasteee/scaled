@@ -1,6 +1,6 @@
 .globalControls { display: flex; flex-direction: column; gap: var(--spacing-3); padding: var(--spacing-3); border-bottom: var(--line-width) solid var(--border); background: var(--card); }
 .primaryControls { display: grid; grid-template-columns: var(--key-width) var(--scale-width) repeat(2, var(--spacing-32)); gap: var(--spacing-3); }
-.secondaryControls { display: grid; grid-template-columns: var(--family-width) minmax(var(--spacing-32), calc(var(--spacing-40) + var(--spacing-8))) minmax(var(--spacing-32), var(--scale-width)) auto; gap: var(--spacing-3); align-items: end; }
+.secondaryControls { display: grid; grid-template-columns: var(--family-width) minmax(var(--spacing-32), calc(var(--spacing-40) + var(--spacing-8))) minmax(var(--spacing-32), var(--scale-width)) var(--spacing-24) auto; gap: var(--spacing-3); align-items: end; }
 .secondaryControls z-switch { justify-self: start; align-self: center; font-size: var(--font-size-small); padding-top: var(--spacing-5); }
 @media (max-width: 800px) {
   .primaryControls, .secondaryControls { grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -34,6 +34,21 @@ const validatePattern = (pattern: types.PerformancePatternT): void => {
   return undefined
 }
 
+const getPerformanceAtSpeed = (pattern: types.PerformancePatternT, speedMultiplier: number): types.PerformancePatternT => {
+  validation.validatePositiveNumber(speedMultiplier, 'Performance speedMultiplier')
+  const isOriginalSpeed = speedMultiplier === 1
+  if (isOriginalSpeed) return pattern
+  const durationBeats = pattern.durationBeats / speedMultiplier
+  const events = pattern.events.map((event): types.PatternEventT => {
+    const startBeat = event.startBeat / speedMultiplier
+    const durationBeats = event.durationBeats / speedMultiplier
+    return { ...event, startBeat, durationBeats }
+  })
+  const scaledPattern = { ...pattern, durationBeats, events }
+  validatePattern(scaledPattern)
+  return scaledPattern
+}
+
 const renderEvent = (input: RenderEventInputT): types.PerformanceNoteT | undefined => {
   const context = input.context
   const patternOffset = input.repeatPosition * context.pattern.durationBeats
@@ -88,6 +103,8 @@ const renderPattern = (context: RenderContextT): readonly types.PerformanceNoteT
 
 export const applyPerformance = (input: types.ApplyPerformanceInputT, options: Required<types.ScaledEngineOptionsT>): types.MidiClipT => {
   validatePattern(input.performance)
+  const speedMultiplier = input.speedMultiplier ?? 1
+  const performance = getPerformanceAtSpeed(input.performance, speedMultiplier)
   const octave = input.octave ?? options.octave
   const chordTimeline = timeline.buildTimeline(input.progression, octave)
   const finalChord = chordTimeline.at(-1)
@@ -99,7 +116,7 @@ export const applyPerformance = (input: types.ApplyPerformanceInputT, options: R
   const scale = chords.getScale({ key, scale: scaleName, octave }, octave)
   const notes = renderPattern({
     timeline: chordTimeline,
-    pattern: input.performance,
+    pattern: performance,
     scale,
     octave,
     velocity: options.velocity,

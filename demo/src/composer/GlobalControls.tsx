@@ -8,12 +8,18 @@ const handleScale = (scale: string): void => { store.updateSession({ scale }); r
 const handleOctave = (octave: number): void => { store.updateSession({ octave }); return undefined }
 const handleVoicing = (voicing: string): void => { store.updateSession({ voicing }); return undefined }
 const handlePerformance = (performance: string): void => { store.updateSession({ performance }); return undefined }
+const handleSpeed = (value: string): void => {
+  const speedMultiplier = Number(value)
+  store.updateSession({ speedMultiplier })
+  return undefined
+}
 const handleTempo = (tempo: number): void => { store.updateSession({ tempo }); return undefined }
 const handleFamily = (family: string): void => { store.updateSession({ family }); return undefined }
 const handlePreviewSwitch = (event: CustomEvent<{ checked: boolean }>): void => { store.updateSession({ shouldPreviewPerformance: event.detail.checked }); return undefined }
 
 export const GlobalControls = () => {
   const session: model.SessionT = store.session.use()
+  const speedValue = String(session.speedMultiplier)
   return (
     <div className="globalControls" aria-label="Global musical settings">
       <div className="primaryControls">
@@ -26,6 +32,7 @@ export const GlobalControls = () => {
         <fields.Choice label="Chord family" value={session.family} options={model.familyOptions} onChange={handleFamily} />
         <fields.Choice label="Global voicing" value={session.voicing} options={model.allVoicingOptions} onChange={handleVoicing} isSearchable />
         <fields.Choice label="Global performance" value={session.performance} options={model.allPerformanceOptions} onChange={handlePerformance} isSearchable />
+        <fields.Choice label="Pattern speed" value={speedValue} options={model.speedOptions} onChange={handleSpeed} />
         <z-switch label="Preview with performance" isChecked={session.shouldPreviewPerformance} onchange={handlePreviewSwitch}>Preview with performance</z-switch>
       </div>
     </div>

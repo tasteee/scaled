@@ -35,6 +35,7 @@
     "check:demo-performances": "node scripts/checkDemoPerformances.mjs",
     "check:chord-following": "npm run build && node scripts/checkChordFollowing.mjs",
     "check:playback": "node scripts/checkPlayback.mjs",
+    "check:performance-speed": "npm run build && node scripts/checkPerformanceSpeed.mjs",
     "check:passages": "npm run build && node scripts/checkPassageAdaptation.mjs"
   },
   "devDependencies": {
