@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@tasteee/scaled/catalog": ["./src/scalerCatalog.ts"],
+      "@tasteee/scaled": ["./src/index.ts"],
+      "@tasteee/scaled/types": ["./src/types.ts"],
+      "@tasteee/scaled/scaler": ["./src/scaler.ts"]
+    },
+    "declaration": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "examples/**/*.ts", "tsdown.config.ts"]
+}

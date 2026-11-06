@@ -1,0 +1,4497 @@
+{
+  "binarySha256": "c2958bfc8d329d0f9752e87b07940d9467941858d49d0ace47b90fbca864445e",
+  "category": "Passages",
+  "fixtures": [
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        62,
+        65,
+        69
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 77,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        48,
+        64,
+        67,
+        72
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 88,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        48,
+        49,
+        50
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        62,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "04e9cd12-c715-4f36-9b71-4a7ed5aaa242",
+      "templateName": "Passage 1",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 68,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        62,
+        65,
+        69
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 77,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        48,
+        64,
+        67,
+        72
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 88,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        48,
+        49,
+        50
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        62,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "0b59ccd9-563e-4124-9d59-fd1358bfb6df",
+      "templateName": "Passage 2",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 68,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        62,
+        65,
+        69
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 77,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        48,
+        64,
+        67,
+        72
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 88,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        48,
+        49,
+        50
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        62,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "b317f427-0a75-456f-95e4-71b0862fb36c",
+      "templateName": "Passage 3",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 68,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        62,
+        65,
+        69
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 77,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        48,
+        64,
+        67,
+        72
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 88,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        48,
+        49,
+        50
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        62,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "add8db0b-a193-4438-ae38-5d15f86e936c",
+      "templateName": "Passage 4",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 68,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 68,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        62,
+        65,
+        69
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 77,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        48,
+        64,
+        67,
+        72
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 88,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        48,
+        49,
+        50
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        62,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 3,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6869efd0-c58b-43f7-a0ef-415672c3df4a",
+      "templateName": "Passage 5",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 1.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.5,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2.4791666666666665,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.4791666666666665,
+          "durationBeats": 1.5,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 66,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 4,
+          "midiNote": 68,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 1,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 63,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 83,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        62,
+        65,
+        69
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 65,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 77,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 81,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        48,
+        64,
+        67,
+        72
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 91,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        48,
+        49,
+        50
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 49,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        62,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "6f65c751-5dcc-4d15-9b6a-4cd5a07396dc",
+      "templateName": "Passage 6",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.8958333333333335,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.3125,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.71875,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.20833333333333334,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.3229166666666667,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.34375,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 1.125,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 79,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 83,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        62,
+        65,
+        69
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 69,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 77,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 81,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 86,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        48,
+        64,
+        67,
+        72
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 67,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 91,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        48,
+        49,
+        50
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 48,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 50,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 61,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        62,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 75,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 86,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 62,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 72,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 73,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        }
+      ]
+    },
+    {
+      "templateId": "ab378acc-f01f-402c-b63c-dc261feb9f81",
+      "templateName": "Passage 7",
+      "midiNotes": [
+        60,
+        62,
+        64,
+        66,
+        68
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 3.875,
+          "midiNote": 60,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 3.2604166666666665,
+          "midiNote": 64,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2.8541666666666665,
+          "midiNote": 74,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.96875,
+          "midiNote": 76,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 1.625,
+          "midiNote": 84,
+          "velocity": 0.699999988079071
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 2.15625,
+          "midiNote": 86,
+          "velocity": 0.699999988079071
+        }
+      ]
+    }
+  ]
+}

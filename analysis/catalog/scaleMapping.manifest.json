@@ -1,0 +1,13 @@
+{
+  "binarySha256": "c2958bfc8d329d0f9752e87b07940d9467941858d49d0ace47b90fbca864445e",
+  "outputSha256": "c8dd1e76a9ea0e0e1653ef7534819ca5da1af39d5049e4751ef10e068a2a48f4",
+  "capturedPitchCount": 132848,
+  "observedAt": "2026-11-06T10:53:09.207Z",
+  "method": "Native 0x1807a1ce0 scalar mappings for all 76 source and target scales. Positive relative pitches use C4 through B4 with source and target in C; negative relative pitches use MIDI0 through10 with source in B and target in C. Portable code preserves signed-remainder behavior, sorting, deduplication and tonic/register transformations.",
+  "verification": {
+    "comparedVectors": 51984,
+    "sourceContextCount": 19,
+    "targetContextCount": 912,
+    "registerModeCount": 2
+  }
+}

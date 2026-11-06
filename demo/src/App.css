@@ -1,0 +1,27 @@
+body { overflow: auto; }
+.app { max-width: var(--page-width); padding: 0 var(--spacing-6) var(--spacing-8); margin: auto; }
+.studioHeader { display: flex; align-items: baseline; justify-content: space-between; padding: var(--spacing-5) 0; border-bottom: var(--line-width) solid var(--border); }
+.studioHeader h1 { font-size: var(--font-size-h2); font-weight: var(--font-weight-medium); line-height: 1.2; }
+.studioBrand { font-weight: var(--font-weight-medium); color: var(--muted-foreground); }
+.app .globalControls { padding: var(--spacing-4) 0; background: transparent; }
+.editorStatus:empty { display: none; }
+.editorStatus { margin-top: var(--spacing-3); }
+.app .progression { margin-top: var(--spacing-5); border: var(--line-width) solid var(--border); border-radius: var(--radius-md); }
+.app .progressionHeading { display: block; }
+.app .progressionTitle { flex-wrap: wrap; }
+.progressionTitle z-button:first-of-type { margin-left: auto; }
+.app .progressionTitle h2, .app .libraryTitle { font-size: var(--font-size-h3); }
+.app .progressionBar { background: var(--background); }
+.app .chordGrid { padding: var(--spacing-5) 0; }
+.app .chordTiles { grid-template-columns: repeat(auto-fit, minmax(var(--spacing-40), 1fr)); gap: var(--spacing-3); }
+.rootGroup { min-width: 0; }
+.rootGroup h3 { margin: 0; padding: var(--spacing-2) 0; font-size: var(--font-size-body); border-bottom: var(--line-width) solid var(--foreground); }
+.rootGroup .chordTile { border: 0; border-bottom: var(--line-width) solid var(--border); border-radius: 0; padding: var(--spacing-1); background: transparent; }
+.previewChord { min-width: 0; flex: 1; align-self: stretch; text-align: left; color: inherit; background: transparent; border: 0; font: inherit; cursor: pointer; overflow-x: auto; }
+.previewChord:active { color: var(--accent); }
+.previewChord:focus-visible { outline: var(--line-width) solid var(--foreground); }
+@media (max-width: 800px) {
+  .app { padding: 0 var(--spacing-3) var(--spacing-5); }
+  .app .chordTiles { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .entryControls > div { min-width: 0; flex: 1 1 var(--spacing-32); }
+}

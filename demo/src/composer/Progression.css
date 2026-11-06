@@ -1,0 +1,22 @@
+.progression { min-width: 0; border-top: var(--line-width) solid var(--border); background: var(--card); }
+.progressionHeading { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: end; gap: var(--spacing-3); padding: var(--spacing-3); border-bottom: var(--line-width) solid var(--border); }
+.progressionTitle { display: flex; align-items: center; gap: var(--spacing-2); min-height: var(--control-height-sm); }
+.progressionTitle h2 { font-size: var(--font-size-small); font-weight: var(--font-weight-medium); }
+.progressionTitle > span { color: var(--muted-foreground); font-size: var(--font-size-caption); white-space: nowrap; }
+.progressionBar { display: flex; overflow-x: auto; min-height: var(--spacing-24); gap: var(--spacing-2); padding: var(--spacing-3); }
+.progressionChord { display: flex; flex-direction: column; justify-content: center; flex: 0 0 auto; align-items: flex-start; color: var(--foreground); background: var(--card); font: inherit; white-space: nowrap; padding: var(--spacing-2) var(--spacing-3); border: var(--line-width) solid var(--border); border-radius: var(--radius-md); cursor: pointer; user-select: none; }
+.progressionChord strong { font-size: var(--font-size-body); font-weight: var(--font-weight-medium); }
+.progressionChord > span { color: var(--muted-foreground); font-size: var(--font-size-caption); }
+.progressionChord[aria-pressed="true"] { border-color: var(--foreground); background: var(--foreground); color: var(--background); }
+.progressionChord[data-playing="true"] { border-color: var(--accent-alt); }
+.progressionEmpty { align-self: center; color: var(--muted-foreground); font-size: var(--font-size-small); }
+.entryControls { display: flex; padding: var(--spacing-3); border-top: var(--line-width) solid var(--border); flex-wrap: wrap; justify-content: flex-start; align-items: end; gap: var(--spacing-2); min-width: 0; overflow-x: auto; }
+.entryNumber { flex: 0 0 calc(var(--spacing-24) + var(--spacing-2)); }
+.entryChoice { flex: 0 0 var(--spacing-36); }
+.entryPerformance { flex: 0 0 calc(var(--spacing-40) + var(--spacing-16)); }
+.entryActions { display: flex; gap: var(--spacing-1); flex-shrink: 0; }
+@media (max-width: 1000px) { .entryControls { justify-content: start; } }
+@media (max-width: 700px) { .progressionHeading { grid-template-columns: minmax(0, 1fr); } }
+
+.progressionChord[aria-pressed="true"] > span { color: inherit; }
+.progressionChord[data-playing="true"] { border-bottom: var(--spacing-1) solid var(--ring); }

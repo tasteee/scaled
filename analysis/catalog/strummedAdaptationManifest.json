@@ -1,0 +1,21 @@
+{
+  "binarySha256": "c2958bfc8d329d0f9752e87b07940d9467941858d49d0ace47b90fbca864445e",
+  "comparisonCount": 720,
+  "templateCount": 30,
+  "supportedVoiceCounts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "sha256": "fb46916b618ad221926109becd3d175570b1550b2d44d5e356e83a5562759c57",
+  "note": "Native fixed strum settings captured symbolically and verified against two independent input voicings for every voice count. No Scaler runtime dependency."
+}

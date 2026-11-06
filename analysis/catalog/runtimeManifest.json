@@ -1,0 +1,52 @@
+{
+  "pluginPath": "C:/Program Files/Steinberg/VSTPlugins/Scaler2.dll",
+  "binarySha256": "c2958bfc8d329d0f9752e87b07940d9467941858d49d0ace47b90fbca864445e",
+  "capturedAt": "2026-11-06T06:38:06.508Z",
+  "method": "Native music-resource initializers, native scale generators, decoded suggestion tries, and native prefix lookups in a short-lived helper process",
+  "wasEditorOpened": false,
+  "wasAudioProcessed": false,
+  "tables": [
+    {
+      "profile": "Tonal",
+      "entryCount": 23388,
+      "sourceKeyCount": 1296,
+      "isMatchingNativeLookup": true
+    },
+    {
+      "profile": "Per Scale",
+      "entryCount": 11683,
+      "sourceKeyCount": 679,
+      "isMatchingNativeLookup": true
+    }
+  ],
+  "scaleGroups": {
+    "scaleCount": 912
+  },
+  "files": [
+    {
+      "filename": "scaleChordGroups.json",
+      "byteLength": 31428998,
+      "sha256": "ff1150179ac018ff7a0b0480af36e61b65eb9be9a26e12193c0fcf74684a7a80"
+    },
+    {
+      "filename": "suggestionsTonal.json",
+      "byteLength": 3566993,
+      "sha256": "06ccc94d00549bfd32a81edc2d6574b32220d55174970f9fc6427fdbfccbb820"
+    },
+    {
+      "filename": "suggestionsPerScale.json",
+      "byteLength": 1824996,
+      "sha256": "9d8f5722109969a37ddf8f8e0b778368cf15dc8a7624f816a6614a4ec64d8f74"
+    },
+    {
+      "filename": "suggestionsTonal.json.raw.json",
+      "byteLength": 201975,
+      "sha256": "87bda637d28d1ffaead2ff22e527f2448dcc1022f10b1cdcb4638fa1f6dfd262"
+    },
+    {
+      "filename": "suggestionsPerScale.json.raw.json",
+      "byteLength": 112888,
+      "sha256": "6912ad476317c040b2c7c8b3ccb64ad319b29173b867747dcd67d843d9313045"
+    }
+  ]
+}

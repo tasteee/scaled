@@ -1,0 +1,4249 @@
+{
+  "binarySha256": "c2958bfc8d329d0f9752e87b07940d9467941858d49d0ace47b90fbca864445e",
+  "observedAt": "2026-11-06T10:44:53.739Z",
+  "ticksPerBeat": 960,
+  "inputVelocity": 0.7,
+  "parameters": {
+    "speedPercent": 100,
+    "mode": 0,
+    "scaleMode": 1,
+    "strumStyle": 1,
+    "strumSpeed": 1,
+    "strumExpression": 0,
+    "strumVoicing": 0,
+    "scaleKey": "zero bytes"
+  },
+  "limitations": [
+    "Input contains MIDI notes but no chordName metadata. These observations establish selected invocation output, not every UI default or category mode."
+  ],
+  "fixtures": [
+    {
+      "templateId": "1c66211c-eb7d-4745-b270-272f3a9d50fe",
+      "templateName": "Basic 1",
+      "category": "Bass",
+      "inputChord": "C",
+      "inputMidiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 0.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 2.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 4.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 6.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 8.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 10.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 12.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 14.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        }
+      ]
+    },
+    {
+      "templateId": "1c66211c-eb7d-4745-b270-272f3a9d50fe",
+      "templateName": "Basic 1",
+      "category": "Bass",
+      "inputChord": "Cm",
+      "inputMidiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 0.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 2.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 4.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 6.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 8.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 10.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 12.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 14.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        }
+      ]
+    },
+    {
+      "templateId": "1c66211c-eb7d-4745-b270-272f3a9d50fe",
+      "templateName": "Basic 1",
+      "category": "Bass",
+      "inputChord": "Cmaj7",
+      "inputMidiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 0.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 2.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 4.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 6.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 8.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 10.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 0.4791666666666667,
+          "midiNote": 48,
+          "velocity": 0.8303149938583374
+        },
+        {
+          "startBeat": 12.75,
+          "durationBeats": 0.5020833651224772,
+          "midiNote": 48,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 0.32916666666666666,
+          "midiNote": 48,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 0.5291666348775228,
+          "midiNote": 48,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 14.75,
+          "durationBeats": 0.7083333333333334,
+          "midiNote": 48,
+          "velocity": 0.8027558922767639
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 0.4041666666666667,
+          "midiNote": 60,
+          "velocity": 0.7870078682899475
+        }
+      ]
+    },
+    {
+      "templateId": "0f97ae6c-daef-4085-a020-8a0da1174286",
+      "templateName": "Color A 1",
+      "category": "Melody",
+      "inputChord": "C",
+      "inputMidiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 8,
+          "durationBeats": 0.6416666666666667,
+          "midiNote": 76,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 9,
+          "durationBeats": 0.46458333333333335,
+          "midiNote": 76,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 0.5395833333333333,
+          "midiNote": 76,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 11,
+          "durationBeats": 0.45,
+          "midiNote": 76,
+          "velocity": 0.515354335308075
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 0.5145833333333333,
+          "midiNote": 76,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 13,
+          "durationBeats": 0.49375,
+          "midiNote": 76,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 0.4479166666666667,
+          "midiNote": 76,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 15,
+          "durationBeats": 0.9583333333333334,
+          "midiNote": 76,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 0.6458333333333334,
+          "midiNote": 77,
+          "velocity": 0.5980315208435059
+        },
+        {
+          "startBeat": 5,
+          "durationBeats": 0.5583333333333333,
+          "midiNote": 77,
+          "velocity": 0.6846456527709961
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 0.5416666666666666,
+          "midiNote": 77,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 7,
+          "durationBeats": 0.6208333333333333,
+          "midiNote": 77,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.5125,
+          "midiNote": 79,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.55,
+          "midiNote": 79,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5062500317891439,
+          "midiNote": 79,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.9833333333333333,
+          "midiNote": 79,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.0125000635782877,
+          "midiNote": 88,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.6854166666666667,
+          "midiNote": 88,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.9854166666666667,
+          "midiNote": 89,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5875,
+          "midiNote": 89,
+          "velocity": 0.7476377487182617
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.9895833333333334,
+          "midiNote": 91,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.9708333333333333,
+          "midiNote": 91,
+          "velocity": 0.6177165508270264
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 0.99375,
+          "midiNote": 91,
+          "velocity": 0.6728346347808838
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 1.010416603088379,
+          "midiNote": 91,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 91,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 0.43333333333333335,
+          "midiNote": 91,
+          "velocity": 0.5429133772850037
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 1.0125000635782877,
+          "midiNote": 93,
+          "velocity": 0.6846456527709961
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 1.0333333333333334,
+          "midiNote": 93,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 8.5,
+          "durationBeats": 1.0333333333333334,
+          "midiNote": 96,
+          "velocity": 0.7909448742866516
+        },
+        {
+          "startBeat": 10.5,
+          "durationBeats": 0.9604166666666667,
+          "midiNote": 96,
+          "velocity": 0.6728346347808838
+        },
+        {
+          "startBeat": 12.5,
+          "durationBeats": 1.075,
+          "midiNote": 96,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 14.5,
+          "durationBeats": 1.1708333333333334,
+          "midiNote": 96,
+          "velocity": 0.5507873892784119
+        }
+      ]
+    },
+    {
+      "templateId": "0f97ae6c-daef-4085-a020-8a0da1174286",
+      "templateName": "Color A 1",
+      "category": "Melody",
+      "inputChord": "Cm",
+      "inputMidiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 8,
+          "durationBeats": 0.6416666666666667,
+          "midiNote": 75,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 9,
+          "durationBeats": 0.46458333333333335,
+          "midiNote": 75,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 0.5395833333333333,
+          "midiNote": 75,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 11,
+          "durationBeats": 0.45,
+          "midiNote": 75,
+          "velocity": 0.515354335308075
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 0.5145833333333333,
+          "midiNote": 75,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 13,
+          "durationBeats": 0.49375,
+          "midiNote": 75,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 0.4479166666666667,
+          "midiNote": 75,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 15,
+          "durationBeats": 0.9583333333333334,
+          "midiNote": 75,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 0.6458333333333334,
+          "midiNote": 77,
+          "velocity": 0.5980315208435059
+        },
+        {
+          "startBeat": 5,
+          "durationBeats": 0.5583333333333333,
+          "midiNote": 77,
+          "velocity": 0.6846456527709961
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 0.5416666666666666,
+          "midiNote": 77,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 7,
+          "durationBeats": 0.6208333333333333,
+          "midiNote": 77,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.5125,
+          "midiNote": 79,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.55,
+          "midiNote": 79,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5062500317891439,
+          "midiNote": 79,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.9833333333333333,
+          "midiNote": 79,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.0125000635782877,
+          "midiNote": 87,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.6854166666666667,
+          "midiNote": 87,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.9854166666666667,
+          "midiNote": 89,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5875,
+          "midiNote": 89,
+          "velocity": 0.7476377487182617
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.9895833333333334,
+          "midiNote": 91,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.9708333333333333,
+          "midiNote": 91,
+          "velocity": 0.6177165508270264
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 0.99375,
+          "midiNote": 91,
+          "velocity": 0.6728346347808838
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 1.010416603088379,
+          "midiNote": 91,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 91,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 0.43333333333333335,
+          "midiNote": 91,
+          "velocity": 0.5429133772850037
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 1.0125000635782877,
+          "midiNote": 92,
+          "velocity": 0.6846456527709961
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 1.0333333333333334,
+          "midiNote": 92,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 8.5,
+          "durationBeats": 1.0333333333333334,
+          "midiNote": 96,
+          "velocity": 0.7909448742866516
+        },
+        {
+          "startBeat": 10.5,
+          "durationBeats": 0.9604166666666667,
+          "midiNote": 96,
+          "velocity": 0.6728346347808838
+        },
+        {
+          "startBeat": 12.5,
+          "durationBeats": 1.075,
+          "midiNote": 96,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 14.5,
+          "durationBeats": 1.1708333333333334,
+          "midiNote": 96,
+          "velocity": 0.5507873892784119
+        }
+      ]
+    },
+    {
+      "templateId": "0f97ae6c-daef-4085-a020-8a0da1174286",
+      "templateName": "Color A 1",
+      "category": "Melody",
+      "inputChord": "Cmaj7",
+      "inputMidiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 8,
+          "durationBeats": 0.6416666666666667,
+          "midiNote": 76,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 9,
+          "durationBeats": 0.46458333333333335,
+          "midiNote": 76,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 0.5395833333333333,
+          "midiNote": 76,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 11,
+          "durationBeats": 0.45,
+          "midiNote": 76,
+          "velocity": 0.515354335308075
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 0.5145833333333333,
+          "midiNote": 76,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 13,
+          "durationBeats": 0.49375,
+          "midiNote": 76,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 0.4479166666666667,
+          "midiNote": 76,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 15,
+          "durationBeats": 0.9583333333333334,
+          "midiNote": 76,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 0.6458333333333334,
+          "midiNote": 77,
+          "velocity": 0.5980315208435059
+        },
+        {
+          "startBeat": 5,
+          "durationBeats": 0.5583333333333333,
+          "midiNote": 77,
+          "velocity": 0.6846456527709961
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 0.5416666666666666,
+          "midiNote": 77,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 7,
+          "durationBeats": 0.6208333333333333,
+          "midiNote": 77,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.5125,
+          "midiNote": 79,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.55,
+          "midiNote": 79,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5062500317891439,
+          "midiNote": 79,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.9833333333333333,
+          "midiNote": 79,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1.0125000635782877,
+          "midiNote": 88,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.6854166666666667,
+          "midiNote": 88,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.9854166666666667,
+          "midiNote": 89,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5875,
+          "midiNote": 89,
+          "velocity": 0.7476377487182617
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.9895833333333334,
+          "midiNote": 91,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.9708333333333333,
+          "midiNote": 91,
+          "velocity": 0.6177165508270264
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 0.99375,
+          "midiNote": 91,
+          "velocity": 0.6728346347808838
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 1.010416603088379,
+          "midiNote": 91,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 91,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 0.43333333333333335,
+          "midiNote": 91,
+          "velocity": 0.5429133772850037
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 1.0125000635782877,
+          "midiNote": 93,
+          "velocity": 0.6846456527709961
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 1.0333333333333334,
+          "midiNote": 93,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 8.5,
+          "durationBeats": 1.0333333333333334,
+          "midiNote": 96,
+          "velocity": 0.7909448742866516
+        },
+        {
+          "startBeat": 10.5,
+          "durationBeats": 0.9604166666666667,
+          "midiNote": 96,
+          "velocity": 0.6728346347808838
+        },
+        {
+          "startBeat": 12.5,
+          "durationBeats": 1.075,
+          "midiNote": 96,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 14.5,
+          "durationBeats": 1.1708333333333334,
+          "midiNote": 96,
+          "velocity": 0.5507873892784119
+        }
+      ]
+    },
+    {
+      "templateId": "acf344b6-15b3-45f0-b7a9-3774ba5cd0de",
+      "templateName": "Avant Garde 1",
+      "category": "Phrases",
+      "inputChord": "C",
+      "inputMidiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 16,
+          "durationBeats": 8.03125,
+          "midiNote": 52,
+          "velocity": 0.7318897247314453
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 7.979166666666667,
+          "midiNote": 53,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 8.020832824707032,
+          "midiNote": 55,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 57,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 7.979166666666667,
+          "midiNote": 57,
+          "velocity": 0.7397637367248535
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 8.020832824707032,
+          "midiNote": 59,
+          "velocity": 0.7279527187347412
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 60,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 60,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 7.958333333333333,
+          "midiNote": 60,
+          "velocity": 0.7318897247314453
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 64,
+          "velocity": 0.6925196647644043
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 64,
+          "velocity": 0.7279527187347412
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 67,
+          "velocity": 0.7082676887512207
+        },
+        {
+          "startBeat": 17,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.515354335308075
+        },
+        {
+          "startBeat": 19,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 21,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.515354335308075
+        },
+        {
+          "startBeat": 23,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 7,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5665354132652283
+        },
+        {
+          "startBeat": 9,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 11,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 13,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.60196852684021
+        },
+        {
+          "startBeat": 15,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.48779526352882385
+        },
+        {
+          "startBeat": 16.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5311023592948914
+        },
+        {
+          "startBeat": 17.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 18.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.49173229932785034
+        },
+        {
+          "startBeat": 19.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.47992125153541565
+        },
+        {
+          "startBeat": 20.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 21.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 22.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 23.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 25,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5311023592948914
+        },
+        {
+          "startBeat": 27,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 29,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 30.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5862205028533936
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 8.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 10.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.49566930532455444
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 12.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 14.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 24.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.49173229932785034
+        },
+        {
+          "startBeat": 25.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5114173293113708
+        },
+        {
+          "startBeat": 26.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5350393652915955
+        },
+        {
+          "startBeat": 27.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 28.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 29.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 31,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.641338586807251
+        },
+        {
+          "startBeat": 31.5,
+          "durationBeats": 0.5,
+          "midiNote": 74,
+          "velocity": 0.641338586807251
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 76,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 2,
+          "midiNote": 76,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 2,
+          "midiNote": 76,
+          "velocity": 0.7712598443031311
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 18,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7161417007446289
+        },
+        {
+          "startBeat": 14.020833333333334,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 22,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7751968502998352
+        },
+        {
+          "startBeat": 26,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7555117607116699
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 20,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 28,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7476377487182617
+        },
+        {
+          "startBeat": 30,
+          "durationBeats": 2,
+          "midiNote": 84,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 88,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 2,
+          "midiNote": 88,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 2,
+          "midiNote": 88,
+          "velocity": 0.7712598443031311
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 18,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7161417007446289
+        },
+        {
+          "startBeat": 14.020833333333334,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 22,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7751968502998352
+        },
+        {
+          "startBeat": 26,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7555117607116699
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 20,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 28,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 30,
+          "durationBeats": 2,
+          "midiNote": 96,
+          "velocity": 0.7870078682899475
+        }
+      ]
+    },
+    {
+      "templateId": "acf344b6-15b3-45f0-b7a9-3774ba5cd0de",
+      "templateName": "Avant Garde 1",
+      "category": "Phrases",
+      "inputChord": "Cm",
+      "inputMidiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 24,
+          "durationBeats": 8,
+          "midiNote": 50,
+          "velocity": 0.6688976287841797
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 8,
+          "midiNote": 53,
+          "velocity": 0.6688976287841797
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 8,
+          "midiNote": 53,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 56,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 8,
+          "midiNote": 56,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 8,
+          "midiNote": 56,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 60,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 60,
+          "velocity": 0.6925196647644043
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 8,
+          "midiNote": 60,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 63,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 63,
+          "velocity": 0.6452755928039551
+        },
+        {
+          "startBeat": 31.5,
+          "durationBeats": 0.5,
+          "midiNote": 65,
+          "velocity": 0.6098425388336182
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 67,
+          "velocity": 0.6255905628204346
+        },
+        {
+          "startBeat": 31,
+          "durationBeats": 0.5,
+          "midiNote": 68,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.4583333333333333,
+          "midiNote": 70,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.3958333333333333,
+          "midiNote": 70,
+          "velocity": 0.6216535568237305
+        },
+        {
+          "startBeat": 5,
+          "durationBeats": 0.40625,
+          "midiNote": 70,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 7,
+          "durationBeats": 0.3645833333333333,
+          "midiNote": 70,
+          "velocity": 0.46023622155189514
+        },
+        {
+          "startBeat": 9,
+          "durationBeats": 0.53125,
+          "midiNote": 70,
+          "velocity": 0.6728346347808838
+        },
+        {
+          "startBeat": 11,
+          "durationBeats": 0.40625,
+          "midiNote": 70,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 13,
+          "durationBeats": 0.4270833333333333,
+          "midiNote": 70,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 15,
+          "durationBeats": 0.4270833333333333,
+          "midiNote": 70,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 17,
+          "durationBeats": 0.53125,
+          "midiNote": 70,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 19,
+          "durationBeats": 0.4479166666666667,
+          "midiNote": 70,
+          "velocity": 0.43661415576934814
+        },
+        {
+          "startBeat": 21,
+          "durationBeats": 0.4375,
+          "midiNote": 70,
+          "velocity": 0.5822834372520447
+        },
+        {
+          "startBeat": 23,
+          "durationBeats": 0.5625,
+          "midiNote": 70,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 25,
+          "durationBeats": 0.53125,
+          "midiNote": 70,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 27,
+          "durationBeats": 0.4479166666666667,
+          "midiNote": 70,
+          "velocity": 0.43661415576934814
+        },
+        {
+          "startBeat": 29,
+          "durationBeats": 0.5,
+          "midiNote": 70,
+          "velocity": 0.5822834372520447
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.4479166666666667,
+          "midiNote": 72,
+          "velocity": 0.6452755928039551
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.6098425388336182
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.46875,
+          "midiNote": 72,
+          "velocity": 0.6098425388336182
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.9166666666666666,
+          "midiNote": 72,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5416666666666666,
+          "midiNote": 72,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.9375,
+          "midiNote": 72,
+          "velocity": 0.6885826587677002
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5625,
+          "midiNote": 72,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.9270833333333334,
+          "midiNote": 72,
+          "velocity": 0.6688976287841797
+        },
+        {
+          "startBeat": 8.5,
+          "durationBeats": 0.5104166984558105,
+          "midiNote": 72,
+          "velocity": 0.6216535568237305
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 0.9479166666666666,
+          "midiNote": 72,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 10.5,
+          "durationBeats": 0.4375,
+          "midiNote": 72,
+          "velocity": 0.49566930532455444
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 0.9375,
+          "midiNote": 72,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 12.5,
+          "durationBeats": 0.6041666666666666,
+          "midiNote": 72,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.6885826587677002
+        },
+        {
+          "startBeat": 14.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.6885826587677002
+        },
+        {
+          "startBeat": 16.5,
+          "durationBeats": 0.4375,
+          "midiNote": 72,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 17.5,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 72,
+          "velocity": 0.6137795448303223
+        },
+        {
+          "startBeat": 18.5,
+          "durationBeats": 0.4375,
+          "midiNote": 72,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 19.5,
+          "durationBeats": 0.96875,
+          "midiNote": 72,
+          "velocity": 0.48385825753211975
+        },
+        {
+          "startBeat": 20.5,
+          "durationBeats": 0.40625,
+          "midiNote": 72,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 21.5,
+          "durationBeats": 0.8958333333333334,
+          "midiNote": 72,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 22.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5311023592948914
+        },
+        {
+          "startBeat": 23.5,
+          "durationBeats": 0.6875,
+          "midiNote": 72,
+          "velocity": 0.6098425388336182
+        },
+        {
+          "startBeat": 24.5,
+          "durationBeats": 0.4479166666666667,
+          "midiNote": 72,
+          "velocity": 0.6098425388336182
+        },
+        {
+          "startBeat": 25.5,
+          "durationBeats": 0.9791666666666666,
+          "midiNote": 72,
+          "velocity": 0.6137795448303223
+        },
+        {
+          "startBeat": 26.5,
+          "durationBeats": 0.4375,
+          "midiNote": 72,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 27.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.48385825753211975
+        },
+        {
+          "startBeat": 28.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 29.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.6570866107940674
+        },
+        {
+          "startBeat": 30.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5311023592948914
+        },
+        {
+          "startBeat": 30,
+          "durationBeats": 2,
+          "midiNote": 74,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 75,
+          "velocity": 0.7712598443031311
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 2,
+          "midiNote": 75,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 2,
+          "midiNote": 77,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 2,
+          "midiNote": 77,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 18,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 22,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 26,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 2,
+          "midiNote": 80,
+          "velocity": 0.7082676887512207
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 2,
+          "midiNote": 80,
+          "velocity": 0.7476377487182617
+        },
+        {
+          "startBeat": 20,
+          "durationBeats": 2,
+          "midiNote": 80,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 28,
+          "durationBeats": 2,
+          "midiNote": 80,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 2,
+          "midiNote": 82,
+          "velocity": 0.7909448742866516
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 2,
+          "midiNote": 82,
+          "velocity": 0.7791338562965393
+        },
+        {
+          "startBeat": 30,
+          "durationBeats": 1.90625,
+          "midiNote": 86,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 87,
+          "velocity": 0.7712598443031311
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 2,
+          "midiNote": 87,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 2,
+          "midiNote": 89,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 2,
+          "midiNote": 89,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 18,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 22,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 26,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 2,
+          "midiNote": 92,
+          "velocity": 0.7082676887512207
+        },
+        {
+          "startBeat": 14,
+          "durationBeats": 2,
+          "midiNote": 92,
+          "velocity": 0.7476377487182617
+        },
+        {
+          "startBeat": 20,
+          "durationBeats": 2,
+          "midiNote": 92,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 28,
+          "durationBeats": 2,
+          "midiNote": 92,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 2,
+          "midiNote": 94,
+          "velocity": 0.7909448742866516
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 2,
+          "midiNote": 94,
+          "velocity": 0.7791338562965393
+        }
+      ]
+    },
+    {
+      "templateId": "acf344b6-15b3-45f0-b7a9-3774ba5cd0de",
+      "templateName": "Avant Garde 1",
+      "category": "Phrases",
+      "inputChord": "Cmaj7",
+      "inputMidiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 16,
+          "durationBeats": 8.03125,
+          "midiNote": 52,
+          "velocity": 0.7318897247314453
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 7.979166666666667,
+          "midiNote": 53,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 8.020832824707032,
+          "midiNote": 55,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 57,
+          "velocity": 0.7633858323097229
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 7.979166666666667,
+          "midiNote": 57,
+          "velocity": 0.7397637367248535
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 8.020832824707032,
+          "midiNote": 59,
+          "velocity": 0.7279527187347412
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 60,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 60,
+          "velocity": 0.767322838306427
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 7.958333333333333,
+          "midiNote": 60,
+          "velocity": 0.7318897247314453
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 64,
+          "velocity": 0.6925196647644043
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 8,
+          "midiNote": 64,
+          "velocity": 0.7279527187347412
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 8,
+          "midiNote": 67,
+          "velocity": 0.7082676887512207
+        },
+        {
+          "startBeat": 17,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.515354335308075
+        },
+        {
+          "startBeat": 19,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 21,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.515354335308075
+        },
+        {
+          "startBeat": 23,
+          "durationBeats": 0.5,
+          "midiNote": 69,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 7,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5665354132652283
+        },
+        {
+          "startBeat": 9,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 11,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 13,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.60196852684021
+        },
+        {
+          "startBeat": 15,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.48779526352882385
+        },
+        {
+          "startBeat": 16.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5311023592948914
+        },
+        {
+          "startBeat": 17.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 18.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.49173229932785034
+        },
+        {
+          "startBeat": 19.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.47992125153541565
+        },
+        {
+          "startBeat": 20.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 21.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 22.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 23.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 25,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5311023592948914
+        },
+        {
+          "startBeat": 27,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 29,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 30.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5862205028533936
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 8.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 9.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 10.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.49566930532455444
+        },
+        {
+          "startBeat": 11.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 12.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 13.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5783464312553406
+        },
+        {
+          "startBeat": 14.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 15.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 24.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.49173229932785034
+        },
+        {
+          "startBeat": 25.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5114173293113708
+        },
+        {
+          "startBeat": 26.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5350393652915955
+        },
+        {
+          "startBeat": 27.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 28.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.5389763712882996
+        },
+        {
+          "startBeat": 29.5,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 31,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.641338586807251
+        },
+        {
+          "startBeat": 31.5,
+          "durationBeats": 0.5,
+          "midiNote": 74,
+          "velocity": 0.641338586807251
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 76,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 2,
+          "midiNote": 76,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 2,
+          "midiNote": 76,
+          "velocity": 0.7712598443031311
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 18,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 2,
+          "midiNote": 79,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7161417007446289
+        },
+        {
+          "startBeat": 14.020833333333334,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 22,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7751968502998352
+        },
+        {
+          "startBeat": 26,
+          "durationBeats": 2,
+          "midiNote": 81,
+          "velocity": 0.7555117607116699
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 20,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 28,
+          "durationBeats": 2,
+          "midiNote": 83,
+          "velocity": 0.7476377487182617
+        },
+        {
+          "startBeat": 30,
+          "durationBeats": 2,
+          "midiNote": 84,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 2,
+          "midiNote": 88,
+          "velocity": 0.7240157127380371
+        },
+        {
+          "startBeat": 8,
+          "durationBeats": 2,
+          "midiNote": 88,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 16,
+          "durationBeats": 2,
+          "midiNote": 88,
+          "velocity": 0.7712598443031311
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 10,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.680708646774292
+        },
+        {
+          "startBeat": 18,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 24,
+          "durationBeats": 2,
+          "midiNote": 91,
+          "velocity": 0.7594488263130188
+        },
+        {
+          "startBeat": 6,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7161417007446289
+        },
+        {
+          "startBeat": 14.020833333333334,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 22,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7751968502998352
+        },
+        {
+          "startBeat": 26,
+          "durationBeats": 2,
+          "midiNote": 93,
+          "velocity": 0.7555117607116699
+        },
+        {
+          "startBeat": 4,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 12,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7358267307281494
+        },
+        {
+          "startBeat": 20,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7437007427215576
+        },
+        {
+          "startBeat": 28,
+          "durationBeats": 2,
+          "midiNote": 95,
+          "velocity": 0.7870078682899475
+        },
+        {
+          "startBeat": 30,
+          "durationBeats": 2,
+          "midiNote": 96,
+          "velocity": 0.7870078682899475
+        }
+      ]
+    },
+    {
+      "templateId": "ad9c2c41-353f-4dda-9052-dfc24c9f8add",
+      "templateName": "Basic 1",
+      "category": "Sequences",
+      "inputChord": "C",
+      "inputMidiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0.75,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 2.25,
+          "durationBeats": 0.75,
+          "midiNote": 64,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.75,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        }
+      ]
+    },
+    {
+      "templateId": "ad9c2c41-353f-4dda-9052-dfc24c9f8add",
+      "templateName": "Basic 1",
+      "category": "Sequences",
+      "inputChord": "Cm",
+      "inputMidiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0.75,
+          "durationBeats": 0.5,
+          "midiNote": 63,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 2.25,
+          "durationBeats": 0.75,
+          "midiNote": 63,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.75,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        }
+      ]
+    },
+    {
+      "templateId": "ad9c2c41-353f-4dda-9052-dfc24c9f8add",
+      "templateName": "Basic 1",
+      "category": "Sequences",
+      "inputChord": "Cmaj7",
+      "inputMidiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0.75,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 2.25,
+          "durationBeats": 0.75,
+          "midiNote": 64,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 0.75,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 72,
+          "velocity": 0.7003936767578125
+        }
+      ]
+    },
+    {
+      "templateId": "69a50343-283f-4a0a-8ee8-5c78739d9f40",
+      "templateName": "Accento",
+      "category": "Grooves",
+      "inputChord": "C",
+      "inputMidiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6177165508270264
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6255905628204346
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6334645748138428
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.641338586807251
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2,
+          "midiNote": 72,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.25,
+          "midiNote": 72,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.25,
+          "midiNote": 76,
+          "velocity": 0.720078706741333
+        }
+      ]
+    },
+    {
+      "templateId": "69a50343-283f-4a0a-8ee8-5c78739d9f40",
+      "templateName": "Accento",
+      "category": "Grooves",
+      "inputChord": "Cm",
+      "inputMidiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.5,
+          "midiNote": 63,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6177165508270264
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6255905628204346
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6334645748138428
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.641338586807251
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2,
+          "midiNote": 72,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.25,
+          "midiNote": 72,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.25,
+          "midiNote": 75,
+          "velocity": 0.720078706741333
+        }
+      ]
+    },
+    {
+      "templateId": "69a50343-283f-4a0a-8ee8-5c78739d9f40",
+      "templateName": "Accento",
+      "category": "Grooves",
+      "inputChord": "Cmaj7",
+      "inputMidiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 2,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5507873892784119
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6177165508270264
+        },
+        {
+          "startBeat": 1.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6255905628204346
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6334645748138428
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.641338586807251
+        },
+        {
+          "startBeat": 0,
+          "durationBeats": 1,
+          "midiNote": 72,
+          "velocity": 0.6492125988006592
+        },
+        {
+          "startBeat": 1,
+          "durationBeats": 2,
+          "midiNote": 72,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 3.5,
+          "durationBeats": 0.25,
+          "midiNote": 72,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 3,
+          "durationBeats": 0.25,
+          "midiNote": 76,
+          "velocity": 0.720078706741333
+        }
+      ]
+    },
+    {
+      "templateId": "51b0c0f3-d626-40da-b20d-49020df28678",
+      "templateName": "Fast 1",
+      "category": "StrummedSequences",
+      "inputChord": "C",
+      "inputMidiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0.0020833333333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 0.5614113648732503,
+          "durationBeats": 0.43233866691589357,
+          "midiNote": 60,
+          "velocity": 0.6226298809051514
+        },
+        {
+          "startBeat": 1.0020833333333334,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 1.5614113330841064,
+          "durationBeats": 1.4323386669158935,
+          "midiNote": 60,
+          "velocity": 0.6407400965690613
+        },
+        {
+          "startBeat": 3.002083333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 3.5614113330841066,
+          "durationBeats": 1.4323386669158935,
+          "midiNote": 60,
+          "velocity": 0.6081417202949524
+        },
+        {
+          "startBeat": 5.002083333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 5.561411333084107,
+          "durationBeats": 0.9323386669158935,
+          "midiNote": 60,
+          "velocity": 0.6008976101875305
+        },
+        {
+          "startBeat": 6.502083333333333,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 60,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 7.561411333084107,
+          "durationBeats": 0.43025533358256024,
+          "midiNote": 60,
+          "velocity": 0.5900314450263977
+        },
+        {
+          "startBeat": 0.03808333476384481,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.6685984134674072
+        },
+        {
+          "startBeat": 0.5308833658695221,
+          "durationBeats": 0.4628666659196218,
+          "midiNote": 64,
+          "velocity": 0.6497007608413696
+        },
+        {
+          "startBeat": 1.0380833347638447,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.6383621692657471
+        },
+        {
+          "startBeat": 1.5308833340803782,
+          "durationBeats": 1.462866665919622,
+          "midiNote": 64,
+          "velocity": 0.6685984134674072
+        },
+        {
+          "startBeat": 3.038083334763845,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.5060787200927734
+        },
+        {
+          "startBeat": 3.5308833340803782,
+          "durationBeats": 1.462866665919622,
+          "midiNote": 64,
+          "velocity": 0.6345826387405396
+        },
+        {
+          "startBeat": 5.0380833347638445,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.4796220362186432
+        },
+        {
+          "startBeat": 5.530883334080378,
+          "durationBeats": 0.9628666659196218,
+          "midiNote": 64,
+          "velocity": 0.6270235776901245
+        },
+        {
+          "startBeat": 6.5380833347638445,
+          "durationBeats": 0.9556666652361552,
+          "midiNote": 64,
+          "velocity": 0.5363149046897888
+        },
+        {
+          "startBeat": 7.530883334080378,
+          "durationBeats": 0.46078333258628845,
+          "midiNote": 64,
+          "velocity": 0.6156850457191467
+        },
+        {
+          "startBeat": 0.07624333302179973,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.6407400965690613
+        },
+        {
+          "startBeat": 0.5020833651224772,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 67,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 1.0762433330217998,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.6117637157440186
+        },
+        {
+          "startBeat": 1.5020833333333334,
+          "durationBeats": 1.4916666666666667,
+          "midiNote": 67,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 3.0762433330217998,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.484992116689682
+        },
+        {
+          "startBeat": 3.502083333333333,
+          "durationBeats": 1.4916666666666667,
+          "midiNote": 67,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 5.076243333021799,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.4596377909183502
+        },
+        {
+          "startBeat": 5.502083333333333,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 67,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 6.576243333021799,
+          "durationBeats": 0.9175066669782003,
+          "midiNote": 67,
+          "velocity": 0.5139684677124023
+        },
+        {
+          "startBeat": 7.502083333333333,
+          "durationBeats": 0.4895833333333333,
+          "midiNote": 67,
+          "velocity": 0.641338586807251
+        }
+      ]
+    },
+    {
+      "templateId": "51b0c0f3-d626-40da-b20d-49020df28678",
+      "templateName": "Fast 1",
+      "category": "StrummedSequences",
+      "inputChord": "Cm",
+      "inputMidiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0.0020833333333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 0.5614113648732503,
+          "durationBeats": 0.43233866691589357,
+          "midiNote": 60,
+          "velocity": 0.6226298809051514
+        },
+        {
+          "startBeat": 1.0020833333333334,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 1.5614113330841064,
+          "durationBeats": 1.4323386669158935,
+          "midiNote": 60,
+          "velocity": 0.6407400965690613
+        },
+        {
+          "startBeat": 3.002083333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 3.5614113330841066,
+          "durationBeats": 1.4323386669158935,
+          "midiNote": 60,
+          "velocity": 0.6081417202949524
+        },
+        {
+          "startBeat": 5.002083333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 5.561411333084107,
+          "durationBeats": 0.9323386669158935,
+          "midiNote": 60,
+          "velocity": 0.6008976101875305
+        },
+        {
+          "startBeat": 6.502083333333333,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 60,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 7.561411333084107,
+          "durationBeats": 0.43025533358256024,
+          "midiNote": 60,
+          "velocity": 0.5900314450263977
+        },
+        {
+          "startBeat": 0.03808333476384481,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 63,
+          "velocity": 0.6685984134674072
+        },
+        {
+          "startBeat": 0.5308833658695221,
+          "durationBeats": 0.4628666659196218,
+          "midiNote": 63,
+          "velocity": 0.6497007608413696
+        },
+        {
+          "startBeat": 1.0380833347638447,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 63,
+          "velocity": 0.6383621692657471
+        },
+        {
+          "startBeat": 1.5308833340803782,
+          "durationBeats": 1.462866665919622,
+          "midiNote": 63,
+          "velocity": 0.6685984134674072
+        },
+        {
+          "startBeat": 3.038083334763845,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 63,
+          "velocity": 0.5060787200927734
+        },
+        {
+          "startBeat": 3.5308833340803782,
+          "durationBeats": 1.462866665919622,
+          "midiNote": 63,
+          "velocity": 0.6345826387405396
+        },
+        {
+          "startBeat": 5.0380833347638445,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 63,
+          "velocity": 0.4796220362186432
+        },
+        {
+          "startBeat": 5.530883334080378,
+          "durationBeats": 0.9628666659196218,
+          "midiNote": 63,
+          "velocity": 0.6270235776901245
+        },
+        {
+          "startBeat": 6.5380833347638445,
+          "durationBeats": 0.9556666652361552,
+          "midiNote": 63,
+          "velocity": 0.5363149046897888
+        },
+        {
+          "startBeat": 7.530883334080378,
+          "durationBeats": 0.46078333258628845,
+          "midiNote": 63,
+          "velocity": 0.6156850457191467
+        },
+        {
+          "startBeat": 0.07624333302179973,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.6407400965690613
+        },
+        {
+          "startBeat": 0.5020833651224772,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 67,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 1.0762433330217998,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.6117637157440186
+        },
+        {
+          "startBeat": 1.5020833333333334,
+          "durationBeats": 1.4916666666666667,
+          "midiNote": 67,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 3.0762433330217998,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.484992116689682
+        },
+        {
+          "startBeat": 3.502083333333333,
+          "durationBeats": 1.4916666666666667,
+          "midiNote": 67,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 5.076243333021799,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.4596377909183502
+        },
+        {
+          "startBeat": 5.502083333333333,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 67,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 6.576243333021799,
+          "durationBeats": 0.9175066669782003,
+          "midiNote": 67,
+          "velocity": 0.5139684677124023
+        },
+        {
+          "startBeat": 7.502083333333333,
+          "durationBeats": 0.4895833333333333,
+          "midiNote": 67,
+          "velocity": 0.641338586807251
+        }
+      ]
+    },
+    {
+      "templateId": "51b0c0f3-d626-40da-b20d-49020df28678",
+      "templateName": "Fast 1",
+      "category": "StrummedSequences",
+      "inputChord": "Cmaj7",
+      "inputMidiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0.0020833333333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 0.5937710424264272,
+          "durationBeats": 0.3999789893627167,
+          "midiNote": 60,
+          "velocity": 0.5955590009689331
+        },
+        {
+          "startBeat": 1.0020833333333334,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.6649606227874756
+        },
+        {
+          "startBeat": 1.5937710106372833,
+          "durationBeats": 1.3999789893627166,
+          "midiNote": 60,
+          "velocity": 0.6128818392753601
+        },
+        {
+          "startBeat": 3.002083333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.5271653532981873
+        },
+        {
+          "startBeat": 3.5937710106372833,
+          "durationBeats": 1.3999789893627166,
+          "midiNote": 60,
+          "velocity": 0.5817007422447205
+        },
+        {
+          "startBeat": 5.002083333333333,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 60,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 5.593771010637283,
+          "durationBeats": 0.8999789893627167,
+          "midiNote": 60,
+          "velocity": 0.5747715830802917
+        },
+        {
+          "startBeat": 6.502083333333333,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 60,
+          "velocity": 0.5586614012718201
+        },
+        {
+          "startBeat": 7.593771010637283,
+          "durationBeats": 0.3978956560293833,
+          "midiNote": 60,
+          "velocity": 0.5643779039382935
+        },
+        {
+          "startBeat": 0.03808333476384481,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.6685984134674072
+        },
+        {
+          "startBeat": 0.5614113648732503,
+          "durationBeats": 0.43233866691589357,
+          "midiNote": 64,
+          "velocity": 0.6226298809051514
+        },
+        {
+          "startBeat": 1.0380833347638447,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.6383621692657471
+        },
+        {
+          "startBeat": 1.5614113330841064,
+          "durationBeats": 1.4323386669158935,
+          "midiNote": 64,
+          "velocity": 0.6407400965690613
+        },
+        {
+          "startBeat": 3.038083334763845,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.5060787200927734
+        },
+        {
+          "startBeat": 3.5614113330841066,
+          "durationBeats": 1.4323386669158935,
+          "midiNote": 64,
+          "velocity": 0.6081417202949524
+        },
+        {
+          "startBeat": 5.0380833347638445,
+          "durationBeats": 0.4556666652361552,
+          "midiNote": 64,
+          "velocity": 0.4796220362186432
+        },
+        {
+          "startBeat": 5.561411333084107,
+          "durationBeats": 0.9323386669158935,
+          "midiNote": 64,
+          "velocity": 0.6008976101875305
+        },
+        {
+          "startBeat": 6.5380833347638445,
+          "durationBeats": 0.9556666652361552,
+          "midiNote": 64,
+          "velocity": 0.5363149046897888
+        },
+        {
+          "startBeat": 7.561411333084107,
+          "durationBeats": 0.43025533358256024,
+          "midiNote": 64,
+          "velocity": 0.5900314450263977
+        },
+        {
+          "startBeat": 0.07624333302179973,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.6407400965690613
+        },
+        {
+          "startBeat": 0.5308833658695221,
+          "durationBeats": 0.4628666659196218,
+          "midiNote": 67,
+          "velocity": 0.6497007608413696
+        },
+        {
+          "startBeat": 1.0762433330217998,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.6117637157440186
+        },
+        {
+          "startBeat": 1.5308833340803782,
+          "durationBeats": 1.462866665919622,
+          "midiNote": 67,
+          "velocity": 0.6685984134674072
+        },
+        {
+          "startBeat": 3.0762433330217998,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.484992116689682
+        },
+        {
+          "startBeat": 3.5308833340803782,
+          "durationBeats": 1.462866665919622,
+          "midiNote": 67,
+          "velocity": 0.6345826387405396
+        },
+        {
+          "startBeat": 5.076243333021799,
+          "durationBeats": 0.41750666697820027,
+          "midiNote": 67,
+          "velocity": 0.4596377909183502
+        },
+        {
+          "startBeat": 5.530883334080378,
+          "durationBeats": 0.9628666659196218,
+          "midiNote": 67,
+          "velocity": 0.6270235776901245
+        },
+        {
+          "startBeat": 6.576243333021799,
+          "durationBeats": 0.9175066669782003,
+          "midiNote": 67,
+          "velocity": 0.5139684677124023
+        },
+        {
+          "startBeat": 7.530883334080378,
+          "durationBeats": 0.46078333258628845,
+          "midiNote": 67,
+          "velocity": 0.6156850457191467
+        },
+        {
+          "startBeat": 0.1166929284731547,
+          "durationBeats": 0.3770570715268453,
+          "midiNote": 71,
+          "velocity": 0.6128818392753601
+        },
+        {
+          "startBeat": 0.5020833651224772,
+          "durationBeats": 0.49166666666666664,
+          "midiNote": 71,
+          "velocity": 0.6767716407775879
+        },
+        {
+          "startBeat": 1.1166929284731546,
+          "durationBeats": 0.3770570715268453,
+          "midiNote": 71,
+          "velocity": 0.5851653218269348
+        },
+        {
+          "startBeat": 1.5020833333333334,
+          "durationBeats": 1.4916666666666667,
+          "midiNote": 71,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 3.116692928473155,
+          "durationBeats": 0.3770570715268453,
+          "midiNote": 71,
+          "velocity": 0.4639054834842682
+        },
+        {
+          "startBeat": 3.502083333333333,
+          "durationBeats": 1.4916666666666667,
+          "midiNote": 71,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 5.116692928473155,
+          "durationBeats": 0.3770570715268453,
+          "midiNote": 71,
+          "velocity": 0.43965351581573486
+        },
+        {
+          "startBeat": 5.502083333333333,
+          "durationBeats": 0.9916666666666667,
+          "midiNote": 71,
+          "velocity": 0.6531496047973633
+        },
+        {
+          "startBeat": 6.616692928473155,
+          "durationBeats": 0.8770570715268453,
+          "midiNote": 71,
+          "velocity": 0.4916220009326935
+        },
+        {
+          "startBeat": 7.502083333333333,
+          "durationBeats": 0.4895833333333333,
+          "midiNote": 71,
+          "velocity": 0.641338586807251
+        }
+      ]
+    },
+    {
+      "templateId": "35b44227-b89d-4e3d-83ee-ceefd673053f",
+      "templateName": "Castrato",
+      "category": "Rhythms",
+      "inputChord": "C",
+      "inputMidiNotes": [
+        60,
+        64,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 60,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.6295275688171387
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.6885826587677002
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 64,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.5665354132652283
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.6059055328369141
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 67,
+          "velocity": 0.6452755928039551
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6137795448303223
+        }
+      ]
+    },
+    {
+      "templateId": "35b44227-b89d-4e3d-83ee-ceefd673053f",
+      "templateName": "Castrato",
+      "category": "Rhythms",
+      "inputChord": "Cm",
+      "inputMidiNotes": [
+        60,
+        63,
+        67
+      ],
+      "notes": [
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 60,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.6295275688171387
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 63,
+          "velocity": 0.6885826587677002
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 63,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 63,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 63,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 63,
+          "velocity": 0.5665354132652283
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 63,
+          "velocity": 0.6059055328369141
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 67,
+          "velocity": 0.6452755928039551
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6137795448303223
+        }
+      ]
+    },
+    {
+      "templateId": "35b44227-b89d-4e3d-83ee-ceefd673053f",
+      "templateName": "Castrato",
+      "category": "Rhythms",
+      "inputChord": "Cmaj7",
+      "inputMidiNotes": [
+        60,
+        64,
+        67,
+        71
+      ],
+      "notes": [
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 60,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 60,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 60,
+          "velocity": 0.6295275688171387
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 64,
+          "velocity": 0.6885826587677002
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 64,
+          "velocity": 0.6374015808105469
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.49960631132125854
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.5468503832817078
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.5665354132652283
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 64,
+          "velocity": 0.6059055328369141
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 67,
+          "velocity": 0.6964566707611084
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 67,
+          "velocity": 0.6452755928039551
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.5074803233146667
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.554724395275116
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.5744094252586365
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 67,
+          "velocity": 0.6137795448303223
+        },
+        {
+          "startBeat": 0.5,
+          "durationBeats": 1,
+          "midiNote": 71,
+          "velocity": 0.7122046947479248
+        },
+        {
+          "startBeat": 2.5,
+          "durationBeats": 0.375,
+          "midiNote": 71,
+          "velocity": 0.6610236167907715
+        },
+        {
+          "startBeat": 4.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5232283473014832
+        },
+        {
+          "startBeat": 5.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5704724192619324
+        },
+        {
+          "startBeat": 6.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.5901575088500977
+        },
+        {
+          "startBeat": 7.5,
+          "durationBeats": 0.5,
+          "midiNote": 71,
+          "velocity": 0.6295275688171387
+        }
+      ]
+    }
+  ]
+}

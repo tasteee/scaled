@@ -1,0 +1,90 @@
+{
+  "binaryPath": "C:/Program Files/Steinberg/VSTPlugins/Scaler2.dll",
+  "binarySha256": "c2958bfc8d329d0f9752e87b07940d9467941858d49d0ace47b90fbca864445e",
+  "catalogs": [
+    {
+      "name": "chordTypes",
+      "pointerAddress": "0x182d7d740",
+      "address": "0x182a8b290",
+      "fileOffset": 44607120,
+      "byteLength": 100711,
+      "sha256": "c610987f3588bbd7cd95ca0828a615db1ce49d698f9538c0a04720066f9c8f57",
+      "entryCount": 255,
+      "firstEntries": [
+        "5",
+        "6",
+        "7",
+        "9",
+        "11",
+        "13",
+        "maj",
+        "min",
+        "dim",
+        "aug",
+        "sus2",
+        "sus4"
+      ]
+    },
+    {
+      "name": "scales",
+      "pointerAddress": "0x182d7d748",
+      "address": "0x182a81d70",
+      "fileOffset": 44568944,
+      "byteLength": 38173,
+      "sha256": "e3aa33c2dc3104280b8ae98ad7203c12af5fbaeadd447c8ac00d48e188e0bc8a",
+      "entryCount": 76,
+      "firstEntries": [
+        "Major scale",
+        "Dorian mode",
+        "Phrygian mode",
+        "Lydian mode",
+        "Mixolydian mode",
+        "Natural Minor scale",
+        "Locrian mode",
+        "Harmonic Major scale",
+        "Dorian b5 scale",
+        "Phrygian b4 scale",
+        "Lydian b3 scale",
+        "Mixolydian b2 scale"
+      ]
+    },
+    {
+      "name": "notes",
+      "pointerAddress": "0x182d7d750",
+      "address": "0x182a81580",
+      "fileOffset": 44566912,
+      "byteLength": 2009,
+      "sha256": "9a4ac168badb9b30c14c2e487620bfe7a3076ca06d85d4a715cdd6e0ee389556",
+      "entryCount": 12,
+      "firstEntries": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "name": "chordSets",
+      "pointerAddress": "0x182d7a030",
+      "address": "0x180be7980",
+      "fileOffset": 12479872,
+      "byteLength": 366646,
+      "sha256": "16b357572ddccefa309123fd3672a9a5eb9b54064f9af4781aa8d30fa0d4f800",
+      "entryCount": 4,
+      "firstEntries": [
+        "Voicings",
+        "Song Sets",
+        "Artist Sets",
+        "Community"
+      ]
+    }
+  ]
+}

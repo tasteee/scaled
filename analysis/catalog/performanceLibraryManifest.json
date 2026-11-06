@@ -1,0 +1,20 @@
+{
+  "method": "Lossless event-field preservation with timing converted to quarter-note beats; pitch remapping is deliberately not inferred",
+  "files": [
+    {
+      "filename": "performanceIndex.json",
+      "byteLength": 373621,
+      "sha256": "daa7533067d8673f44b4eaf58378cd98aee6fe7daf1e369325aadf2a3452ff27"
+    },
+    {
+      "filename": "performances.json",
+      "byteLength": 9477965,
+      "sha256": "518100d6594eac4c628f754d76cf71ab61e3e909195370c2fef544214cda00e8"
+    },
+    {
+      "filename": "voicings.json",
+      "byteLength": 18385,
+      "sha256": "6a2b56383172ca679f55b584924cd9688e7a6030590ecdd519b5c48a350c729b"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "pluginPath": "C:/Program Files/Steinberg/VSTPlugins/Scaler2.dll",
+  "binarySha256": "c2958bfc8d329d0f9752e87b07940d9467941858d49d0ace47b90fbca864445e",
+  "outputSha256": "0931bde4813e5bc7b2a97c14113501580ab60bd1da28eac347b11652eada3d27",
+  "capturedAt": "2026-11-06T10:40:39.516Z",
+  "method": "Native 0x18080ec50 sequence adaptation with loader-inferred source scales and native 0x1807a5e90 notes; fallback 0x180811460 when native source scale is absent",
+  "wasEditorOpened": false,
+  "wasAudioProcessed": false,
+  "nativeOctaveArgument": 3,
+  "presetCount": 14,
+  "targetScaleCount": 2
+}

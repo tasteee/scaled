@@ -1,0 +1,48 @@
+{
+  "name": "@tasteee/scaled",
+  "version": "0.1.0",
+  "description": "Typed chord, voicing, and continuous MIDI performance tools",
+  "type": "module",
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "workspaces": ["demo"],
+  "files": ["dist", "README.md"],
+  "types": "./dist/index.d.mts",
+  "exports": {
+    "./catalog": {
+      "types": "./dist/scalerCatalog.d.mts",
+      "import": "./dist/scalerCatalog.mjs"
+    },
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/types.mjs"
+    },
+    "./scaler": {
+      "types": "./dist/scaler.d.mts",
+      "import": "./dist/scaler.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "catalogs": "node scripts/importCatalogs.mjs",
+    "demo": "npm run dev --workspace @tasteee/scaled-demo",
+    "demo:build": "npm run build --workspace @tasteee/scaled-demo",
+    "demo:typecheck": "npm run typecheck --workspace @tasteee/scaled-demo",
+    "check:demo-performances": "node scripts/checkDemoPerformances.mjs",
+    "check:passages": "npm run build && node scripts/checkPassageAdaptation.mjs"
+  },
+  "devDependencies": {
+    "tsdown": "0.23.5",
+    "typescript": "7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
+
