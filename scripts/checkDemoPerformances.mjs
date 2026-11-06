@@ -112,8 +112,8 @@ const checkOverrides = async (model, renderer, source, library) => {
 try {
   const model = await server.ssrLoadModule('/demo/src/composer/model.ts')
   const renderer = await server.ssrLoadModule('/demo/src/composer/render.ts')
-  const source = await server.ssrLoadModule('/src/scaler.ts')
   const library = await server.ssrLoadModule('/src/index.ts')
+  const source = library.scaled
   const dropdownIds = model.sourcePerformanceOptions.map((option) => {
     return option.value
   })

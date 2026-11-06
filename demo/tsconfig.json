@@ -2,14 +2,26 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "types": ["vite/client", "@tasteee/zest/react"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "vite/client",
+      "@tasteee/zest/react"
+    ],
     "paths": {
-      "@tasteee/scaled/catalog": ["../src/scalerCatalog.ts"],
-      "@tasteee/scaled": ["../src/index.ts"],
-      "@tasteee/scaled/types": ["../src/types.ts"],
-      "@tasteee/scaled/scaler": ["../src/scaler.ts"]
+      "@tasteee/scaled": [
+        "../src/index.ts"
+      ],
+      "@tasteee/scaled/types": [
+        "../src/types.ts"
+      ]
     }
   },
-  "include": ["src", "vite.config.ts"]
+  "include": [
+    "src",
+    "vite.config.ts"
+  ]
 }

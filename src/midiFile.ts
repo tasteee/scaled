@@ -107,7 +107,15 @@ const buildFile = (track: Uint8Array, ticksPerBeat: number): Uint8Array => {
   return output
 }
 
-export const exportMidi = (input: types.ExportMidiInputT): Uint8Array => {
+const getFileName = (requested: string | undefined): string => {
+  const withoutIllegal = (requested ?? '').replace(/[\\/:*?"<>|\u0000-\u001f]/g, '')
+  const baseName = withoutIllegal.trim().replace(/\.mid$/i, '').trim()
+  const hasName = baseName.length > 0
+  const finalName = hasName ? baseName : 'scaled'
+  return `${finalName}.mid`
+}
+
+export const exportMidi = (input: types.ExportMidiInputT): types.MidiFileT => {
   const ticksPerBeat = input.ticksPerBeat ?? 480
   const channel = input.channel ?? 0
   const tempo = input.tempo ?? 120
@@ -130,5 +138,6 @@ export const exportMidi = (input: types.ExportMidiInputT): Uint8Array => {
   const endTick = Math.round(input.clip.durationBeats * ticksPerBeat)
   const track = encodeTrack(events, endTick)
   const file = buildFile(track, ticksPerBeat)
-  return file
+  const fileName = getFileName(input.fileName)
+  return Object.assign(file, { fileName })
 }

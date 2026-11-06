@@ -1,5 +1,5 @@
 import { scaled } from '@tasteee/scaled'
-import type { PerformancePatternT } from '@tasteee/scaled/types'
+import type { ScaledT } from '@tasteee/scaled/types'
 
 const firstChord = scaled.getChordWithVoicing({
   chord: 'Cmaj7',
@@ -12,7 +12,7 @@ const secondChord = scaled.getChordWithVoicing({
   voicing: 'open'
 })
 
-const pattern: PerformancePatternT = {
+const pattern: ScaledT.PerformancePatternT = {
   id: 'customTwoBarPattern',
   name: 'Two-bar pattern',
   durationBeats: 8,

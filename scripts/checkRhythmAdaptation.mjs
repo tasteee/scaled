@@ -1,8 +1,8 @@
 import * as assert from 'node:assert/strict'
 import * as library from '../dist/index.mjs'
-import * as catalog from '../dist/scaler.mjs'
+import { scaled } from '../dist/index.mjs'
 
-const rhythms = catalog.performanceTemplates.filter(catalog.canAdaptRhythmTemplate)
+const rhythms = scaled.performanceTemplates.filter(scaled.canAdaptRhythmTemplate)
 assert.equal(rhythms.length, 102)
 const referenceTemplate = rhythms[0]
 assert.ok(referenceTemplate)
@@ -10,7 +10,7 @@ const firstEvent = referenceTemplate.events[0]
 assert.ok(firstEvent)
 
 const checkChordSize = (targetNoteCount) => {
-  const pattern = catalog.adaptRhythmTemplate({ template: referenceTemplate, targetNoteCount })
+  const pattern = scaled.adaptRhythmTemplate({ template: referenceTemplate, targetNoteCount })
   const simultaneousEvents = pattern.events.filter((event) => {
     return event.startBeat === firstEvent.startBeat
   })
@@ -29,10 +29,10 @@ checkChordSize(2)
 checkChordSize(4)
 checkChordSize(6)
 
-const firstBassTemplate = catalog.performanceTemplates[0]
+const firstBassTemplate = scaled.performanceTemplates[0]
 assert.ok(firstBassTemplate)
 const adaptBass = () => {
-  return catalog.adaptRhythmTemplate({ template: firstBassTemplate, targetNoteCount: 3 })
+  return scaled.adaptRhythmTemplate({ template: firstBassTemplate, targetNoteCount: 3 })
 }
 assert.throws(adaptBass, /Only recovered Rhythms/)
 
@@ -40,7 +40,7 @@ let checkedRenders = 0
 for (const template of rhythms) {
   for (const chordSymbol of ['C', 'Cm7', 'Cmaj9', 'C13']) {
     const chord = library.scaled.getChord({ chord: chordSymbol })
-    const pattern = catalog.adaptRhythmTemplate({ template, targetNoteCount: chord.midiNotes.length })
+    const pattern = scaled.adaptRhythmTemplate({ template, targetNoteCount: chord.midiNotes.length })
     const clip = library.scaled.applyPerformance({
       progression: [{ chord, durationBeats: template.durationBeats }],
       performance: pattern

@@ -5,14 +5,15 @@
   "type": "module",
   "license": "UNLICENSED",
   "sideEffects": false,
-  "workspaces": ["demo"],
-  "files": ["dist", "README.md"],
+  "workspaces": [
+    "demo"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "types": "./dist/index.d.mts",
   "exports": {
-    "./catalog": {
-      "types": "./dist/scalerCatalog.d.mts",
-      "import": "./dist/scalerCatalog.mjs"
-    },
     ".": {
       "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
@@ -20,16 +21,13 @@
     "./types": {
       "types": "./dist/types.d.mts",
       "import": "./dist/types.mjs"
-    },
-    "./scaler": {
-      "types": "./dist/scaler.d.mts",
-      "import": "./dist/scaler.mjs"
     }
   },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
+    "prepare": "tsdown",
     "catalogs": "node scripts/importCatalogs.mjs",
     "demo": "npm run dev --workspace @tasteee/scaled-demo",
     "demo:build": "npm run build --workspace @tasteee/scaled-demo",
@@ -45,4 +43,3 @@
     "access": "public"
   }
 }
-

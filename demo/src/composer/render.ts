@@ -1,11 +1,10 @@
-import * as library from '@tasteee/scaled'
-import * as catalog from '@tasteee/scaled/catalog'
-import type * as music from '@tasteee/scaled/types'
+import { scaled } from '@tasteee/scaled'
+import type { ScaledT } from '@tasteee/scaled/types'
 import * as model from './model'
 import * as store from './store'
 import * as piano from '../piano'
 
-export const resolveVoicing = (value: string): music.VoicingNameT => {
+export const resolveVoicing = (value: string): ScaledT.VoicingNameT => {
   const isClosed = value === 'closed'
   if (isClosed) return 'closed'
   const isOpen = value === 'open'
@@ -17,14 +16,14 @@ export const resolveVoicing = (value: string): music.VoicingNameT => {
   throw new Error('Source voicing adaptation is not yet verified.')
 }
 
-export const getVoicedChord = (entry: model.EntryT, session: model.SessionT): music.ChordT => {
+export const getVoicedChord = (entry: model.EntryT, session: model.SessionT): ScaledT.ChordT => {
   const shouldInherit = entry.voicing === 'inherit'
   const selectedVoicing = shouldInherit ? session.voicing : entry.voicing
   const octave = session.octave + entry.octaveOffset
   const hasSourceVoicing = model.isSourceVoicing(selectedVoicing)
   if (hasSourceVoicing) {
-    const shapes = catalog.getScaleVoicingChords({ presetId: selectedVoicing, key: session.key, scale: session.scale, octave })
-    const baseChord = library.scaled.getChord({ chord: entry.symbol, octave })
+    const shapes = scaled.getScaleVoicingChords({ presetId: selectedVoicing, key: session.key, scale: session.scale, octave })
+    const baseChord = scaled.getChord({ chord: entry.symbol, octave })
     const matchingShapes = shapes.filter((candidate) => {
       const hasExplicitSlot = entry.sourceSlot !== null
       if (hasExplicitSlot) return candidate.sourceSlot === entry.sourceSlot
@@ -36,15 +35,15 @@ export const getVoicedChord = (entry: model.EntryT, session: model.SessionT): mu
     const shape = matchingShapes[0]
     const sourceChord = shape?.chord
     if (!sourceChord) throw new Error(`This scale voicing has no slot for ${entry.symbol}. Choose a chord from its grid or override this chord's voicing.`)
-    const chord = library.scaled.getChordWithVoicing({ chord: sourceChord, inversion: entry.inversion })
+    const chord = scaled.getChordWithVoicing({ chord: sourceChord, inversion: entry.inversion })
     return chord
   }
   const voicing = resolveVoicing(selectedVoicing)
-  const chord = library.scaled.getChordWithVoicing({ chord: entry.symbol, voicing, inversion: entry.inversion, octave })
+  const chord = scaled.getChordWithVoicing({ chord: entry.symbol, voicing, inversion: entry.inversion, octave })
   return chord
 }
 
-const getSustainedNotes = (chord: music.ChordT, entry: model.EntryT, startBeat: number): music.PerformanceNoteT[] => {
+const getSustainedNotes = (chord: ScaledT.ChordT, entry: model.EntryT, startBeat: number): ScaledT.PerformanceNoteT[] => {
   const notes = chord.midiNotes.map((midiNote, position) => {
     const identifier = `${entry.id}:${position}`
     return { id: identifier, chordId: entry.id, eventId: identifier, midiNote, startBeat, durationBeats: entry.durationBeats, velocity: 90 }
@@ -52,12 +51,12 @@ const getSustainedNotes = (chord: music.ChordT, entry: model.EntryT, startBeat: 
   return notes
 }
 
-export const renderProgression = async (session: model.SessionT): Promise<music.MidiClipT> => {
+export const renderProgression = async (session: model.SessionT): Promise<ScaledT.MidiClipT> => {
   const progression = session.progression.map((entry) => {
     const chord = getVoicedChord(entry, session)
     return { id: entry.id, chord, durationBeats: entry.durationBeats }
   })
-  const notes: music.PerformanceNoteT[] = []
+  const notes: ScaledT.PerformanceNoteT[] = []
   let startBeat = 0
   for (const entry of session.progression) {
     const shouldInherit = entry.performance === 'inherit'
@@ -71,14 +70,13 @@ export const renderProgression = async (session: model.SessionT): Promise<music.
   return { durationBeats: startBeat, notes }
 }
 
-const getPerformedNotes = async (entry: model.EntryT, chord: music.ChordT, progression: music.ProgressionChordT[], identifier: string, session: model.SessionT): Promise<readonly music.PerformanceNoteT[]> => {
-  const source = await import('@tasteee/scaled/scaler')
-  const templates = source.performanceTemplates
+const getPerformedNotes = async (entry: model.EntryT, chord: ScaledT.ChordT, progression: ScaledT.ProgressionChordT[], identifier: string, session: model.SessionT): Promise<readonly ScaledT.PerformanceNoteT[]> => {
+  const templates = scaled.performanceTemplates
   const template = templates.find((candidate) => { return candidate.id === identifier })
   if (!template) throw new Error('Unknown performance template')
   const octave = session.octave + entry.octaveOffset
-  const performance = source.adaptPerformanceTemplate({ template, midiNotes: chord.midiNotes, key: session.key, scale: session.scale, octave })
-  const clip = library.scaled.applyPerformance({ progression, performance, key: session.key, scale: session.scale, octave })
+  const performance = scaled.adaptPerformanceTemplate({ template, midiNotes: chord.midiNotes, key: session.key, scale: session.scale, octave })
+  const clip = scaled.applyPerformance({ progression, performance, key: session.key, scale: session.scale, octave })
   const notes = clip.notes.filter((note) => { return note.chordId === entry.id })
   return notes
 }
@@ -144,7 +142,7 @@ export const exportProgression = async (): Promise<void> => {
   try {
     const session = store.session.state
     const clip = await renderProgression(session)
-    const bytes = library.scaled.exportMidi({ clip, tempo: session.tempo, ticksPerBeat: 960 })
+    const bytes = scaled.exportMidi({ clip, tempo: session.tempo, ticksPerBeat: 960 })
     const fileBytes = new Uint8Array(bytes)
     const file = new Blob([fileBytes], { type: 'audio/midi' })
     const downloadUrl = URL.createObjectURL(file)

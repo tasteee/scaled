@@ -1,16 +1,15 @@
-import * as library from '@tasteee/scaled'
-import * as source from '@tasteee/scaled/catalog'
-import type * as music from '@tasteee/scaled/types'
+import { scaled } from '@tasteee/scaled'
+import type { ScaledT } from '@tasteee/scaled/types'
 
 export type OptionT = { value: string; label: string; disabled?: boolean }
 export type EntryT = { id: string; symbol: string; durationBeats: number; voicing: string; performance: string; inversion: number; octaveOffset: number; sourceSlot: number | null }
-export type GridChordT = music.ChordT & { sourceSlot: number | null }
+export type GridChordT = ScaledT.ChordT & { sourceSlot: number | null }
 export type SessionT = { key: string; scale: string; octave: number; voicing: string; performance: string; tempo: number; shouldPreviewPerformance: boolean; family: string; search: string; selectedId: string; progression: EntryT[]; error: string }
 
 export const keyOptions = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'].map((key): OptionT => {
   return { value: key, label: key }
 })
-export const scaleOptions = library.scaled.getScaleDefinitions().map((scale): OptionT => {
+export const scaleOptions = scaled.getScaleDefinitions().map((scale): OptionT => {
   return { value: scale.name, label: scale.name }
 })
 export const voicingOptions: OptionT[] = [
@@ -19,12 +18,12 @@ export const voicingOptions: OptionT[] = [
   { value: 'open', label: 'Open' },
   { value: 'drop2', label: 'Drop 2 (4+ notes)' }
 ]
-export const sourceVoicingOptions = source.voicingPresets.map((preset): OptionT => {
+export const sourceVoicingOptions = scaled.voicingPresets.map((preset): OptionT => {
   return { value: preset.id, label: `${preset.name} · scale voicing` }
 })
 export const allVoicingOptions = voicingOptions.concat(sourceVoicingOptions)
 export const performanceOptions: OptionT[] = [{ value: 'standard', label: 'Standard · sustained chords' }]
-export const sourcePerformanceOptions = source.performanceSummaries.map((template): OptionT => {
+export const sourcePerformanceOptions = scaled.performanceSummaries.map((template): OptionT => {
   const label = `${template.category} / ${template.subcategory} / ${template.name}`
   return { value: template.id, label }
 })
@@ -50,13 +49,13 @@ export const createEntry = (symbol: string, sourceSlot: number | null = null): E
   return { id: crypto.randomUUID(), symbol, durationBeats: 4, voicing: 'inherit', performance: 'inherit', inversion: 0, octaveOffset: 0, sourceSlot }
 }
 
-export const getFamilyFilter = (family: string): readonly music.ChordFamilyT[] | undefined => {
+export const getFamilyFilter = (family: string): readonly ScaledT.ChordFamilyT[] | undefined => {
   const matchingFamily = familyOptions.find((option) => {
     return option.value === family
   })
   const isAll = matchingFamily?.value === 'all'
   if (isAll) return undefined
-  const families: music.ChordFamilyT[] = ['triad', 'seventh', 'ninth', 'eleventh', 'thirteenth', 'sixth', 'power']
+  const families: ScaledT.ChordFamilyT[] = ['triad', 'seventh', 'ninth', 'eleventh', 'thirteenth', 'sixth', 'power']
   const selectedFamily = families.find((candidate) => {
     return candidate === family
   })
@@ -65,7 +64,7 @@ export const getFamilyFilter = (family: string): readonly music.ChordFamilyT[] |
 }
 
 export const isSourceVoicing = (identifier: string): boolean => {
-  const hasSourcePreset = source.voicingPresets.some((preset) => {
+  const hasSourcePreset = scaled.voicingPresets.some((preset) => {
     return preset.id === identifier
   })
   return hasSourcePreset
@@ -74,7 +73,7 @@ export const isSourceVoicing = (identifier: string): boolean => {
 export const getVisibleChords = (session: SessionT): readonly GridChordT[] => {
   const hasSourceVoicing = isSourceVoicing(session.voicing)
   if (hasSourceVoicing) {
-    const sequence = source.getScaleVoicingChords({ presetId: session.voicing, key: session.key, scale: session.scale, octave: session.octave })
+    const sequence = scaled.getScaleVoicingChords({ presetId: session.voicing, key: session.key, scale: session.scale, octave: session.octave })
     const gridChords: GridChordT[] = []
     for (const shape of sequence) {
       if (!shape.chord) continue
@@ -89,7 +88,7 @@ export const getVisibleChords = (session: SessionT): readonly GridChordT[] => {
   }
   const familyFilter = getFamilyFilter(session.family)
   const filter = familyFilter ? { chordTypes: familyFilter } : {}
-  const chords = library.scaled.getScaleChords({ key: session.key, scale: session.scale, octave: session.octave, ...filter })
+  const chords = scaled.getScaleChords({ key: session.key, scale: session.scale, octave: session.octave, ...filter })
   const search = session.search.toLowerCase().trim()
   const filteredChords = chords.filter((chord) => {
     const symbol = chord.symbol.toLowerCase()

@@ -1,3 +1,3 @@
-import * as engine from './engine.js'
+import { createEngine } from './engine.js'
 
-export const scaled = engine.createEngine()
+export const scaled = createEngine()

@@ -9,15 +9,21 @@
     "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
     "paths": {
-      "@tasteee/scaled/catalog": ["./src/scalerCatalog.ts"],
-      "@tasteee/scaled": ["./src/index.ts"],
-      "@tasteee/scaled/types": ["./src/types.ts"],
-      "@tasteee/scaled/scaler": ["./src/scaler.ts"]
+      "@tasteee/scaled": [
+        "./src/index.ts"
+      ],
+      "@tasteee/scaled/types": [
+        "./src/types.ts"
+      ]
     },
     "declaration": true,
     "isolatedModules": true,
     "skipLibCheck": true,
     "noEmit": true
   },
-  "include": ["src/**/*.ts", "examples/**/*.ts", "tsdown.config.ts"]
+  "include": [
+    "src/**/*.ts",
+    "examples/**/*.ts",
+    "tsdown.config.ts"
+  ]
 }

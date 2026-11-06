@@ -11,12 +11,11 @@ type ResolvePitchInputT = {
 
 const getIndexedNote = (notes: readonly number[], index: number, octaveOffset: number): number => {
   validation.validateInteger(index, 'Pitch index')
-  validation.validateNonnegativeNumber(index, 'Pitch index')
   validation.validateInteger(octaveOffset, 'Pitch octaveOffset')
   const noteCount = notes.length
   const hasNotes = noteCount > 0
   if (!hasNotes) throw new Error('Cannot resolve a pitch against an empty note collection')
-  const wrappedIndex = index % noteCount
+  const wrappedIndex = ((index % noteCount) + noteCount) % noteCount
   const wrappedOctaves = Math.floor(index / noteCount)
   const baseNote = validation.getRequiredEntry(notes, wrappedIndex)
   const totalOctaveOffset = wrappedOctaves + octaveOffset

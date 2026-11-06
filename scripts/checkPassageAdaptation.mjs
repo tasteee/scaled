@@ -1,6 +1,6 @@
 import * as assert from 'node:assert/strict'
 import * as filesystem from 'node:fs'
-import * as source from '../dist/scaler.mjs'
+import { scaled } from '../dist/index.mjs'
 
 const capturePath = new URL('../analysis/catalog/Passages-probe.json', import.meta.url)
 const captureText = filesystem.readFileSync(capturePath, 'utf8')
@@ -23,11 +23,11 @@ for (const fixture of capture.fixtures) {
   const voicingKey = fixture.midiNotes.join(',')
   const isCommonVoicing = commonVoicings.includes(voicingKey)
   if (!isCommonVoicing) continue
-  const template = source.performanceTemplates.find((candidate) => {
+  const template = scaled.performanceTemplates.find((candidate) => {
     return candidate.id === fixture.templateId
   })
   assert.ok(template)
-  const pattern = source.adaptPerformanceTemplate({ template, midiNotes: fixture.midiNotes, key: 'C', scale: 'major', octave: 4 })
+  const pattern = scaled.adaptPerformanceTemplate({ template, midiNotes: fixture.midiNotes, key: 'C', scale: 'major', octave: 4 })
   // The saved host requested four beats for eight-beat
   // templates. Compare at that captured duration.
   const notes = pattern.events.map((event) => {

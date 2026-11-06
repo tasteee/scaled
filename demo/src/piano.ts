@@ -1,6 +1,6 @@
 import * as sampler from 'smplr'
 import * as datass from 'datass'
-import type * as music from '@tasteee/scaled/types'
+import type { ScaledT } from '@tasteee/scaled/types'
 
 type PianoSessionT = { context: AudioContext; instrument: sampler.Soundfont }
 type PlaybackOptionsT = { shouldLoop?: boolean }
@@ -63,7 +63,7 @@ export const unlockPiano = (): void => {
   return undefined
 }
 
-export const playClip = async (clip: music.MidiClipT, tempo = 120, options: PlaybackOptionsT = {}): Promise<void> => {
+export const playClip = async (clip: ScaledT.MidiClipT, tempo = 120, options: PlaybackOptionsT = {}): Promise<void> => {
   stopPlayback()
   const version = playbackVersion
   const shouldLoop = options.shouldLoop === true

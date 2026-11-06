@@ -58,7 +58,7 @@ export const getScaleDefinition = (name: string): types.ScaleDefinitionT => {
     const isMatchingName = candidateName === lookupName
     const isMatchingAlias = candidate.alternateNames.some((alias) => {
       const candidateAlias = alias.toLowerCase()
-      const isMatchingAlias = candidateAlias === lowercaseName
+      const isMatchingAlias = candidateAlias === lowercaseName || candidateAlias === lookupName
       return isMatchingAlias
     })
     const isMatchingDefinition = isMatchingName || isMatchingAlias
