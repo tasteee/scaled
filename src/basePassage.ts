@@ -1,3 +1,4 @@
+import chordRecognition from './data/passageChordRecognition.json'
 import type * as recovered from './recoveredTypes.js'
 import type * as types from './types.js'
 import * as validation from './validation.js'
@@ -11,6 +12,16 @@ const referenceVoices = [60, 64, 67, 71, 74]
 const referencePitches = [0, 2, 4, 7, 11]
 const passageVelocity = Math.round(0.7 * 127)
 
+type UpperVoiceContextT = {
+  readonly currentNote: number
+  readonly previousPitch: number
+}
+
+type UpperVoiceResultT = {
+  readonly midiNote: number
+  readonly nextContext: UpperVoiceContextT
+}
+
 const getSortedNotes = (midiNotes: readonly number[]): number[] => {
   const uniqueNotes = Array.from(new Set(midiNotes))
   const sortedNotes = uniqueNotes.sort((firstNote, secondNote) => {
@@ -19,37 +30,59 @@ const getSortedNotes = (midiNotes: readonly number[]): number[] => {
   return sortedNotes
 }
 
-const getRelativePitches = (midiNotes: readonly number[]): number[] => {
-  const rootNote = validation.getRequiredEntry(midiNotes, 0)
-  const rootPitch = rootNote % 12
-  const relativePitches = new Set<number>()
+const getPitchMask = (midiNotes: readonly number[]): number => {
+  let pitchMask = 0
   for (const midiNote of midiNotes) {
-    const relativePitch = (midiNote - rootPitch + 12) % 12
-    relativePitches.add(relativePitch)
+    const pitchClass = midiNote % 12
+    pitchMask |= 1 << pitchClass
   }
-  const targetPitches = Array.from(relativePitches).sort((firstPitch, secondPitch) => {
-    return firstPitch - secondPitch
-  })
-  return targetPitches
+  return pitchMask
 }
 
-const getUpperVoice = (sourceNote: number, midiNotes: readonly number[]): number => {
-  const rootNote = validation.getRequiredEntry(midiNotes, 0)
-  const targetPitches = getRelativePitches(midiNotes)
+const getRecognizedPitches = (midiNotes: readonly number[]): readonly number[] => {
+  const pitchMask = getPitchMask(midiNotes)
+  const bassNote = validation.getRequiredEntry(midiNotes, 0)
+  const bassPitch = bassNote % 12
+  const chordPitchesByBass = chordRecognition.mappings[pitchMask]
+  const recognizedPitches = chordPitchesByBass?.[bassPitch]
+  const isMissingChord = recognizedPitches === undefined || recognizedPitches.length === 0
+  if (isMissingChord) throw new Error('Missing native passage chord recognition')
+  return recognizedPitches
+}
+
+const getOrderedChordPitches = (midiNotes: readonly number[]): number[] => {
+  const recognizedPitches = getRecognizedPitches(midiNotes)
+  const rootPitch = validation.getRequiredEntry(recognizedPitches, 0)
+  const relativePitches = recognizedPitches.map((chordPitch) => {
+    const relativePitch = (chordPitch - rootPitch + 12) % 12
+    return relativePitch
+  })
+  relativePitches.sort((firstPitch, secondPitch) => {
+    return firstPitch - secondPitch
+  })
+  const orderedPitches = relativePitches.map((relativePitch) => {
+    return (rootPitch + relativePitch) % 12
+  })
+  return orderedPitches
+}
+
+const getUpperVoice = (sourceNote: number, targetPitches: readonly number[], context: UpperVoiceContextT): UpperVoiceResultT => {
   const sourcePitch = sourceNote % 12
   const referencePosition = referencePitches.indexOf(sourcePitch)
   const hasUnknownPitch = referencePosition < 0
   if (hasUnknownPitch) throw new Error('Unknown passage reference pitch')
   const isLeadingVoice = sourcePitch === 11
-  const wrappedPosition = referencePosition % targetPitches.length
+  const wrapCount = Math.max(1, targetPitches.length - 1)
+  const wrappedPosition = referencePosition % wrapCount
   const targetPosition = isLeadingVoice ? targetPitches.length - 1 : wrappedPosition
   const targetPitch = validation.getRequiredEntry(targetPitches, targetPosition)
-  const minimumOctave = sourcePitch === 0 ? 1 : 0
-  const sourceOctave = Math.floor((sourceNote - 72) / 12)
-  const octaveOffset = Math.max(minimumOctave, sourceOctave)
-  const mappedNote = rootNote + targetPitch + octaveOffset * 12
+  const pitchDifference = (targetPitch - context.previousPitch + 12) % 12
+  const currentNote = context.currentNote + pitchDifference
+  const octaveOffset = Math.max(0, Math.trunc((sourceNote - 75) / 12))
+  const mappedNote = currentNote + octaveOffset * 12
   const boundedNote = Math.min(127, mappedNote)
-  return boundedNote
+  const nextContext = { currentNote, previousPitch: targetPitch }
+  return { midiNote: boundedNote, nextContext }
 }
 
 const buildEvent = (sourceEvent: recovered.RecoveredPerformanceEventT, midiNote: number, identifier: string): types.PatternEventT => {
@@ -98,23 +131,38 @@ const buildAdditionalVoices = (template: recovered.RecoveredPerformanceTemplateT
 
 const buildPassageEvents = (input: AdaptPassageTemplateInputT, midiNotes: readonly number[]): types.PatternEventT[] => {
   const events: types.PatternEventT[] = []
+  const highestNote = validation.getRequiredEntry(midiNotes, midiNotes.length - 1)
+  const targetPitches = getOrderedChordPitches(midiNotes)
+  const upperContexts = new Map<number, UpperVoiceContextT>()
   for (const sourceEvent of input.template.events) {
     const referencePosition = referenceVoices.indexOf(sourceEvent.sourceMidiNote)
     const isUpperVoice = referencePosition < 0
     const wrappedPosition = referencePosition % midiNotes.length
-    const midiNote = isUpperVoice ? getUpperVoice(sourceEvent.sourceMidiNote, midiNotes) : validation.getRequiredEntry(midiNotes, wrappedPosition)
+    let midiNote = 0
+    if (isUpperVoice) {
+      const initialContext = { currentNote: highestNote, previousPitch: highestNote % 12 }
+      const context = upperContexts.get(sourceEvent.startBeat) ?? initialContext
+      const result = getUpperVoice(sourceEvent.sourceMidiNote, targetPitches, context)
+      midiNote = result.midiNote
+      upperContexts.set(sourceEvent.startBeat, result.nextContext)
+    }
+    if (!isUpperVoice) midiNote = validation.getRequiredEntry(midiNotes, wrappedPosition)
     const identifier = String(sourceEvent.id)
     const event = buildEvent(sourceEvent, midiNote, identifier)
     events.push(event)
   }
   const additionalEvents = buildAdditionalVoices(input.template, midiNotes)
   events.push(...additionalEvents)
+  // Native keeps the longest colliding ornament.
+  events.sort((firstEvent, secondEvent) => {
+    return secondEvent.durationBeats - firstEvent.durationBeats
+  })
   return events
 }
 
-// Base voices follow native passage ordinals. Upper
-// ornaments use chord pitch classes in root register;
-// native chord detection for unusual voicings can differ.
+// Base voices follow native passage ordinals. Each
+// onset's upper notes walk the recognized chord from
+// the highest supplied voice.
 export const adaptPassageTemplate = (input: AdaptPassageTemplateInputT): types.PerformancePatternT => {
   const isPassage = input.template.category === 'Passages'
   if (!isPassage) throw new Error('Passage adaptation requires a Passages template')

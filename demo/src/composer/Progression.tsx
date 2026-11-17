@@ -60,7 +60,7 @@ const EntryControls = (props: { entry: model.EntryT; position: number; count: nu
       <div className="entryChoice"><fields.Choice label="Voicing" value={props.entry.voicing} options={model.inheritedVoicingOptions} onChange={handleVoicing} isSearchable /></div>
       <div className="entryNumber"><fields.NumberField label="Inversion" value={props.entry.inversion} min={-4} max={7} step={1} onChange={handleInversion} /></div>
       <div className="entryNumber"><fields.NumberField label="Octave offset" value={props.entry.octaveOffset} min={-2} max={2} step={1} onChange={handleOctaveOffset} /></div>
-      <div className="entryPerformance"><fields.Choice label="Performance" value={props.entry.performance} options={model.inheritedPerformanceOptions} onChange={handlePerformance} isSearchable /></div>
+      <div className="entryPerformance"><fields.Choice label="Performance" value={props.entry.performance} options={model.inheritedPerformanceSelectOptions} onChange={handlePerformance} /></div>
       <div className="entryChoice"><fields.Choice label="Pattern speed" value={speedValue} options={model.inheritedSpeedOptions} onChange={handleSpeed} /></div>
       <div className="entryActions"><z-button kind="ghost" size="sm" onClick={handleMoveLeft} isDisabled={isFirst} aria-label="Move chord left">←</z-button><z-button kind="ghost" size="sm" onClick={handleMoveRight} isDisabled={isLast} aria-label="Move chord right">→</z-button><z-button kind="ghost" size="sm" tone="danger" onClick={handleRemove} aria-label="Remove chord">×</z-button></div>
     </div>

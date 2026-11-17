@@ -50,15 +50,8 @@ export const voicingNames = [
 
 export type VoicingNameT = (typeof voicingNames)[number]
 
-// Fewest chord notes a voicing needs. Voicings missing here work with any chord.
-export const voicingMinimumNotes: Readonly<Partial<Record<VoicingNameT, number>>> = {
-  drop2: 4,
-  drop3: 4,
-  drop4: 4,
-  drop2and3: 4,
-  drop2and4: 4,
-  shell: 2
-}
+// Voicings missing here work with any nonempty chord.
+export const voicingMinimumNotes: Readonly<Partial<Record<VoicingNameT, number>>> = {}
 
 export type VoicedChordT = ChordT & {
   readonly voicing: VoicingNameT
@@ -222,15 +215,15 @@ export type ScaledT = {
   readonly voicingPresets: readonly ScaledT.VoicingPresetT[]
   readonly performanceTemplates: readonly ScaledT.PerformanceTemplateT[]
   readonly performanceSummaries: readonly ScaledT.PerformanceSummaryT[]
-  readonly getScaleVoicingChords: typeof import('./scalerVoicing.js').getScaleVoicingChords
-  readonly canAdaptPerformanceTemplate: typeof import('./scalerTemplate.js').canAdaptPerformanceTemplate
-  readonly adaptPerformanceTemplate: typeof import('./scalerTemplate.js').adaptPerformanceTemplate
-  readonly canAdaptRhythmTemplate: typeof import('./scalerPerformance.js').canAdaptRhythmTemplate
-  readonly adaptRhythmTemplate: typeof import('./scalerPerformance.js').adaptRhythmTemplate
-  readonly adaptStrummedTemplate: typeof import('./scalerStrummed.js').adaptStrummedTemplate
-  readonly getGrooveMidiNotes: typeof import('./scalerGroove.js').getGrooveMidiNotes
-  readonly getScalePerformance: typeof import('./scalerScalePerformance.js').getScalePerformance
-  readonly mapScaleNotes: typeof import('./scalerScaleMapping.js').mapScaleNotes
+  readonly getScaleVoicingChords: typeof import('./baseVoicing.js').getScaleVoicingChords
+  readonly canAdaptPerformanceTemplate: typeof import('./baseTemplate.js').canAdaptPerformanceTemplate
+  readonly adaptPerformanceTemplate: typeof import('./baseTemplate.js').adaptPerformanceTemplate
+  readonly canAdaptRhythmTemplate: typeof import('./basePerformance.js').canAdaptRhythmTemplate
+  readonly adaptRhythmTemplate: typeof import('./basePerformance.js').adaptRhythmTemplate
+  readonly adaptStrummedTemplate: typeof import('./baseStrummed.js').adaptStrummedTemplate
+  readonly getGrooveMidiNotes: typeof import('./baseGroove.js').getGrooveMidiNotes
+  readonly getScalePerformance: typeof import('./baseScalePerformance.js').getScalePerformance
+  readonly mapScaleNotes: typeof import('./baseScaleMapping.js').mapScaleNotes
   readonly ticksToBeats: (ticks: number, ticksPerBeat: number) => number
   readonly beatsToTicks: (beats: number, ticksPerBeat: number) => number
   readonly barsToBeats: (bars: number, timeSignature: TimeSignatureT) => number
@@ -280,15 +273,15 @@ type ScaledTimeSignatureT = TimeSignatureT
 type ScaledExportMidiInputT = ExportMidiInputT
 type ScaledMidiFileT = MidiFileT
 type ScaledScaledEngineOptionsT = ScaledEngineOptionsT
-type ScaledGetScaleVoicingChordsInputT = import('./scalerVoicing.js').GetScaleVoicingChordsInputT
-type ScaledScaleVoicingChordT = import('./scalerVoicing.js').ScaleVoicingChordT
-type ScaledAdaptPerformanceTemplateInputT = import('./scalerTemplate.js').AdaptPerformanceTemplateInputT
-type ScaledAdaptRhythmTemplateInputT = import('./scalerPerformance.js').AdaptRhythmTemplateInputT
-type ScaledAdaptStrummedTemplateInputT = import('./scalerStrummed.js').AdaptStrummedTemplateInputT
-type ScaledGetGrooveMidiNotesInputT = import('./scalerGroove.js').GetGrooveMidiNotesInputT
-type ScaledGetScalePerformanceInputT = import('./scalerScalePerformance.js').GetScalePerformanceInputT
-type ScaledScalePerformanceT = import('./scalerScalePerformance.js').ScalePerformanceT
-type ScaledMapScaleNotesInputT = import('./scalerScaleMapping.js').MapScaleNotesInputT
+type ScaledGetScaleVoicingChordsInputT = import('./baseVoicing.js').GetScaleVoicingChordsInputT
+type ScaledScaleVoicingChordT = import('./baseVoicing.js').ScaleVoicingChordT
+type ScaledAdaptPerformanceTemplateInputT = import('./baseTemplate.js').AdaptPerformanceTemplateInputT
+type ScaledAdaptRhythmTemplateInputT = import('./basePerformance.js').AdaptRhythmTemplateInputT
+type ScaledAdaptStrummedTemplateInputT = import('./baseStrummed.js').AdaptStrummedTemplateInputT
+type ScaledGetGrooveMidiNotesInputT = import('./baseGroove.js').GetGrooveMidiNotesInputT
+type ScaledGetScalePerformanceInputT = import('./baseScalePerformance.js').GetScalePerformanceInputT
+type ScaledScalePerformanceT = import('./baseScalePerformance.js').ScalePerformanceT
+type ScaledMapScaleNotesInputT = import('./baseScaleMapping.js').MapScaleNotesInputT
 type ScaledVoicingShapeT = import('./recoveredTypes.js').RecoveredVoicingShapeT
 type ScaledVoicingPresetT = import('./recoveredTypes.js').RecoveredVoicingPresetT
 type ScaledPerformanceEventT = import('./recoveredTypes.js').RecoveredPerformanceEventT

@@ -1,17 +1,17 @@
 # @tasteee/scaled
 
-`@tasteee/scaled` aims to provide a Scaler-like music-theory and MIDI engine
+`@tasteee/scaled` aims to provide music-theory and MIDI engine
 for applications: scales, compatible chords, inversions, voicings, progressions,
 and performance patterns that turn harmony into playable musical phrases.
+
 Use it to build composition tools, chord explorers, progression editors,
 arpeggiators, and MIDI workflows without implementing the underlying theory
 and pattern scheduling yourself.
 
-The library combines a typed theory API with built-in Scaler catalogs and
+The library combines a typed theory API with built-in catalogs and
 adapters for rhythms, grooves, bass lines, melodies, phrases, sequences,
-strummed sequences, and passages. Its goal is broad Scaler-level support;
-current coverage and compatibility limits are described below. It generates
-note data and MIDI files; audio synthesis and playback belong to the host app.
+strummed sequences, and passages. It generates note data and MIDI files;
+audio synthesis and playback belong to the host app.
 
 ## Contents
 
@@ -23,6 +23,7 @@ note data and MIDI files; audio synthesis and playback belong to the host app.
 - [API reference](#api-reference)
 - [Public types](#public-types)
 - [Validation and errors](#validation-and-errors)
+- [Roadmap and future work](#roadmap-and-future-work)
 - [Development](#development)
 - [Interactive examples](#interactive-examples)
 
@@ -47,9 +48,28 @@ const voicedChord = scaled.getChordWithVoicing({
 const independentEngine: ScaledT = scaled.createEngine({ octave: 3, velocity: 84 })
 ```
 
+<!--
+CAN WE LIST SOMEWHERE: ALL OF THE SCALES, CHORD TYPES
+AND PERFORMANCES THAT WE OFFER THROUGH THE API?
+ -->
+
 `scaled` is an initialized engine. Each `createEngine()` call creates a separate
 engine with its own defaults. Factory defaults are octave 4 and velocity 90.
 The engine uses standard scientific pitch notation: C4 is MIDI 60.
+
+<!-- ADD A NOTE WHAT A CUSTOM ENGINE ENSTANTIATION MIGHT BE USED FOR -->
+<!-- DO WE PROVIDE AN API TO CONVERT PPQ TICKS TO BEAT NUMBERS? -->
+<!-- DO WE PROVIDE A TOOL TO CONVERT MS TO BEAT NUMBERS? -->
+
+<!--
+ALTERNATIVELY, CAN THINGS LIKE STARTBEAT AND DURATIONBEATS
+ACCEPT EITHER NUMBERS OR STRINGS, WHERE STRINGS MIGHT BE LIKE
+'20ms' or '100ppq'? BETTER EVEN, WHAT IF OUR ENGINE SUPPORTED
+NOT SPECIFIC BEAT LANGUAGE, AND INSTEAD ASKED FOR TICKS INPUT
+FOR START AND DURATIONS? THEN WE COULD OFFER APIS TO CONVERT
+BEATS / MS / BARS TO TICKS FOR PASSING INTO THE ENGINE AND IT
+WOULD PROVIDE A LOT MORE FINE GRAINED USAGE MORE EASILY?
+-->
 
 Chord symbols support roots A–G, single sharps/flats, and catalog chord
 type names. Common aliases include `Cm`, `Cm7`, `CM7`, and `Cadd9`. Use
@@ -59,8 +79,7 @@ Scale aliases include major, minor, and the seven major-scale modes.
 `getScaleChords()` uses 255 chord definitions and 76 scales. It
 checks every required chord pitch against the scale. Optional-index arrays
 are retained as metadata; omission variants are not synthesized. Chords are
-ordered by scale degree, then source chord-definition order. This is a
-compatible-chord engine, not a replay of all Scaler UI grouping rules.
+ordered by scale degree, then source chord-definition order.
 
 Chord families are classified by the highest formula degree. Suspended and
 added-tone chords are included by default and can be excluded explicitly.
@@ -155,17 +174,17 @@ alternating voices from that closed arrangement.
 | `dynamic` | Picks the inversion (and octave) that keeps the chord in a cohesive range, or closest to `previousMidiNotes` when given. Ignores `inversion`; the result reports the chosen one. | 1 |
 | `dynamicBass` | `dynamic`, plus the root added in the nearest octave below the lowest note. | 1 |
 | `guitar` | A playable 6-string shape in standard tuning (E2–E4 open strings, 4-fret reach). `inversion` picks the bass note. Ignores the engine octave. | 3 |
-| `drop2` | Lowers the second-highest note an octave. | 4 |
-| `drop3` | Lowers the third-highest note an octave. | 4 |
-| `drop4` | Lowers the fourth-highest note an octave. | 4 |
-| `drop2and3` | Lowers the second- and third-highest notes. | 4 |
-| `drop2and4` | Lowers the second- and fourth-highest notes. | 4 |
+| `drop2` | Lowers the second-highest note an octave when present. | 1 |
+| `drop3` | Lowers the third-highest note an octave when present. | 1 |
+| `drop4` | Lowers the fourth-highest note an octave when present. | 1 |
+| `drop2and3` | Lowers the second- and third-highest notes when present. | 1 |
+| `drop2and4` | Lowers the second- and fourth-highest notes when present. | 1 |
 | `spread` | Pushes upper notes up in pairs (+1, +1, +2, +2 octaves). | 1 |
-| `shell` | Keeps root, third and (with 4+ notes) seventh. | 2 |
+| `shell` | Keeps root, third and (with 4+ notes) seventh when present. | 1 |
 
 Drop and shell voicings throw when the chord has too few notes. The exported
-`voicingNames` and `voicingMinimumNotes` (from `@tasteee/scaled/types`) list
-every voicing and its minimum, so UIs can disable the ones a chord can't use.
+`voicingNames` lists the available voicings. Drop and shell voicings keep
+short chords playable by using the voices that are present.
 
 `dynamic` and `dynamicBass` depend on the chord before them. Use
 `getProgressionWithVoicing(inputs)` to voice a list of chords in order; it
@@ -208,21 +227,11 @@ Pass `chordRootPitch: chord.rootPitch` to `adaptPerformanceTemplate` or
 ambiguous pitch sets such as C6/Am7. Without it, the adapter matches the
 supplied pitch classes against catalog chord definitions in catalog order,
 then falls back to the lowest note. Minor variants follow chord quality.
-This harmonic adaptation is Scaled behavior, not a promise of exact Scaler
-runtime output.
 
 The shared adapter resolves MIDI pitches for one voiced chord. For a
 progression, adapt each chord, render against the complete timeline, and
 retain that chord's notes to preserve continuous pattern phase. The demo
 uses this path for previews, progression playback and MIDI export.
-
-Playback can differ from Scaler. Notes without a valid scale mapping are
-omitted. Passages preserve template timing, use voiced chord positions for
-base notes, and map upper ornaments to chord pitch classes. Widely spaced
-or unusual voicings can produce different upper notes from Scaler. With
-fewer than three voices, Passages sustain the supplied chord. Strummed
-Sequences use Scaler's default strum settings and support 1–12 voices.
-Suggestion APIs remain future work.
 
 ## API reference
 
@@ -245,7 +254,8 @@ const chord: ScaledT.ChordT = scaled.getChord({ chord: 'Cmaj7' })
 `scaled.ChordFamily` has the keys and values `power`, `triad`, `sixth`,
 `seventh`, `ninth`, `eleventh`, and `thirteenth`. Use these constants or
 string literals when filtering chords. `scaled.voicingNames` lists supported
-voicings; `scaled.voicingMinimumNotes` gives minimum note counts where needed.
+voicings; `scaled.voicingMinimumNotes` is empty because drop and shell
+voicings now adapt to short chords.
 
 ### Engine methods
 
@@ -336,7 +346,7 @@ explicit inputs; they do not inherit engine defaults.
 | `scaled.adaptPerformanceTemplate(input: ScaledT.AdaptPerformanceTemplateInputT)` | `template`, nonempty `midiNotes`, `key`, `scale`, `octave`, optional `chordRootPitch` | `ScaledT.PerformancePatternT`: shared adapter for all eight categories. Resolves notes for one voiced chord into fixed `midi` selectors, applies category-specific register/velocity behavior, removes duplicate same-pitch onsets, and clips same-pitch overlaps. |
 | `scaled.canAdaptRhythmTemplate(template: ScaledT.PerformanceTemplateT)` | A full factory template | `boolean`: checks category `Rhythms` and the supported register `octaveDifference === -1`. Other structural validation occurs during adaptation. |
 | `scaled.adaptRhythmTemplate(input: ScaledT.AdaptRhythmTemplateInputT)` | `template`, `targetNoteCount` | `ScaledT.PerformancePatternT`: expands a supported rhythm into chord-tone selectors, cycling source voice patterns to cover 1–128 target voices. Preserves source event velocities. |
-| `scaled.adaptStrummedTemplate(input: ScaledT.AdaptStrummedTemplateInputT)` | `template`, `targetNoteCount` | `ScaledT.PerformancePatternT`: uses the template ID to select a built-in strum for 1–12 voices. Returns chord-tone selectors with timing and velocities matching Scaler's default strum settings. Throws for an unknown strummed sequence. |
+| `scaled.adaptStrummedTemplate(input: ScaledT.AdaptStrummedTemplateInputT)` | `template`, `targetNoteCount` | `ScaledT.PerformancePatternT`: uses the template ID to select a built-in strum for 1–12 voices. Returns chord-tone selectors with timing and velocities with default strum settings. Throws for an unknown strummed sequence. |
 | `scaled.getGrooveMidiNotes(input: ScaledT.GetGrooveMidiNotesInputT)` | Grooves `template`, nonempty `midiNotes` | `readonly number[]`: builds the source-index pitch vector from unique target pitch classes and source octave repetitions, including the template register shift. This is a pitch vector, not a playable pattern. |
 | `scaled.getScalePerformance(input: ScaledT.GetScalePerformanceInputT)` | `template`, nonempty `midiNotes`, `key`, `scale`, `octave`, optional `chordRootPitch` | `ScaledT.ScalePerformanceT`: supports Bass, Melody, Phrases, and Sequences. Selects chord-quality variants, maps pitches to chord harmony with scale passing tones, and applies register and pitch-count rules. The returned vector preserves source indices, including duplicate pitches and `undefined` entries for unmapped notes. |
 | `scaled.mapScaleNotes(input: ScaledT.MapScaleNotesInputT)` | `midiNotes`, `sourceKey`, `sourceScale`, `targetKey`, `targetScale`, optional `shouldPreserveNearestRegister = false` | `readonly number[]`: maps notes between scales, drops unmapped notes, sorts, and deduplicates exact MIDI notes. The optional flag shifts the mapped register by an octave when tonic distance exceeds six semitones. Throws if a mapped note leaves MIDI range. |
@@ -354,6 +364,7 @@ const template = scaled.performanceTemplates.find((candidate) => {
   const isRhythm = candidate.category === 'Rhythms'
   return isRhythm
 })
+
 const isMissingTemplate = template === undefined
 if (isMissingTemplate) throw new Error('No rhythm template available')
 
@@ -366,10 +377,12 @@ const performance = scaled.adaptPerformanceTemplate({
   scale: 'major',
   octave: 4
 })
+
 const factoryClip = scaled.applyPerformance({
   progression: [{ chord, durationBeats: 8 }],
   performance
 })
+
 const factoryMidi = scaled.exportMidi({ clip: factoryClip })
 ```
 
@@ -484,6 +497,14 @@ Numeric range and integer checks generally produce `RangeError` instances.
   data. Engine definition getters return copies, and rendering does not
   mutate its inputs.
 
+## Roadmap and future work
+
+- **Migrate test/check scripts to Vitest**:
+  Convert standalone algorithmic check scripts (`checkCore`, `checkMidi`, `checkTiming`, `checkRhythmAdaptation`, `checkFactoryPerformances`, `checkChordFollowing`, `checkPerformanceSpeed`, and `checkPassageAdaptation`) into standard Vitest test suites.
+
+- **Chord and progression suggestion APIs**:
+  Design and implement suggestion APIs for chords, scales, and compatible performance styles.
+
 ## Development
 
 ```sh
@@ -492,8 +513,8 @@ npm run build
 ```
 
 The build produces `dist/index.mjs`, `dist/types.mjs`, source maps and type
-declarations. Package exports point to those compiled artifacts. Only `dist`
-and this README are included by the package files allowlist; development
+declarations. Package exports point to those compiled artifacts. The package
+includes `dist`, this README, and LICENSE; development
 scripts and reference fixtures stay outside the npm package.
 
 `npm run dev` watches source files. `npm run typecheck` runs TypeScript checks.
@@ -502,29 +523,41 @@ it is a development preparation step, not a consumer install hook.
 
 See `examples/continuousPerformance.ts` for the full first rendering flow.
 
+### Verification and releases
+
+`npm test` builds the library and runs all regression checks, including core
+theory, voicings, fractional MIDI boundaries, factory patterns and demo playback.
+`npm run check` also checks both TypeScript projects, builds the demo, and
+installs the actual npm tarball into a temporary consumer project to verify
+its files, public runtime imports and TypeScript declarations.
+
+GitHub Actions runs these checks on Windows and Linux with Node 24 and 26.
+The separate licensing job checks that catalog redistribution terms are
+documented. `npm run release:check` requires both the licensing check and all
+development checks to pass. `npm publish` invokes it through `prepublishOnly`.
+
+## License
+
+Original library code and documentation use the MIT license; see [LICENSE](LICENSE).
+
+
 ## Interactive examples
 
-Run `npm run demo`, then open http://127.0.0.1:5173.
-The demo uses Zest from a pinned GitHub build and the local library source.
-Each feature has its own linkable page: inversions, voicings, scales and
-compatible chords, and performance patterns with MIDI export. Change a
-selection, click the result to hear it, and copy the matching TypeScript
-example. Controls, cards, alerts and code blocks use actual Zest elements.
-Soundfont piano samples load on the first click and require a network
-connection. Playback and MIDI export share the chosen BPM and pattern speed.
-The composer offers 0.25×, 0.5×, 1×, and 2× speeds globally and per chord;
-per-chord speed defaults to the global setting. Sustained chords retain their
-full duration at every pattern speed.
+- `npm run demo` starts demo app at http://127.0.0.1:5173
+- `npm run demo:typecheck` checks the app.
+- `npm run demo:build` builds it.
 
-`npm run demo:typecheck` checks the app. `npm run demo:build` builds it.
-`npm run check:demo-performances` checks every dropdown choice through the
+- `npm run check:demo-performances` checks every dropdown choice through the
 demo renderer across three progression scenarios, including MIDI export
-and per-category chord overrides.
-It exercises all four pattern speeds. `npm run check:performance-speed`
-checks scaled timing, phase, chord clipping, dynamics, and invalid multipliers.
-`npm run check:passages` checks all seven Passages against Scaler reference
+and per-category chord overrides. It exercises all four pattern speeds.
+
+-`npm run check:performance-speed` checks scaled timing, phase, chord clipping, dynamics, and invalid multipliers.
+
+- `npm run check:passages` checks all seven Passages against
 performances for four common chord voicings.
-`npm run check:chord-following` checks chord roots, quality, inversions,
+
+- `npm run check:chord-following` checks chord roots, quality, inversions,
 passing tones, source indices, and all 770 scale-based factory templates.
-`npm run check:playback` checks that the first bass pattern plays a four-bar
+
+- `npm run check:playback` checks that the first bass pattern plays a four-bar
 progression and its highlight wraps only after all sixteen beats.

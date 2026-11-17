@@ -1,6 +1,7 @@
-body { overflow: auto; }
+html, body { overflow-x: hidden; overflow-y: auto; }
 .app { max-width: var(--page-width); padding: 0 var(--spacing-6) var(--spacing-8); margin: auto; }
-.studioHeader { display: flex; align-items: baseline; justify-content: space-between; padding: var(--spacing-5) 0; border-bottom: var(--line-width) solid var(--border); }
+.studioHeader { display: flex; align-items: center; justify-content: space-between; padding: var(--spacing-4) 0; border-bottom: var(--line-width) solid var(--border); gap: var(--spacing-4); flex-wrap: wrap; }
+.studioBrandGroup { display: flex; align-items: baseline; gap: var(--spacing-3); }
 .studioHeader h1 { font-size: var(--font-size-h2); font-weight: var(--font-weight-medium); line-height: 1.2; }
 .studioBrand { font-weight: var(--font-weight-medium); color: var(--muted-foreground); }
 .app .globalControls { padding: var(--spacing-4) 0; background: transparent; }

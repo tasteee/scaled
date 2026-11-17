@@ -49,6 +49,22 @@ const encodeTimeSignature = (signature: types.TimeSignatureT): readonly number[]
   return [0xff, 0x58, 4, signature.numerator, denominatorPower, 24, 8]
 }
 
+// Subtracting and adding fractional beats can move an end
+// by a few floating-point steps. Clamp only that roundoff.
+const getNoteEndBeat = (note: types.PerformanceNoteT, clipDurationBeats: number): number => {
+  const requestedEndBeat = note.startBeat + note.durationBeats
+  validation.validateFiniteNumber(requestedEndBeat, 'Note endBeat')
+  const timingMagnitude = Math.max(note.startBeat, note.durationBeats, clipDurationBeats)
+  const roundingTolerance = Number.EPSILON * timingMagnitude * 4
+  const excessBeats = requestedEndBeat - clipDurationBeats
+  const startsOutsideClip = note.startBeat >= clipDurationBeats
+  const endsOutsideClip = excessBeats > roundingTolerance
+  const isOutsideClip = startsOutsideClip || endsOutsideClip
+  if (isOutsideClip) throw new RangeError('MIDI note extends beyond the clip duration')
+  const endBeat = Math.min(requestedEndBeat, clipDurationBeats)
+  return endBeat
+}
+
 const buildNoteEvents = (input: types.ExportMidiInputT, ticksPerBeat: number, channel: number): readonly TickEventT[] => {
   const events: TickEventT[] = []
   for (const note of input.clip.notes) {
@@ -56,9 +72,7 @@ const buildNoteEvents = (input: types.ExportMidiInputT, ticksPerBeat: number, ch
     validation.validateVelocity(note.velocity)
     validation.validateNonnegativeNumber(note.startBeat, 'Note startBeat')
     validation.validatePositiveNumber(note.durationBeats, 'Note durationBeats')
-    const endBeat = note.startBeat + note.durationBeats
-    const isOutsideClip = endBeat > input.clip.durationBeats
-    if (isOutsideClip) throw new RangeError('MIDI note extends beyond the clip duration')
+    const endBeat = getNoteEndBeat(note, input.clip.durationBeats)
     const startTick = Math.round(note.startBeat * ticksPerBeat)
     const requestedEndTick = Math.round(endBeat * ticksPerBeat)
     const endTick = Math.max(startTick + 1, requestedEndTick)

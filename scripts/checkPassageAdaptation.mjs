@@ -2,10 +2,14 @@ import * as assert from 'node:assert/strict'
 import * as filesystem from 'node:fs'
 import { scaled } from '../dist/index.mjs'
 
-const capturePath = new URL('../analysis/catalog/Passages-probe.json', import.meta.url)
-const captureText = filesystem.readFileSync(capturePath, 'utf8')
-const capture = JSON.parse(captureText)
-const commonVoicings = ['60,64,67', '60,63,67', '60,64,67,71', '62,65,69']
+const captureNames = ['Passages-probe.json', 'Passages-voicing-probe.json', 'Passages-voicing-holdout.json', 'Passages-voicing-stress.json']
+const captures = captureNames.map((captureName) => {
+  const capturePath = new URL(`../analysis/catalog/${captureName}`, import.meta.url)
+  const captureText = filesystem.readFileSync(capturePath, 'utf8')
+  return JSON.parse(captureText)
+})
+const binarySha256 = captures[0].binarySha256
+for (const capture of captures) assert.equal(capture.binarySha256, binarySha256)
 
 const getEventKeys = (notes) => {
   const keys = notes.map((note) => {
@@ -18,11 +22,8 @@ const getEventKeys = (notes) => {
   return keys
 }
 
-let checkedCount = 0
-for (const fixture of capture.fixtures) {
+const checkFixture = (fixture) => {
   const voicingKey = fixture.midiNotes.join(',')
-  const isCommonVoicing = commonVoicings.includes(voicingKey)
-  if (!isCommonVoicing) continue
   const template = scaled.performanceTemplates.find((candidate) => {
     return candidate.id === fixture.templateId
   })
@@ -40,7 +41,16 @@ for (const fixture of capture.fixtures) {
   const actualKeys = getEventKeys(notes)
   const expectedKeys = getEventKeys(fixture.notes)
   assert.deepEqual(actualKeys, expectedKeys, `${fixture.templateName} / ${voicingKey}`)
-  checkedCount += 1
 }
-assert.equal(checkedCount, 28)
+
+let checkedCount = 0
+for (const capture of captures) {
+  for (const fixture of capture.fixtures) {
+    const hasFewVoices = fixture.midiNotes.length < 3
+    if (hasFewVoices) continue
+    checkFixture(fixture)
+    checkedCount += 1
+  }
+}
+assert.equal(checkedCount, 378)
 console.log(`Passages: ${checkedCount} saved native pitch/timing/velocity comparisons passed.`)

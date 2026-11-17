@@ -1,7 +1,7 @@
 import { scaled } from '@tasteee/scaled'
 import type { ScaledT } from '@tasteee/scaled/types'
 
-export type OptionT = { value: string; label: string; disabled?: boolean }
+export type OptionT = { value: string; label: string; disabled?: boolean; children?: OptionT[] }
 export type EntryT = { id: string; symbol: string; durationBeats: number; voicing: string; performance: string; speedMultiplier: number | null; inversion: number; octaveOffset: number; sourceSlot: number | null }
 export type GridChordT = ScaledT.ChordT & { sourceSlot: number | null }
 export type SessionT = { key: string; scale: string; octave: number; voicing: string; performance: string; speedMultiplier: number; tempo: number; shouldPreviewPerformance: boolean; family: string; search: string; selectedId: string; progression: EntryT[]; error: string }
@@ -16,7 +16,7 @@ export const voicingOptions: OptionT[] = [
   { value: 'rootPosition', label: 'Standard' },
   { value: 'closed', label: 'Closed' },
   { value: 'open', label: 'Open' },
-  { value: 'drop2', label: 'Drop 2 (4+ notes)' }
+  { value: 'drop2', label: 'Drop 2' }
 ]
 export const sourceVoicingOptions = scaled.voicingPresets.map((preset): OptionT => {
   return { value: preset.id, label: `${preset.name} · scale voicing` }
@@ -31,8 +31,42 @@ export const sourcePerformanceOptions = scaled.performanceSummaries.map((templat
   return { value: template.id, label }
 })
 export const allPerformanceOptions = performanceOptions.concat(sourcePerformanceOptions)
+const getPerformanceLeaf = (template: ScaledT.PerformanceSummaryT): OptionT => {
+  return { value: template.id, label: template.name }
+}
+const getPerformanceSubcategory = (category: string, subcategory: string): OptionT => {
+  const templates = scaled.performanceSummaries.filter((template) => {
+    const isCategory = template.category === category
+    const isSubcategory = template.subcategory.trim() === subcategory
+    return isCategory && isSubcategory
+  })
+  const children = templates.map(getPerformanceLeaf)
+  return { value: `subcategory:${category}:${subcategory}`, label: subcategory, children }
+}
+const getPerformanceCategory = (category: string): OptionT => {
+  const templates = scaled.performanceSummaries.filter((template) => {
+    return template.category === category
+  })
+  const directTemplates = templates.filter((template) => {
+    return template.subcategory.trim().length === 0
+  })
+  const directOptions = directTemplates.map(getPerformanceLeaf)
+  const subcategories = [...new Set(templates.map((template) => template.subcategory.trim()))]
+  const namedSubcategories = subcategories.filter((subcategory) => {
+    return subcategory.length > 0
+  })
+  const subcategoryOptions = namedSubcategories.map((subcategory) => {
+    return getPerformanceSubcategory(category, subcategory)
+  })
+  const children = directOptions.concat(subcategoryOptions)
+  return { value: `category:${category}`, label: category, children }
+}
+const categoryNames = [...new Set(scaled.performanceSummaries.map((template) => template.category))]
+export const sourcePerformanceSelectOptions = categoryNames.map(getPerformanceCategory)
+export const performanceSelectOptions = performanceOptions.concat(sourcePerformanceSelectOptions)
 export const inheritedVoicingOptions = [{ value: 'inherit', label: 'Use global voicing' }].concat(allVoicingOptions)
 export const inheritedPerformanceOptions = [{ value: 'inherit', label: 'Use global performance' }].concat(allPerformanceOptions)
+export const inheritedPerformanceSelectOptions = [{ value: 'inherit', label: 'Use global performance' }].concat(performanceSelectOptions)
 export const speedOptions: OptionT[] = [
   { value: '0.25', label: '0.25×' },
   { value: '0.5', label: '0.5×' },

@@ -4,9 +4,18 @@ import * as piano from '../piano'
 
 export const session = datass.datass.object<model.SessionT>(model.getInitialSession())
 
+let liveRefresh: (() => void) | null = null
+
+export const setLiveRefresh = (handler: (() => void) | null): void => {
+  liveRefresh = handler
+  return undefined
+}
+
 export const updateSession = (changes: Partial<model.SessionT>): void => {
-  piano.stopPlayback()
+  const isLiveLooping = piano.audioStatus.state.isLooping && piano.isLivePlaying() && liveRefresh !== null
+  if (!isLiveLooping) piano.stopPlayback()
   session.set({ ...changes, error: '' })
+  if (isLiveLooping) liveRefresh?.()
   return undefined
 }
 
