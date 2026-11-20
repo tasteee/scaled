@@ -31,7 +31,7 @@ export const GlobalControls = () => {
       <div className="secondaryControls">
         <fields.Choice label="Chord family" value={session.family} options={model.familyOptions} onChange={handleFamily} />
         <fields.Choice label="Global voicing" value={session.voicing} options={model.allVoicingOptions} onChange={handleVoicing} isSearchable />
-        <fields.Choice label="Global performance" value={session.performance} options={model.allPerformanceOptions} onChange={handlePerformance} isSearchable />
+        <fields.Choice label="Global performance" value={session.performance} options={model.performanceSelectOptions} onChange={handlePerformance} />
         <fields.Choice label="Pattern speed" value={speedValue} options={model.speedOptions} onChange={handleSpeed} />
         <z-switch label="Preview with performance" isChecked={session.shouldPreviewPerformance} onchange={handlePreviewSwitch}>Preview with performance</z-switch>
       </div>

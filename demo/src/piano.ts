@@ -17,6 +17,7 @@ export const getPlaybackVersion = (): number => {
 export const stopPlayback = (): void => {
   playbackVersion += 1
   clearTimeout(scheduleTimer)
+  live = null
   session?.instrument.stop()
   audioStatus.set({ isPlaying: false, isLoading: false, isLooping: false })
   playbackBeat.set(0)
@@ -63,6 +64,72 @@ export const unlockPiano = (): void => {
   return undefined
 }
 
+type NoteT = ScaledT.MidiClipT['notes'][number]
+type LiveT = {
+  clip: ScaledT.MidiClipT
+  notes: NoteT[]
+  tempo: number
+  startTime: number
+  shouldLoop: boolean
+  started: Map<string, () => void>
+}
+let live: LiveT | null = null
+
+const sortNotes = (clip: ScaledT.MidiClipT): NoteT[] => {
+  return [...clip.notes].sort((first, second) => { return first.startBeat - second.startBeat })
+}
+
+const getNoteKey = (cycle: number, note: NoteT): string => {
+  return `${cycle}|${note.id ?? ''}|${note.midiNote}|${note.startBeat}|${note.durationBeats}`
+}
+
+const getKeyCycle = (key: string): number => {
+  return Number(key.slice(0, key.indexOf('|')))
+}
+
+export const isLivePlaying = (): boolean => {
+  return live !== null
+}
+
+/**
+ * Swap the clip (and optionally tempo) of the running playback without restarting it.
+ * The playhead keeps its position within the loop. Notes that are unchanged and still
+ * sounding are left alone; notes that no longer exist are released; new notes that
+ * should be sounding at the playhead are started.
+ */
+export const updateClip = (clip: ScaledT.MidiClipT, tempo?: number): boolean => {
+  const current = live
+  const piano = session
+  if (!current || !piano) return false
+  const now = piano.context.currentTime
+  const oldSecondsPerBeat = 60 / current.tempo
+  const nextTempo = tempo ?? current.tempo
+  const elapsedBeats = Math.max(0, (now - current.startTime) / oldSecondsPerBeat)
+  const oldCycle = Math.floor(elapsedBeats / current.clip.durationBeats)
+  const hasDuration = clip.durationBeats > 0
+  if (!hasDuration) {
+    stopPlayback()
+    return true
+  }
+  const position = (elapsedBeats % current.clip.durationBeats) % clip.durationBeats
+  const nextNotes = sortNotes(clip)
+  const nextKeys = new Set(nextNotes.map((note) => { return getNoteKey(0, note) }))
+  const kept = new Map<string, () => void>()
+  for (const [key, stop] of current.started) {
+    const isCurrentCycle = getKeyCycle(key) === oldCycle
+    const rekeyed = `0${key.slice(key.indexOf('|'))}`
+    const isUnchanged = isCurrentCycle && nextKeys.has(rekeyed)
+    if (isUnchanged) kept.set(rekeyed, stop)
+    else stop()
+  }
+  current.clip = clip
+  current.notes = nextNotes
+  current.tempo = nextTempo
+  current.started = kept
+  current.startTime = now - position * (60 / nextTempo)
+  return true
+}
+
 export const playClip = async (clip: ScaledT.MidiClipT, tempo = 120, options: PlaybackOptionsT = {}): Promise<void> => {
   stopPlayback()
   const version = playbackVersion
@@ -76,40 +143,38 @@ export const playClip = async (clip: ScaledT.MidiClipT, tempo = 120, options: Pl
     if (wasCancelled) return undefined
     const hasNoDuration = clip.durationBeats <= 0
     if (hasNoDuration) return undefined
-    const startTime = piano.context.currentTime + 0.02
-    const secondsPerBeat = 60 / tempo
-    const loopDuration = clip.durationBeats * secondsPerBeat
-    const notes = [...clip.notes].sort((first, second) => { return first.startBeat - second.startBeat })
-    let scheduledThrough = -1
+    const state: LiveT = { clip, notes: sortNotes(clip), tempo, startTime: piano.context.currentTime + 0.02, shouldLoop, started: new Map() }
+    live = state
     const schedulePlayback = (): void => {
-      const wasStopped = version !== playbackVersion
+      const wasStopped = version !== playbackVersion || live !== state
       if (wasStopped) return undefined
-      const currentTime = piano.context.currentTime
-      const elapsedBeats = (currentTime - startTime) / secondsPerBeat
-      const firstCycle = Math.max(0, Math.floor(scheduledThrough / clip.durationBeats))
-      const lastCycle = Math.floor(elapsedBeats / clip.durationBeats)
-      const cycles = new Set([firstCycle, lastCycle])
-      for (const cycle of cycles) {
-        const isOutsideClip = cycle < 0 || (!shouldLoop && cycle > 0)
+      const secondsPerBeat = 60 / state.tempo
+      const duration = state.clip.durationBeats
+      const elapsed = Math.max(0, piano.context.currentTime - state.startTime)
+      const elapsedBeats = elapsed / secondsPerBeat
+      const currentCycle = Math.floor(elapsedBeats / duration)
+      for (const [key] of state.started) {
+        const isStale = getKeyCycle(key) < currentCycle - 1
+        if (isStale) state.started.delete(key)
+      }
+      for (const cycle of new Set([Math.max(0, currentCycle - 1), currentCycle])) {
+        const isOutsideClip = !state.shouldLoop && cycle > 0
         if (isOutsideClip) continue
-        const cycleStartBeat = cycle * clip.durationBeats
-        for (const note of notes) {
+        const cycleStartBeat = cycle * duration
+        for (const note of state.notes) {
           const onset = cycleStartBeat + note.startBeat
           const isFuture = onset > elapsedBeats
           if (isFuture) break
           const remainingBeats = onset + note.durationBeats - elapsedBeats
-          const shouldSkip = onset <= scheduledThrough || remainingBeats <= 0
+          const key = getNoteKey(cycle, note)
+          const shouldSkip = state.started.has(key) || remainingBeats <= 0
           if (shouldSkip) continue
-          const duration = remainingBeats * secondsPerBeat
-          piano.instrument.start({ note: note.midiNote, velocity: note.velocity, duration })
+          const stop = piano.instrument.start({ note: note.midiNote, velocity: note.velocity, duration: remainingBeats * secondsPerBeat })
+          state.started.set(key, () => { stop() })
         }
       }
-      scheduledThrough = elapsedBeats
-      const elapsed = Math.max(0, piano.context.currentTime - startTime)
-      const currentBeat = elapsed / secondsPerBeat
-      const beat = currentBeat % clip.durationBeats
-      playbackBeat.set(beat)
-      const hasFinished = !shouldLoop && elapsed >= loopDuration
+      playbackBeat.set(elapsedBeats % duration)
+      const hasFinished = !state.shouldLoop && elapsedBeats >= duration
       if (hasFinished) {
         stopPlayback()
         return undefined

@@ -1,10 +1,10 @@
 import type * as recovered from './recoveredTypes.js'
 import type * as types from './types.js'
-import * as rhythms from './scalerPerformance.js'
-import * as grooves from './scalerGroove.js'
-import * as scalePerformances from './scalerScalePerformance.js'
-import * as strummed from './scalerStrummed.js'
-import * as passages from './scalerPassage.js'
+import * as rhythms from './basePerformance.js'
+import * as grooves from './baseGroove.js'
+import * as scalePerformances from './baseScalePerformance.js'
+import * as strummed from './baseStrummed.js'
+import * as passages from './basePassage.js'
 import * as validation from './validation.js'
 
 export type AdaptPerformanceTemplateInputT = {

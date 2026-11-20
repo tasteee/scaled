@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@tasteee/scaled": "file:..",
-    "@tasteee/zest": "https://codeload.github.com/tasteee/zest/tar.gz/832957a102b5b0b76320e51b8c80d616c41c975a",
+    "@tasteee/zest": "git+https://github.com/tasteee/zest.git#3655780f907942b681a334213a5575df2aecf968",
     "datass": "2.1.2",
     "react": "19.3.1",
     "react-dom": "19.3.1",

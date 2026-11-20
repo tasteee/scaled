@@ -16,6 +16,49 @@ export const resolveVoicing = (value: string): ScaledT.VoicingNameT => {
   throw new Error('Source voicing adaptation is not yet verified.')
 }
 
+// Keep the requested chord tones in a preset's captured register.
+const getAdaptedPresetChord = (baseChord: ScaledT.ChordT, referenceChord: ScaledT.ChordT): ScaledT.ChordT => {
+  const referenceNotes = [...referenceChord.midiNotes].sort((firstNote, secondNote) => {
+    return firstNote - secondNote
+  })
+  const hasNoReferenceNotes = referenceNotes.length === 0
+  if (hasNoReferenceNotes) throw new Error('Scale voicing has no notes')
+  const rootShift = baseChord.rootPitch - referenceChord.rootPitch
+  const referenceBass = referenceNotes[0]
+  if (referenceBass === undefined) throw new Error('Scale voicing has no bass note')
+  const bassInterval = (referenceBass - referenceChord.rootPitch + 12) % 12
+  const desiredBassPitch = (baseChord.rootPitch + bassInterval) % 12
+  const desiredBassPosition = baseChord.midiNotes.findIndex((midiNote) => {
+    const hasMatchingPitch = midiNote % 12 === desiredBassPitch
+    return hasMatchingPitch
+  })
+  const bassPosition = desiredBassPosition < 0 ? 0 : desiredBassPosition
+  const adaptedNotes: number[] = []
+  for (const position of baseChord.midiNotes.keys()) {
+    const targetPosition = (bassPosition + position) % baseChord.midiNotes.length
+    const targetNote = baseChord.midiNotes[targetPosition]
+    if (targetNote === undefined) throw new Error('Chord has no note at this position')
+    const referencePosition = position % referenceNotes.length
+    const referenceCycle = Math.floor(position / referenceNotes.length)
+    const sourceNote = referenceNotes[referencePosition]
+    if (sourceNote === undefined) throw new Error('Scale voicing has no note at this position')
+    const targetReference = sourceNote + rootShift + referenceCycle * 12
+    const targetPitch = targetNote % 12
+    const nearestOctave = Math.round((targetReference - targetPitch) / 12)
+    const candidateNote = nearestOctave * 12 + targetPitch
+    const previousNote = adaptedNotes.at(-1)
+    let octaveCorrection = 0
+    if (previousNote !== undefined) {
+      const minimumShift = previousNote + 1 - candidateNote
+      const octavesToRaise = Math.max(0, Math.ceil(minimumShift / 12))
+      octaveCorrection = octavesToRaise * 12
+    }
+    const adaptedNote = candidateNote + octaveCorrection
+    adaptedNotes.push(adaptedNote)
+  }
+  return { ...baseChord, midiNotes: adaptedNotes }
+}
+
 export const getVoicedChord = (entry: model.EntryT, session: model.SessionT): ScaledT.ChordT => {
   const shouldInherit = entry.voicing === 'inherit'
   const selectedVoicing = shouldInherit ? session.voicing : entry.voicing
@@ -25,17 +68,31 @@ export const getVoicedChord = (entry: model.EntryT, session: model.SessionT): Sc
     const shapes = scaled.getScaleVoicingChords({ presetId: selectedVoicing, key: session.key, scale: session.scale, octave })
     const baseChord = scaled.getChord({ chord: entry.symbol, octave })
     const matchingShapes = shapes.filter((candidate) => {
-      const hasExplicitSlot = entry.sourceSlot !== null
-      if (hasExplicitSlot) return candidate.sourceSlot === entry.sourceSlot
+      const hasMatchingChord = candidate.chord?.symbol === baseChord.symbol
+      return hasMatchingChord
+    })
+    const selectedShape = matchingShapes.find((candidate) => {
+      const isSelectedSlot = candidate.sourceSlot === entry.sourceSlot
+      return isSelectedSlot
+    })
+    const shape = selectedShape ?? matchingShapes[0]
+    const sourceChord = shape?.chord
+    if (sourceChord) {
+      const chord = scaled.getChordWithVoicing({ chord: sourceChord, inversion: entry.inversion })
+      return chord
+    }
+    const sameRootShape = shapes.find((candidate) => {
       const hasMatchingRoot = candidate.chord?.rootPitch === baseChord.rootPitch
       return hasMatchingRoot
     })
-    const hasAmbiguousRoot = matchingShapes.length > 1 && entry.sourceSlot === null
-    if (hasAmbiguousRoot) throw new Error(`This scale voicing has multiple slots for ${entry.symbol}. Add the intended slot from its grid.`)
-    const shape = matchingShapes[0]
-    const sourceChord = shape?.chord
-    if (!sourceChord) throw new Error(`This scale voicing has no slot for ${entry.symbol}. Choose a chord from its grid or override this chord's voicing.`)
-    const chord = scaled.getChordWithVoicing({ chord: sourceChord, inversion: entry.inversion })
+    const firstShape = shapes.find((candidate) => {
+      const hasChord = candidate.chord !== null
+      return hasChord
+    })
+    const referenceChord = sameRootShape?.chord ?? firstShape?.chord
+    if (!referenceChord) throw new Error('This scale voicing has no playable chords')
+    const adaptedChord = getAdaptedPresetChord(baseChord, referenceChord)
+    const chord = scaled.getChordWithVoicing({ chord: adaptedChord, inversion: entry.inversion })
     return chord
   }
   const voicing = resolveVoicing(selectedVoicing)
@@ -114,6 +171,32 @@ export const playProgression = async (): Promise<void> => {
   }
   return undefined
 }
+
+let refreshToken = 0
+
+export const refreshLivePlayback = async (): Promise<void> => {
+  refreshToken += 1
+  const token = refreshToken
+  const playbackVersion = piano.getPlaybackVersion()
+  try {
+    const session = store.session.state
+    const clip = await renderProgression(session)
+    const isSuperseded = token !== refreshToken || playbackVersion !== piano.getPlaybackVersion()
+    if (isSuperseded) return undefined
+    const hasNotes = clip.notes.length > 0
+    if (!hasNotes) {
+      piano.stopPlayback()
+      return undefined
+    }
+    piano.updateClip(clip, session.tempo)
+  } catch (error) {
+    piano.stopPlayback()
+    handleRenderError(error)
+  }
+  return undefined
+}
+
+store.setLiveRefresh(() => { void refreshLivePlayback() })
 
 export const previewEntry = async (entry: model.EntryT): Promise<void> => {
   piano.stopPlayback()

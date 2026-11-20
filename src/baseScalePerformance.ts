@@ -1,7 +1,7 @@
 import performanceContexts from './data/performanceContexts.json'
 import performanceTemplates from './data/performances.json'
 import type * as recovered from './recoveredTypes.js'
-import * as scaleMapping from './scalerScaleMapping.js'
+import * as scaleMapping from './baseScaleMapping.js'
 import * as pitch from './pitch.js'
 import * as validation from './validation.js'
 import * as harmony from './performanceHarmony.js'

@@ -126,6 +126,85 @@ const checkScenarioSpeeds = async (model, renderer, library, option, scenario) =
   return model.speedOptions.length
 }
 
+const checkSourceVoicingSelection = (model, renderer, source) => {
+  const firstPreset = source.voicingPresets[0]
+  const secondPreset = source.voicingPresets[1]
+  assert.ok(firstPreset)
+  assert.ok(secondPreset)
+
+  const session = model.getInitialSession()
+  session.voicing = firstPreset.id
+  const sourceEntry = model.createEntry('G', 7)
+  const voicedChord = renderer.getVoicedChord(sourceEntry, session)
+  const firstPresetShapes = source.getScaleVoicingChords({ presetId: firstPreset.id, key: session.key, scale: session.scale })
+  const matchingShape = firstPresetShapes.find((candidate) => {
+    return candidate.chord?.symbol === 'G'
+  })
+  assert.deepEqual(voicedChord.midiNotes, matchingShape?.chord?.midiNotes)
+  assert.equal(voicedChord.symbol, 'G')
+
+  session.voicing = secondPreset.id
+  const duplicateEntry = model.createEntry('C')
+  const duplicateChord = renderer.getVoicedChord(duplicateEntry, session)
+  assert.equal(duplicateChord.symbol, 'C')
+
+  const unavailableEntry = model.createEntry('Cmaj7')
+  const adaptedChord = renderer.getVoicedChord(unavailableEntry, session)
+  assert.equal(adaptedChord.symbol, 'Cmaj7')
+  assert.deepEqual(adaptedChord.midiNotes.map((midiNote) => midiNote % 12), [0, 4, 7, 11])
+
+  session.voicing = source.voicingPresets[4].id
+  const minorEntry = model.createEntry('Dmin')
+  const adaptedMinor = renderer.getVoicedChord(minorEntry, session)
+  assert.equal(adaptedMinor.symbol, 'Dmin')
+  assert.deepEqual(adaptedMinor.midiNotes, [57, 62, 65])
+
+  for (const preset of source.voicingPresets) {
+    session.voicing = preset.id
+    for (const symbol of ['C', 'Dmin', 'G7', 'Cmaj7']) {
+      const entry = model.createEntry(symbol)
+      const chord = renderer.getVoicedChord(entry, session)
+      assert.equal(chord.symbol, symbol, `${preset.name}: ${symbol}`)
+      assert.ok(chord.midiNotes.length > 0, `${preset.name}: ${symbol}`)
+    }
+  }
+  return undefined
+}
+
+const checkChordVoicingSelection = async (model, renderer) => {
+  const session = model.getInitialSession()
+  const entry = model.createEntry('Cmaj7')
+  session.progression = [entry]
+
+  const standardClip = await renderer.renderProgression(session)
+  const standardNotes = standardClip.notes.map((note) => note.midiNote)
+  assert.deepEqual(standardNotes, [60, 64, 67, 71])
+
+  session.voicing = 'open'
+  const openClip = await renderer.renderProgression(session)
+  const openNotes = openClip.notes.map((note) => note.midiNote)
+  assert.deepEqual(openNotes, [60, 67, 76, 83])
+
+  session.progression = [{ ...entry, voicing: 'drop2', inversion: 1 }]
+  const droppedClip = await renderer.renderProgression(session)
+  const droppedNotes = droppedClip.notes.map((note) => note.midiNote)
+  assert.deepEqual(droppedNotes, [59, 64, 67, 72])
+  return undefined
+}
+
+const getLeafValues = (options) => {
+  const values = []
+  for (const option of options) {
+    const hasChildren = option.children !== undefined
+    if (hasChildren) {
+      values.push(...getLeafValues(option.children))
+      continue
+    }
+    values.push(option.value)
+  }
+  return values
+}
+
 try {
   const model = await server.ssrLoadModule('/demo/src/composer/model.ts')
   const renderer = await server.ssrLoadModule('/demo/src/composer/render.ts')
@@ -138,6 +217,11 @@ try {
     return template.id
   })
   assert.deepEqual(dropdownIds, templateIds, 'Dropdown must expose every factory template in catalog order')
+  const nestedValues = getLeafValues(model.performanceSelectOptions)
+  const expectedValues = ['standard', ...templateIds]
+  assert.deepEqual([...nestedValues].sort(), [...expectedValues].sort(), 'Nested select must expose every performance once')
+  const inheritedValues = getLeafValues(model.inheritedPerformanceSelectOptions)
+  assert.deepEqual([...inheritedValues].sort(), ['inherit', ...expectedValues].sort(), 'Per-chord select must add inherit')
   let checkedCount = 0
   for (const option of model.allPerformanceOptions) {
     for (const scenario of scenarios) {
@@ -146,6 +230,8 @@ try {
     }
   }
   const overrideCount = await checkOverrides(model, renderer, source, library)
+  checkSourceVoicingSelection(model, renderer, source)
+  await checkChordVoicingSelection(model, renderer)
   console.log(`Demo renderer: ${model.allPerformanceOptions.length} dropdown options, ${checkedCount} progression/MIDI checks, ${overrideCount} category override checks passed.`)
 } finally {
   await server.close()
