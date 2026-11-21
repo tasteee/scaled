@@ -4,7 +4,7 @@ import { scaled } from '../dist/index.mjs'
 
 const captureNames = ['Passages-probe.json', 'Passages-voicing-probe.json', 'Passages-voicing-holdout.json', 'Passages-voicing-stress.json']
 const captures = captureNames.map((captureName) => {
-  const capturePath = new URL(`../analysis/catalog/${captureName}`, import.meta.url)
+  const capturePath = new URL(`../tests/fixtures/${captureName}`, import.meta.url)
   const captureText = filesystem.readFileSync(capturePath, 'utf8')
   return JSON.parse(captureText)
 })

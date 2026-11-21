@@ -1,4 +1,5 @@
-import type * as React from 'react'
+import * as React from 'react'
+import { scaled } from '@tasteee/scaled'
 import * as fields from './Fields'
 import * as model from './model'
 import * as store from './store'
@@ -27,7 +28,7 @@ const ProgressionChord = (props: { entry: model.EntryT; isSelected: boolean; sta
   const chordWidth = `max(var(--spacing-24), calc(var(--spacing-32) * ${durationBars} + var(--spacing-12)))`
   const chordStyle = { flexBasis: chordWidth }
   return (
-    <button type="button" className="progressionChord" style={chordStyle} aria-pressed={props.isSelected}  data-playing={isPlaying} onMouseDown={handlePreview} onMouseUp={piano.stopPreview} onMouseLeave={piano.stopPreview} onClick={handleSelect}>
+    <button type="button" className="progressionChord" style={chordStyle} aria-pressed={props.isSelected}  data-playing={isPlaying} onPointerDown={handlePreview} onPointerUp={piano.stopPreview} onPointerCancel={piano.stopPreview} onKeyDown={(event) => { if ((event.key === 'Enter' || event.key === ' ') && !event.repeat) { event.preventDefault(); piano.unlockPiano(); store.session.set({ selectedId: props.entry.id }); void render.previewEntry(props.entry) } }} onKeyUp={piano.stopPreview} onBlur={piano.stopPreview} onMouseLeave={piano.stopPreview} onClick={handleSelect}>
       <strong>{props.entry.symbol}</strong><span>{durationLabel}</span>
     </button>
   )
@@ -67,6 +68,36 @@ const EntryControls = (props: { entry: model.EntryT; position: number; count: nu
   )
 }
 
+
+const Suggestions = (props: { entry: model.EntryT | undefined; session: model.SessionT }) => {
+  const [inScaleOnly, setInScaleOnly] = React.useState(false)
+  const result = React.useMemo(() => {
+    if (!props.entry) return { chords: [], error: '' }
+    try {
+      return { chords: scaled.getSuggestions({ chord: props.entry.symbol, key: props.session.key, scale: props.session.scale, inScaleOnly }), error: '' }
+    } catch (error) {
+      return { chords: [], error: error instanceof Error ? error.message : 'Unable to load suggestions' }
+    }
+  }, [props.entry?.symbol, props.session.key, props.session.scale, inScaleOnly])
+  return <div className="suggestions">
+    <div className="suggestionHeading"><h3>{props.entry ? 'After ' + props.entry.symbol : 'Next chord suggestions'} <span>· {result.chords.length}</span></h3>
+      <label><input type="checkbox" checked={inScaleOnly} onChange={(event) => setInScaleOnly(event.target.checked)} /> In-scale only</label>
+    </div>
+    <p className="chordHint">Hold to audition · double-click to add. Suggestions follow the selected chord.</p>
+    <div className="suggestionRow" aria-label="Suggested next chords">
+      {result.chords.map((chord) => <button type="button" className="suggestionChord" key={chord.token} disabled={!chord.symbol}
+        title={'Corpus weight: ' + chord.weight}
+        onPointerDown={(event) => { if (event.button !== 0 || !chord.symbol) return; event.preventDefault(); piano.unlockPiano(); void render.previewEntry(model.createEntry(chord.symbol)) }}
+        onPointerUp={piano.stopPreview} onPointerCancel={piano.stopPreview} onPointerLeave={piano.stopPreview} onBlur={piano.stopPreview}
+        onKeyDown={(event) => { if ((event.key === 'Enter' || event.key === ' ') && !event.repeat && chord.symbol) { event.preventDefault(); piano.unlockPiano(); void render.previewEntry(model.createEntry(chord.symbol)) } }} onKeyUp={piano.stopPreview}
+        onDoubleClick={() => { if (chord.symbol) store.addChord(chord.symbol) }}>
+        <strong>{chord.symbol ?? chord.targetType}</strong><span>{chord.isInScale ? 'In scale' : chord.symbol ? 'Chromatic' : 'Unavailable'} · {chord.weight}</span>
+      </button>)}
+      {result.chords.length === 0 && <p className="progressionEmpty">{result.error || (props.entry ? 'No corpus transitions for this chord. Explore the chord library above.' : 'Add and select a chord to see suggestions.')}</p>}
+    </div>
+  </div>
+}
+
 export const Progression = () => {
   const session: model.SessionT = store.session.use()
   const status = piano.audioStatus.use()
@@ -81,7 +112,7 @@ export const Progression = () => {
   const selectedEntry = session.progression[selectedPosition]
   const entryControls = selectedEntry ? <EntryControls key={selectedEntry.id} entry={selectedEntry} position={selectedPosition} count={session.progression.length} /> : null
   const isEmpty = session.progression.length === 0
-  const emptyMessage = isEmpty ? <p className="progressionEmpty">Use + in the library to build your progression.</p> : null
+  const emptyMessage = isEmpty ? <p className="progressionEmpty">Double-click a library chord to build your progression.</p> : null
   const totalBars = totalBeats / 4
   const isSingleBar = totalBars === 1
   const totalLabel = isSingleBar ? '1 bar' : `${totalBars} bars`
@@ -93,6 +124,7 @@ export const Progression = () => {
       <div className="progressionHeading">
         <div className="progressionTitle"><h2>Progression</h2><span>{totalLabel}</span><z-button kind="soft" size="sm" tone="primary" onClick={render.playProgression} isDisabled={isEmpty} aria-label={playLabel}>{playSymbol} {playLabel}</z-button><z-button kind="ghost" size="sm" onClick={render.exportProgression} isDisabled={isEmpty}>Export MIDI</z-button></div>
         </div>
+      <Suggestions entry={selectedEntry} session={session} />
       <div className="progressionBar">{entries}{emptyMessage}</div>
       {entryControls}
     </section>

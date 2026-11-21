@@ -11,7 +11,9 @@ const checkScripts = [
   'checkPerformanceSpeed.mjs',
   'checkPassageAdaptation.mjs',
   'checkPlayback.mjs',
-  'checkDemoPerformances.mjs'
+  'checkDemoPerformances.mjs',
+  'checkScaleChordParity.mjs',
+  'checkSuggestions.mjs'
 ]
 
 for (const checkScript of checkScripts) {

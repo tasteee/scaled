@@ -17,6 +17,7 @@ import { adaptStrummedTemplate } from './baseStrummed.js'
 import { getGrooveMidiNotes } from './baseGroove.js'
 import { getScalePerformance } from './baseScalePerformance.js'
 import { mapScaleNotes } from './baseScaleMapping.js'
+import { getSuggestions as findSuggestions } from './suggestions.js'
 
 export const createEngine = (input: ScaledT.ScaledEngineOptionsT = {}): ScaledT => {
   const octave = input.octave ?? 4
@@ -49,6 +50,9 @@ export const createEngine = (input: ScaledT.ScaledEngineOptionsT = {}): ScaledT 
     const clip = renderPerformance(input, options)
     return clip
   }
+  const getSuggestions = (input: ScaledT.GetSuggestionsInputT): readonly ScaledT.SuggestedChordT[] => {
+    return findSuggestions(input)
+  }
 
   return {
     ChordFamily,
@@ -79,6 +83,7 @@ export const createEngine = (input: ScaledT.ScaledEngineOptionsT = {}): ScaledT 
     getChordDefinitions,
     getScaleDefinitions,
     applyPerformance,
-    exportMidi
+    exportMidi,
+    getSuggestions
   }
 }

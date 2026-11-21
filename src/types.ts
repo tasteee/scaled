@@ -208,6 +208,10 @@ export type ScaledEngineOptionsT = {
   readonly velocity?: number
 }
 
+export type SuggestedChordT = import('./suggestionTypes.js').SuggestedChordT
+export type GetSuggestionsOptionsT = import('./suggestionTypes.js').GetSuggestionsOptionsT
+export type GetSuggestionsInputT = import('./suggestionTypes.js').GetSuggestionsInputT
+
 export type ScaledT = {
   readonly ChordFamily: typeof ChordFamily
   readonly voicingNames: typeof voicingNames
@@ -238,6 +242,7 @@ export type ScaledT = {
   readonly getScaleDefinitions: () => readonly ScaleDefinitionT[]
   readonly applyPerformance: (input: ApplyPerformanceInputT) => MidiClipT
   readonly exportMidi: (input: ExportMidiInputT) => MidiFileT
+  readonly getSuggestions: (input: GetSuggestionsInputT) => readonly SuggestedChordT[]
 }
 
 export type ScaledEngineT = ScaledT
@@ -287,12 +292,18 @@ type ScaledVoicingPresetT = import('./recoveredTypes.js').RecoveredVoicingPreset
 type ScaledPerformanceEventT = import('./recoveredTypes.js').RecoveredPerformanceEventT
 type ScaledPerformanceTemplateT = import('./recoveredTypes.js').RecoveredPerformanceTemplateT
 type ScaledPerformanceSummaryT = import('./recoveredTypes.js').RecoveredPerformanceSummaryT
+type ScaledSuggestedChordT = SuggestedChordT
+type ScaledGetSuggestionsOptionsT = GetSuggestionsOptionsT
+type ScaledGetSuggestionsInputT = GetSuggestionsInputT
 
 export declare namespace ScaledT {
   export type ChordFamilyT = ScaledChordFamilyT
   export type ChordDefinitionT = ScaledChordDefinitionT
   export type ScaleDefinitionT = ScaledScaleDefinitionT
   export type ChordT = ScaledChordT
+  export type SuggestedChordT = ScaledSuggestedChordT
+  export type GetSuggestionsOptionsT = ScaledGetSuggestionsOptionsT
+  export type GetSuggestionsInputT = ScaledGetSuggestionsInputT
   export type VoicingNameT = ScaledVoicingNameT
   export type VoicedChordT = ScaledVoicedChordT
   export type GetChordInputT = ScaledGetChordInputT

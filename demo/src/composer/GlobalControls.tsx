@@ -25,13 +25,13 @@ export const GlobalControls = () => {
       <div className="primaryControls">
         <fields.Choice label="Key" value={session.key} options={model.keyOptions} onChange={handleKey} />
         <fields.Choice label="Scale" value={session.scale} options={model.scaleOptions} onChange={handleScale} isSearchable />
+        <fields.Choice label="Global performance" value={session.performance} options={model.performanceSelectOptions} onChange={handlePerformance} />
         <fields.NumberField label="Root octave" value={session.octave} min={2} max={6} step={1} onChange={handleOctave} />
         <fields.NumberField label="BPM" value={session.tempo} min={30} max={300} step={1} onChange={handleTempo} />
       </div>
       <div className="secondaryControls">
         <fields.Choice label="Chord family" value={session.family} options={model.familyOptions} onChange={handleFamily} />
         <fields.Choice label="Global voicing" value={session.voicing} options={model.allVoicingOptions} onChange={handleVoicing} isSearchable />
-        <fields.Choice label="Global performance" value={session.performance} options={model.performanceSelectOptions} onChange={handlePerformance} />
         <fields.Choice label="Pattern speed" value={speedValue} options={model.speedOptions} onChange={handleSpeed} />
         <z-switch label="Preview with performance" isChecked={session.shouldPreviewPerformance} onchange={handlePreviewSwitch}>Preview with performance</z-switch>
       </div>

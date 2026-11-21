@@ -113,8 +113,8 @@ export const App = () => {
         <>
           <controls.GlobalControls />
           <div className="editorStatus">{errorNotice}</div>
-          <progression.Progression />
           <chords.ChordGrid />
+          <progression.Progression />
         </>
       ) : (
         <apiDocs.ApiDocs />

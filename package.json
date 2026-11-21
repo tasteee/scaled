@@ -1,54 +1,55 @@
 {
-	"name": "@tasteee/scaled",
-	"version": "0.1.0",
-	"description": "Typed chord, voicing, and continuous MIDI performance tools",
-	"type": "module",
-	"license": "SEE LICENSE IN LICENSE",
-	"sideEffects": false,
-	"workspaces": [
-		"demo"
-	],
-	"files": [
-		"dist",
-		"README.md",
-		"LICENSE"
-	],
-	"types": "./dist/index.d.mts",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.mts",
-			"import": "./dist/index.mjs"
-		},
-		"./types": {
-			"types": "./dist/types.d.mts",
-			"import": "./dist/types.mjs"
-		}
-	},
-	"scripts": {
-		"build": "tsdown",
-		"dev": "tsdown --watch",
-		"typecheck": "tsc --noEmit",
-		"test": "npm run build && node scripts/checkTests.mjs",
-		"check": "npm run typecheck && npm run demo:typecheck && npm test && npm run demo:build && npm run check:package",
-		"check:package": "node scripts/checkPackage.mjs",
-		"release:check": "npm run check",
-		"prepublishOnly": "npm run release:check",
-		"prepare": "tsdown",
-		"catalogs": "node scripts/importCatalogs.mjs",
-		"demo": "npm run dev --workspace @tasteee/scaled-demo",
-		"demo:build": "npm run build --workspace @tasteee/scaled-demo",
-		"demo:typecheck": "npm run typecheck --workspace @tasteee/scaled-demo",
-		"check:demo-performances": "node scripts/checkDemoPerformances.mjs",
-		"check:chord-following": "npm run build && node scripts/checkChordFollowing.mjs",
-		"check:playback": "node scripts/checkPlayback.mjs",
-		"check:performance-speed": "npm run build && node scripts/checkPerformanceSpeed.mjs",
-		"check:passages": "npm run build && node scripts/checkPassageAdaptation.mjs"
-	},
-	"devDependencies": {
-		"tsdown": "0.23.5",
-		"typescript": "7.0.2"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@tasteee/scaled",
+  "version": "0.1.0",
+  "description": "Typed chord, voicing, and continuous MIDI performance tools",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": false,
+  "workspaces": [
+    "demo"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/types.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node scripts/checkTests.mjs",
+    "check": "npm run typecheck && npm run demo:typecheck && npm test && npm run demo:build && npm run check:package",
+    "check:package": "node scripts/checkPackage.mjs",
+    "release:check": "npm run check",
+    "prepublishOnly": "npm run release:check",
+    "prepare": "tsdown",
+    "demo": "npm run dev --workspace @tasteee/scaled-demo",
+    "demo:build": "npm run build --workspace @tasteee/scaled-demo",
+    "demo:typecheck": "npm run typecheck --workspace @tasteee/scaled-demo",
+    "check:demo-performances": "node scripts/checkDemoPerformances.mjs",
+    "check:chord-following": "npm run build && node scripts/checkChordFollowing.mjs",
+    "check:playback": "node scripts/checkPlayback.mjs",
+    "check:performance-speed": "npm run build && node scripts/checkPerformanceSpeed.mjs",
+    "check:passages": "npm run build && node scripts/checkPassageAdaptation.mjs",
+    "check:scale-chords": "node scripts/checkScaleChordParity.mjs",
+    "check:suggestions": "node scripts/checkSuggestions.mjs"
+  },
+  "devDependencies": {
+    "tsdown": "0.23.5",
+    "typescript": "7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

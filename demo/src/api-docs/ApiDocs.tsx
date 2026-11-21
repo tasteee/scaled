@@ -29,6 +29,26 @@ export type MethodDocT = {
 }
 
 export const API_METHODS: readonly MethodDocT[] = [
+  {
+    id: 'getSuggestions',
+    name: 'scaled.getSuggestions(input)',
+    category: 'chords',
+    categoryLabel: 'Chords',
+    signature: 'scaled.getSuggestions(input: ScaledT.GetSuggestionsInputT): readonly ScaledT.SuggestedChordT[]',
+    summary: 'Returns ranked next-chord corpus transitions for the current chord. All results are retained unless a limit is supplied.',
+    parameters: [
+      { name: 'input', type: 'string | ChordT | GetSuggestionsOptionsT', required: true, description: 'A chord symbol, chord object, lookup token, or one object containing chord and named options.' },
+      { name: 'input.key', type: 'string', required: false, default: 'C', description: 'Tonic used to interpret relative chord roots.' },
+      { name: 'input.scale', type: 'string', required: false, description: 'Scale used for membership flags and Per Scale degree mapping. Defaults to major when filtering or using Per Scale.' },
+      { name: 'input.profile', type: "'tonal' | 'perScale'", required: false, default: 'tonal', description: 'Tonal uses semitone offsets. Per Scale uses degrees of a seven-note scale; Roman tokens infer this profile.' },
+      { name: 'input.inScaleOnly', type: 'boolean', required: false, default: 'false', description: 'Keep only chords whose complete formulas fit the scale.' },
+      { name: 'input.limit', type: 'number', required: false, description: 'Nonnegative integer cap; omitted means all available suggestions.' }
+    ],
+    returnType: 'readonly ScaledT.SuggestedChordT[]',
+    returnDescription: 'Ranked transitions with token, corpus weight, chord type, resolved symbol and root, and optional scale membership. Unknown corpus chord types retain their token and weight without a playable symbol.',
+    codeExample: "const suggestions = scaled.getSuggestions({ chord: 'C', key: 'C', scale: 'major', inScaleOnly: true })",
+    returnExample: "[{ symbol: 'G', weight: 109, isInScale: true, ... }, ...]"
+  },
 	{
 		id: 'createEngine',
 		name: 'scaled.createEngine(options?)',
