@@ -35,7 +35,7 @@ const ChordTile = (props: { chord: model.GridChordT }) => {
   const previewLabel = `Hold to preview ${props.chord.symbol}`
   const addLabel = `Add ${props.chord.symbol} to progression`
   return (
-    <div className="chordTile"><button type="button" className="previewChord" aria-label={previewLabel} onPointerDown={handlePreview} onPointerCancel={piano.stopPreview} onPointerUp={piano.stopPreview} onMouseLeave={piano.stopPreview} onKeyDown={handleKeyboardPreview} onKeyUp={piano.stopPreview}>
+    <div className="chordTile"><button type="button" className="previewChord" aria-label={previewLabel} onDoubleClick={handleAdd} onPointerDown={handlePreview} onPointerCancel={piano.stopPreview} onPointerUp={piano.stopPreview} onMouseLeave={piano.stopPreview} onKeyDown={handleKeyboardPreview} onKeyUp={piano.stopPreview} onBlur={piano.stopPreview}>
       <span className="chordSymbol">{props.chord.symbol}</span></button>
       <z-button className="chordAdd" size="sm" kind="ghost" aria-label={addLabel} onMouseDown={handleAddMouseDown} onClick={handleAdd}><span>+</span></z-button>
     </div>
@@ -65,7 +65,7 @@ export const ChordGrid = () => {
   })
   const hasNoChords = chords.length === 0
   const emptyMessage = hasNoChords ? <z-empty-state heading="No compatible chords" description="Choose another scale or chord family." /> : null
-  return <div className="chordGrid" aria-label="Compatible chord library"><h2 className="libraryTitle">Chord library</h2><div className="chordTiles">{columns}</div>{emptyMessage}</div>
+  return <div className="chordGrid" aria-label="Compatible chord library"><h2 className="libraryTitle">Chord library</h2><p className="chordHint">Hold to audition · double-click to add · {chords.length} compatible chords</p><div className="chordTiles">{columns}</div>{emptyMessage}</div>
 }
 
 

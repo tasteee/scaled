@@ -26,3 +26,6 @@ html, body { overflow-x: hidden; overflow-y: auto; }
   .app .chordTiles { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .entryControls > div { min-width: 0; flex: 1 1 var(--spacing-32); }
 }
+
+.app .chordTiles { max-height: 52vh; overflow-y: auto; overscroll-behavior: contain; }
+.previewChord, .progressionChord { touch-action: none; }

@@ -502,8 +502,19 @@ Numeric range and integer checks generally produce `RangeError` instances.
 - **Migrate test/check scripts to Vitest**:
   Convert standalone algorithmic check scripts (`checkCore`, `checkMidi`, `checkTiming`, `checkRhythmAdaptation`, `checkFactoryPerformances`, `checkChordFollowing`, `checkPerformanceSpeed`, and `checkPassageAdaptation`) into standard Vitest test suites.
 
-- **Chord and progression suggestion APIs**:
-  Design and implement suggestion APIs for chords, scales, and compatible performance styles.
+- **Suggestion context**: Explore progression-history ranking beyond the current-chord corpus transitions.
+
+## Repository layout
+
+- `src/`: library implementation and maintained runtime catalogs in `src/data/`.
+- `demo/`: interactive composer and API reference.
+- `examples/`: usage examples.
+- `scripts/`: build and regression checks.
+- `tests/fixtures/`: independent reference results used by parity tests.
+- `dist/`: generated npm package output (ignored by Git).
+
+Extraction tools, original corpora, raw captures, and analysis notes live in a
+separate preservation archive. They are not required to build, test, or use scaled.
 
 ## Development
 
@@ -514,12 +525,12 @@ npm run build
 
 The build produces `dist/index.mjs`, `dist/types.mjs`, source maps and type
 declarations. Package exports point to those compiled artifacts. The package
-includes `dist`, this README, and LICENSE; development
+includes `dist`, this README, LICENSE, and THIRD_PARTY_NOTICES.md; development
 scripts and reference fixtures stay outside the npm package.
 
 `npm run dev` watches source files. `npm run typecheck` runs TypeScript checks.
-`npm run catalogs` refreshes source JSON from the local catalog files;
-it is a development preparation step, not a consumer install hook.
+The versioned JSON in `src/data/` is the maintained runtime catalog.
+See `src/data/README.md` for its role and update workflow.
 
 See `examples/continuousPerformance.ts` for the full first rendering flow.
 
@@ -532,13 +543,15 @@ installs the actual npm tarball into a temporary consumer project to verify
 its files, public runtime imports and TypeScript declarations.
 
 GitHub Actions runs these checks on Windows and Linux with Node 24 and 26.
-The separate licensing job checks that catalog redistribution terms are
-documented. `npm run release:check` requires both the licensing check and all
-development checks to pass. `npm publish` invokes it through `prepublishOnly`.
+`npm run release:check` requires all development checks to pass. `npm publish` invokes it through `prepublishOnly`.
 
 ## License
 
-Original library code and documentation use the MIT license; see [LICENSE](LICENSE).
+Original library code and documentation use the [MIT license](LICENSE).
+Third-party catalog data and reference captures are excluded from that license,
+including their copies in compiled bundles. See [third-party notices](THIRD_PARTY_NOTICES.md)
+for provenance and the unresolved redistribution terms. The complete package
+is not represented as MIT-licensed.
 
 
 ## Interactive examples
@@ -561,3 +574,22 @@ passing tones, source indices, and all 770 scale-based factory templates.
 
 - `npm run check:playback` checks that the first bass pattern plays a four-bar
 progression and its highlight wraps only after all sixteen beats.
+
+## Next-chord suggestions
+
+`scaled.getSuggestions('C')` returns all ranked corpus transitions for C in the default key of C. Pass one options object to supply context:
+
+```ts
+const suggestions = scaled.getSuggestions({
+  chord: 'G',
+  key: 'C',
+  scale: 'major',
+  inScaleOnly: true
+})
+```
+
+Omit `limit` to retain every result. With a scale, `isInScale` reports whether all chord notes fit it. The default tonal profile uses semitone offsets from the key. The `perScale` profile uses degrees of a seven-note scale; it accepts chord symbols or tokens such as `V_maj`. A source root outside that scale returns no Per Scale suggestions. Roman tokens infer the Per Scale profile when no profile is supplied. Other scale sizes use the tonal profile.
+
+Weights are corpus frequencies, not probabilities. Results use only the current chord, not progression history. Unknown corpus chord types remain in the results with their token and weight but without a playable `symbol`.
+
+The demo shows all compatible chord families by default. Hold a chord to audition it, and double-click a library or suggestion chord to append it. Select a progression chord to update the suggestions above the progression. The selected performance applies to previews by default; the preview switch allows sustained-chord auditioning.

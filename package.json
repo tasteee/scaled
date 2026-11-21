@@ -11,7 +11,8 @@
 	"files": [
 		"dist",
 		"README.md",
-		"LICENSE"
+		"LICENSE",
+		"THIRD_PARTY_NOTICES.md"
 	],
 	"types": "./dist/index.d.mts",
 	"exports": {
@@ -34,7 +35,6 @@
 		"release:check": "npm run check",
 		"prepublishOnly": "npm run release:check",
 		"prepare": "tsdown",
-		"catalogs": "node scripts/importCatalogs.mjs",
 		"demo": "npm run dev --workspace @tasteee/scaled-demo",
 		"demo:build": "npm run build --workspace @tasteee/scaled-demo",
 		"demo:typecheck": "npm run typecheck --workspace @tasteee/scaled-demo",
@@ -42,7 +42,9 @@
 		"check:chord-following": "npm run build && node scripts/checkChordFollowing.mjs",
 		"check:playback": "node scripts/checkPlayback.mjs",
 		"check:performance-speed": "npm run build && node scripts/checkPerformanceSpeed.mjs",
-		"check:passages": "npm run build && node scripts/checkPassageAdaptation.mjs"
+		"check:passages": "npm run build && node scripts/checkPassageAdaptation.mjs",
+		"check:scale-chords": "node scripts/checkScaleChordParity.mjs",
+		"check:suggestions": "node scripts/checkSuggestions.mjs"
 	},
 	"devDependencies": {
 		"tsdown": "0.23.5",

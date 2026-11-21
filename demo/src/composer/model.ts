@@ -86,7 +86,7 @@ export const familyOptions: OptionT[] = [
 ]
 
 export const getInitialSession = (): SessionT => {
-  return { key: 'C', scale: 'Major scale', octave: 4, voicing: 'rootPosition', performance: 'standard', speedMultiplier: 1, tempo: 110, shouldPreviewPerformance: false, family: 'triad', search: '', selectedId: '', progression: [], error: '' }
+  return { key: 'C', scale: 'Major scale', octave: 4, voicing: 'rootPosition', performance: 'standard', speedMultiplier: 1, tempo: 110, shouldPreviewPerformance: true, family: 'all', search: '', selectedId: '', progression: [], error: '' }
 }
 
 export const createEntry = (symbol: string, sourceSlot: number | null = null): EntryT => {

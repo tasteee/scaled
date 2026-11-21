@@ -2,8 +2,10 @@ License scope
 
 The MIT License below applies to original @tasteee/scaled code and
 documentation. It does not apply to extracted or captured third-party
-catalog content in src/data/ or analysis/, or that content embedded in
-compiled bundles and source maps.
+catalog content in src/data/ or tests/fixtures/, or that content embedded in
+compiled bundles and source maps. See THIRD_PARTY_NOTICES.md for the
+provenance and licensing status of that material. No third-party rights
+are granted by the MIT license for the original code.
 
 MIT License
 
