@@ -525,7 +525,7 @@ npm run build
 
 The build produces `dist/index.mjs`, `dist/types.mjs`, source maps and type
 declarations. Package exports point to those compiled artifacts. The package
-includes `dist`, this README, LICENSE, and THIRD_PARTY_NOTICES.md; development
+includes `dist`, this README, and LICENSE; development
 scripts and reference fixtures stay outside the npm package.
 
 `npm run dev` watches source files. `npm run typecheck` runs TypeScript checks.
@@ -548,11 +548,6 @@ GitHub Actions runs these checks on Windows and Linux with Node 24 and 26.
 ## License
 
 Original library code and documentation use the [MIT license](LICENSE).
-Third-party catalog data and reference captures are excluded from that license,
-including their copies in compiled bundles. See [third-party notices](THIRD_PARTY_NOTICES.md)
-for provenance and the unresolved redistribution terms. The complete package
-is not represented as MIT-licensed.
-
 
 ## Interactive examples
 
